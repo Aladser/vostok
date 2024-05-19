@@ -1,0 +1,136 @@
+.form-fancybox
+  .fancybox__backdrop
+    background-color: $main-color40
+
+  .fancybox__slide
+    justify-content: center
+    padding: 0
+
+    &:before,
+    &:after
+      content: ''
+      display: none
+
+.modal-form
+  max-width: 410px
+  width: 100%
+  height: 100%
+  padding: 60px 24px 40px
+
+  .form__control
+    height: 52px
+    padding: 17px 25px
+
+    &.form__textarea
+      height: 180px
+
+  .form__placeholder
+    top: 36px
+
+.modal-form__title
+  font-size: 28px
+  line-height: 34px
+  font-weight: 700
+
+.modal-form__subtitle
+  margin-top: 15px
+  font-size: 17px
+  line-height: 24px
+  color: $main-color80
+
+.modal-form-top
+  margin-bottom: 40px
+  flex-shrink: 0
+
+.modal-form-inner
+  height: 100%
+  display: flex
+  flex-direction: column
+
+.modal-form-content
+  min-height: 0
+  flex-grow: 1
+  display: flex
+  flex-direction: column
+
+.modal-form__close
+  position: absolute
+  top: 11px
+  right: 15px
+  padding: 10px
+  +svg
+
+.modal-form-content-fields
+  min-height: 0
+  flex-grow: 1
+  overflow-x: hidden
+  overflow-y: auto
+  margin-right: -8px
+  padding-right: 8px
+
+  .form-group
+    margin-bottom: 25px
+
+    &:last-of-type
+      margin-bottom: 0
+
+.modal-form-bottom
+  margin-top: 30px
+  flex-shrink: 0
+
+.modal-form__submit
+  font-size: 16px
+  line-height: 20px
+  font-weight: 700
+  padding: 17px 30px
+  width: 100%
+  border-radius: 100px
+
+.modal-form-uc-wrapper
+  margin-top: 20px
+
++mq(tablet)
+  .modal-form
+    max-width: 560px
+    padding: 40px 48px
+    height: auto
+    max-height: 90%
+    box-shadow: 0 10px 50px 0 rgba(146, 152, 164, 0.15)
+    border-radius: 20px
+    border: 1px solid #ECF0F8
+
+    .form__control
+      height: 56px
+      padding: 21px 25px
+      font-size: 16px
+
+    .form__placeholder
+      font-size: 16px
+      top: 39px
+
+  .modal-form-top
+    margin-bottom: 35px
+
+  .modal-form__title
+    font-size: 36px
+    line-height: 100%
+
+  .modal-form__subtitle
+    margin-top: 13px
+    font-size: 16px
+    line-height: 18px
+
+  .modal-form-bottom
+    margin-top: 40px
+
+  .modal-form-uc-wrapper
+    margin-top: 30px
+    text-align: center
+
++mq(desktop)
+  .modal-form__close
+    opacity: 0.5
+    transition: opacity $default-transition
+
+    &:hover
+      opacity: 1

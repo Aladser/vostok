@@ -1,0 +1,69 @@
+.units__header
+  font-size: 27px
+  line-height: 35px
+  font-weight: 700
+  margin-bottom: 40px
+
+.units-list
+  display: grid
+  grid-gap: 20px 0
+
+.units-item
+  min-width: 0
+  padding: 25px 30px
+  border-radius: 14px
+  background-color: #F0F1F2
+  color: $main-color60
+  box-shadow: 0 10px 50px 0 transparentize(#9298A4, .9)
+  font-size: 14px
+  line-height: 16px
+  min-height: 192px
+
+.units-item__title
+  font-size: 20px
+  line-height: 1.2
+  font-weight: 500
+  color: $main-color70
+  margin-bottom: 21px
+
+.units-item__label
+  margin-bottom: 10px
+  min-height: 16px
+
+.units-item__phone,
+.units-item__email
+  display: inline-flex
+  align-items: center
+  font-size: 24px
+  line-height: 100%
+  letter-spacing: 0.04em
+  font-weight: 500
+  color: $main-color
+
+.units-item__phone-wa
+  flex-shrink: 0
+  margin-left: 7px
+  width: 20px
+  height: auto
+
+.units-item__working-time
+  margin-top: 25px
+
++mq(tablet)
+  .units__header
+    font-size: 26px
+    line-height: 100%
+    margin-bottom: 30px
+
+  .units-list
+    grid-template-columns: 1fr 1fr
+    grid-gap: 26px 16px
+
++mq(desktop)
+  .units
+    padding-top: 40px
+    border-top: 1px solid transparentize($main-color, .9)
+
+  .units-list
+    grid-template-columns: 1fr 1fr 1fr
+    grid-gap: 30px 24px

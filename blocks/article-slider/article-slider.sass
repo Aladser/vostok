@@ -1,0 +1,174 @@
+.article-slider
+    max-width: 703px
+    margin: 20px auto
+
+    a
+        border: none
+
+    a:hover
+        border: none
+
+.article-slider-container
+    position: relative
+    margin-bottom: 10px
+
+    .swiper-button-disabled
+        circle
+            fill-opacity: 0.4
+
+    .swiper-button-disabled:hover
+        circle
+            fill-opacity: 0.4
+
+.article-slider-thumbs .swiper-backface-hidden .swiper-slide
+    width: 108px
+
+.article-slider-block
+    border-radius: 16px
+    overflow: hidden
+    line-height: 0
+
+.article-slider-slide__img
+    width: 100%
+    height: auto
+    border-radius: 16px
+
+.article-slider-arrow
+    display: none
+    position: absolute
+    top: calc(50% - 52px / 2)
+    z-index: 2
+    line-height: 0
+
+    circle
+        transition: $default-transition
+
+.article-slider-arrow:hover
+    circle
+        fill-opacity: 1
+
+.article-slider-arrow_prev
+    left: 20px
+
+.article-slider-arrow_next
+    right: 20px
+
+.article-slider-thumbs-slider
+    border-radius: 4px
+
+.article-slider-thumb
+    position: relative
+    width: 59px
+    cursor: pointer
+
+    &.swiper-slide-thumb-active
+        cursor: default
+
+        .article-slider-thumb__plague
+            background-color: transparentize($color-blue, 0.5)
+
+.article-slider-thumb__plague
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    border-radius: 4px
+    transition: $default-transition
+    background-color: none
+
+.article-slider-thumb:hover
+    .article-slider-thumb__plague
+        background-color: transparentize($color-blue, 0.5)
+
+.article-slider-thumbs
+    position: relative
+
+    .swiper-backface-hidden .swiper-slide
+        height: fit-content
+
+    .swiper-button-disabled
+        opacity: 0
+        cursor: default
+
+.article-slider-thumb__img-wrap
+    width: 100%
+    line-height: 0
+    overflow: hidden
+    border-radius: 4px
+
+.article-slider-thumb__img
+    width: 100%
+    height: auto
+
+.article-slider-thumbs-arrow
+    display: none
+    position: absolute
+    top: calc( 50% - 13px / 2 )
+    z-index: 2
+    line-height: 0
+    transition: $default-transition
+
+.article-slider-thumbs-arrow_prev
+    left: -32px
+    transform: rotate(180deg)
+
+.article-slider-thumbs-arrow_next
+    right: -32px
+
++mq(tablet)
+    .article-slider
+        margin-top: 25px
+
+    .article-slider-slide__img
+        width: auto
+
+    .article-slider-thumbs-arrow
+        display: block
+
+    .article-slider-thumbs
+        margin-right: 52px
+
++mq(desktop)
+    .article-slider
+        max-width: 849px
+        margin: 0
+        margin-top: 25px
+        margin-bottom: 25px
+
+    .article-slider-arrow
+        display: block
+        overflow: hidden
+        transition: $default-transition
+
+    .article-slider-container
+        overflow: hidden
+
+    .article-slider-arrow_prev
+        left: -100px
+        opacity: 0
+
+    .article-slider-arrow_next
+        right: -100px
+        opacity: 0
+        
+    .article-slider-container:hover
+        .article-slider-arrow_prev
+            left: 20px
+            opacity: 1
+
+        .article-slider-arrow_next
+            right: 20px
+            opacity: 1
+
+    .article-slider-thumbs-arrow_prev
+        left: -28px
+
+    .article-slider-thumbs-arrow_next
+        right: -28px
+
+    .article-slider-thumbs
+        margin-right: 49px
+
+    .article-slider-thumbs .swiper-backface-hidden .swiper-slide
+        width: 133px

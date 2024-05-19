@@ -1,0 +1,46 @@
+<div class="form-group{{#has_error}} form-group_has-error{{/has_error}}">
+  {{#label}}
+    <div class="form-group__title">
+      {{.}}{{#required}} <span class="form__astrix">*</span>{{/required}}
+    </div>
+  {{/label}}
+  <div class="dropdown form-select-dd">
+    <div class="form-label">
+      <div class="form-select-current">
+        <select id="{{id}}"
+                name="{{code}}"
+                {{#htmlRequired}}required{{/htmlRequired}}
+                class="form__control form__control_select form-select__control{{#requiredCssClass}} {{.}}{{/requiredCssClass}}{{#maskCssClass}} {{.}}{{/maskCssClass}}{{#additionalCssClass}} {{.}}{{/additionalCssClass}}">
+          {{#possibleValues}}
+            <option value="{{value}}"{{#selected}} selected{{/selected}} class="form-select__option">{{title}}</option>
+          {{/possibleValues}}
+        </select>
+        <span class="form-select-current__text">{{defaultValue}}</span>
+        <span class="form-select-current__icon">
+                    <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M.045 1.27c.04.102.37.44 2.806 2.866 2.23 2.22 2.784 2.761 2.879 2.806a.563.563 0 0 0 .27.056c.309 0 .118.173 3.157-2.853 2.632-2.621 2.749-2.741 2.796-2.87a.62.62 0 0 0 0-.477C11.91.686 11.856.62 11.63.392c-.336-.336-.417-.381-.671-.382a.621.621 0 0 0-.281.043c-.064.03-.832.778-2.386 2.322L5.999 4.653 3.707 2.374C2.447 1.121 1.378.077 1.333.054a.83.83 0 0 0-.25-.052C.827-.014.71.05.37.39.143.618.09.685.047.798a.629.629 0 0 0-.002.471Z"
+                            fill="#205CC0"/>
+                    </svg>
+                </span>
+      </div>
+    </div>
+    <div class="dropdown-hidden form-select-hidden">
+      <ul class="dropdown-list form-select-list">
+        {{#possibleValues}}
+          <li class="dropdown-item form-select-item">
+            <button class="dropdown__value form-select__value{{#selected}} dropdown__value_selected{{/selected}}"
+                    type="button"
+                    data-value="{{value}}">
+              <span class="dropdown__value-text form-select__value-text">{{{title}}}</span>
+            </button>
+          </li>
+        {{/possibleValues}}
+      </ul>
+    </div>
+  </div>
+  {{#show_error_message}}
+    <span class="form-group__message">{{{error_message}}}</span>
+  {{/show_error_message}}
+  {{#note}}<span class="form__note">{{{.}}}</span>{{/note}}
+</div>

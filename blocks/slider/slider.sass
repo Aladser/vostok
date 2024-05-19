@@ -1,0 +1,63 @@
+@keyframes progress-bar
+  from
+    transform: scaleX(0)
+  to
+    transform: scaleX(1)
+
+.slider-arrow_disabled
+  opacity: 0.5
+  cursor: default
+
+.slider-arrow_lock
+  opacity: 0
+  visibility: hidden
+  cursor: default
+
+.slider-dots
+  display: flex
+  justify-content: center
+  margin-left: -12px
+  margin-right: -12px
+  width: calc(100% + 12px * 2) !important
+
+.slider-dots_lock
+  opacity: 0
+  visibility: hidden
+  cursor: default
+
+.slider-dot
+  flex: 1
+  max-width: 86px
+  height: 3px
+  margin: 0 12px
+  background-color: #D9D9D9
+  position: relative
+  border-radius: 2px
+  cursor: pointer
+
+  &:after
+    content: ''
+    +absoluteFluid
+    background-color: #2C3346
+    transform: scaleX(0)
+    transform-origin: left top
+    border-radius: 2px
+
+  &_active
+    &:after
+      animation: progress-bar linear 6s forwards
+
+.slider-scrollbar
+  background-color: #D9D9D9
+  border-radius: 2px
+  height: 3px
+
+.slider-scrollbar-drag
+  background-color: #2C3346
+  border-radius: 2px
+  height: 100%
+
++mq(tablet)
+  .slider-dot
+    max-width: 100px
+    margin: 0 15px

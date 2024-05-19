@@ -1,0 +1,6 @@
+import '../../index-stages/index-stages.mustache'
+import '../../index-faq/index-faq.mustache'
+import '../../index-company/index-company.mustache'
+import '../../index-get-car/index-get-car.mustache'
+import 'infinite-button/infinite-button.mustache'
+import '../../index-blog/index-blog.mustache'

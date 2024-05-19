@@ -1,0 +1,42 @@
+.article-image
+  max-width: 704px
+  margin: 0 auto
+  margin-top: 25px
+  margin-bottom: 25px
+
+.article
+  .article-image
+    a
+      border: none
+
+    a:hover
+      border: none
+      
+
+.article-image__figure
+  margin: 0
+  text-align: center
+
+.article-image__wrapper
+  position: relative
+  transition: $default-transition
+
+.article-image__img
+  width: 100%
+  height: 100%
+  border-radius: 8px
+  box-shadow: 0px 8px 24px 0px #8187BD1A
+
+.article-image__sign
+  font-size: 15px
+  line-height: 24px
+  color: $main-color
+
++mq(tablet)
+  .article-image
+    max-width: 840px
+
++mq(desktop)
+  .article-image__wrapper:hover
+    .article-image__img
+      box-shadow: 0px 8px 24px 0px #8187BD33

@@ -1,0 +1,13 @@
+{{#menu.isNotEmpty}}
+<div class="footer-menu">
+    <div class="footer-menu__container container">
+        <ul class="footer-menu-list">
+            {{#menu}}
+                <li class="footer-menu-item{{#active}} footer-menu-item_active{{/active}}">
+                    <a href="{{href}}" class="footer-menu-item__link">{{text}}</a>
+                </li>
+            {{/menu}}
+        </ul>
+    </div>
+</div>
+{{/menu.isNotEmpty}}

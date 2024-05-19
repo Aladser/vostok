@@ -1,0 +1,32 @@
+@import '../../variables/variables'
+@import '../../mixins/mixins'
+@import '../../slider/slider'
+@import '../../seo-text/seo-text'
+@import '../../news-list/news-list'
+@import '../../pager/pager'
+
+.news
+  padding-bottom: 70px
+
+.news__bottom
+  margin-top: 20px
+  padding-top: 50px
+
++mq(tablet)
+  .news
+    padding-bottom: 60px
+
+  .news__bottom
+    margin-top: 50px
+    border-top: 1px solid #ECF0F8
+
++mq(desktop)
+  .news
+    padding-bottom: 50px
+
+  .news__bottom
+    max-width: calc(#{$wp3} - #{$co3} * 2)
+    margin: 50px auto 0
+
+  .container-news__bottom
+    padding: 0

@@ -1,0 +1,22 @@
+{{#tabs.isNotEmpty}}
+<div class="detail-tabs">
+    <div class="detail-tabs-links">
+        <div class="detail-tabs-links__container container">
+            <div class="detail-tabs-links-list swiper">
+                <div class="swiper-wrapper">
+                    {{#tabs}}
+                        <button class="detail-tabs-link swiper-slide{{#active}} detail-tabs-link_active{{/active}}" data-tab="{{id}}" type="button">{{name}}</button>
+                    {{/tabs}}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="detail-tabs-panels">
+        <div class="container">
+            {{#tabs}}
+                <div class="detail-tabs-panel" data-tab="{{id}}">{{{content}}}</div>
+            {{/tabs}}
+        </div>
+    </div>
+</div>
+{{/tabs.isNotEmpty}}

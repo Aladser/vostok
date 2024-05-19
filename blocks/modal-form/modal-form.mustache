@@ -1,0 +1,37 @@
+<form method="post" action="{{action}}" class="modal-form form"{{#ajax_component_id}}
+      id="{{.}}"{{/ajax_component_id}} style="display: none">
+  <div class="modal-form-inner">
+    <div class="modal-form-top">
+      {{#title}}
+        <div class="modal-form__title">{{{.}}}</div>
+      {{/title}}
+      {{#sub_title}}
+        <div class="modal-form__subtitle">{{{.}}}</div>
+      {{/sub_title}}
+    </div>
+    <div class="modal-form-content">
+      <div class="modal-form-content-fields scrollbar">
+        {{#html_fields}}
+          {{{html}}}
+        {{/html_fields}}
+      </div>
+      <div class="modal-form-bottom">
+        <button class="modal-form__submit form__submit button button_submit button_filled_blue" name="submit" type="submit">
+          {{{submit_text}}}
+        </button>
+        {{#user_consent}}
+          <div class="modal-form-uc-wrapper">
+            <span class="modal-form__uc form-uc">{{{.}}}</span>
+          </div>
+        {{/user_consent}}
+      </div>
+    </div>
+  </div>
+  <button class="modal-form__close" type="button" data-fancybox-close>
+      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.726 10.178l6.882-6.881a1.094 1.094 0 1 0-1.548-1.548L10.18 8.631 3.297 1.749a1.094 1.094 0 1 0-1.548 1.548l6.882 6.881L1.75 17.06a1.094 1.094 0 1 0 1.548 1.547l6.882-6.882 6.881 6.882a1.092 1.092 0 0 0 1.548 0 1.094 1.094 0 0 0 0-1.547l-6.882-6.882z" fill="#282D3C" stroke="#282D3C"/></svg>
+  </button>
+</form>
+<script>
+    if (!window.initFeedback) window.initFeedback = []
+    window.initFeedback.push(() => new window.FeedbackForm('#{{ajax_component_id}}'))
+</script>

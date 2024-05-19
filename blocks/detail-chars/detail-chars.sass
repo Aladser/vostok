@@ -1,0 +1,74 @@
+.detail-chars
+  margin-top: 40px
+
+.detail-chars__title
+  font-size: 22px
+  line-height: 34px
+  font-weight: 500
+  margin-bottom: 20px
+
+  b
+    font-weight: 600
+
+.detail-chars__list
+  font-size: 17px
+  line-height: 22px
+  font-weight: 500
+  letter-spacing: 0.02em
+
+.detail-char
+  margin-bottom: 24px
+
+  &:last-child
+    margin-bottom: 0
+
+.detail-char__label
+  color: $main-color70
+  margin-bottom: 4px
+
++mq(tablet)
+  .detail-chars
+    margin-top: 50px
+
+  .detail-chars__title
+    margin-bottom: 30px
+    font-size: 28px
+    line-height: 42px
+
+  .detail-char
+    display: flex
+    align-items: flex-end
+    margin-bottom: 25px
+
+  .detail-char__label,
+  .detail-char__value
+    flex-shrink: 0
+
+  .detail-char__label
+    margin: 0
+
+  .detail-char__filler
+    font-size: 13px
+    min-width: 0
+    flex-grow: 1
+    margin: 0 14px
+    overflow: hidden
+    position: relative
+    align-self: stretch
+
+    &:after
+      content: '. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . '
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 100%
+      white-space: nowrap
+      color: transparentize(#1B1B1B, .6)
+
++mq(desktop)
+  .detail-chars__title
+    margin-bottom: 32px
+
+  .detail-char__filler
+    margin: 0 20px

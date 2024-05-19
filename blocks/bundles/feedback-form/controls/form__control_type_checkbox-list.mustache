@@ -1,0 +1,31 @@
+<div class="form-group{{#has_error}} form-group_has-error{{/has_error}}">
+    {{#label}}
+        <div class="form-group__title">
+          {{{.}}}{{#required}} <span class="form__astrix">*</span>{{/required}}
+        </div>
+    {{/label}}
+    {{#possibleValues.isNotEmpty}}
+        <div class="form-checkbox-list">
+            {{#possibleValues}}
+                <label class="form-label form-checkbox form-checkbox-item">
+                    <input name="{{code}}"
+                           type="checkbox"
+                           value="{{value}}"
+                        {{#checked}} checked{{/checked}}
+                           class="form-checkbox__control form__control form-hidden{{#requiredCssClass}} {{.}}{{/requiredCssClass}}{{#maskCssClass}} {{.}}{{/maskCssClass}}{{#additionalCssClass}} {{.}}{{/additionalCssClass}}">
+                    <span class="form-checkbox__marker">
+                        <svg width="11" height="8" viewBox="0 0 11 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M10.216 2.264A1.071 1.071 0 0 0 8.721.73L4.337 5 2.28 3.003A1.072 1.072 0 0 0 .785 4.54L3.96 7.632a.54.54 0 0 0 .754 0l5.502-5.368Z"
+                                fill="#fff"/>
+                        </svg>
+                    </span>
+                    <span class="form-checkbox__text">{{title}}</span>
+                </label>
+            {{/possibleValues}}
+        </div>
+    {{/possibleValues.isNotEmpty}}
+    {{#show_error_message}}
+        <span class="form-group__message">{{{error_message}}}</span>
+    {{/show_error_message}}
+    {{#note}}<span class="form__note">{{{.}}}</span>{{/note}}
+</div>

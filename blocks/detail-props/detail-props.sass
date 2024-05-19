@@ -1,0 +1,57 @@
+.detail-props__header
+  font-size: 15px
+  line-height: 100%
+  font-weight: 500
+  color: #9298A4
+  margin-bottom: 15px
+
+.detail-props-list
+  font-size: 13px
+  line-height: 14px
+  font-weight: 500
+  color: $main-color70
+
+.detail-prop
+  display: flex
+  align-items: flex-end
+  margin-bottom: 15px
+
+  &:last-child
+    margin-bottom: 0
+
+.detail-prop__filler
+  min-width: 0
+  flex-grow: 1
+  margin: 0 7px
+  overflow: hidden
+  position: relative
+  align-self: stretch
+
+  &:after
+    content: '. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . '
+    position: absolute
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 100%
+    white-space: nowrap
+    color: transparentize(#1B1B1B, .6)
+
+.detail-prop__label
+  flex-shrink: 0
+
+.detail-prop__value
+  flex-shrink: 0
+  font-size: 14px
+  text-align: right
+
+.detail-props__button
+  margin-top: 15px
+  font-size: 14px
+  line-height: 20px
+  font-weight: 500
+  border-bottom: 1px solid currentColor
+  transition: $default-transition
+
+  &:hover
+    border-color: transparent

@@ -1,0 +1,10 @@
+{{#label}}
+  <span class="form-group-top">
+    <span class="form-group__title">{{{.}}}{{#required}} <span class="form__astrix">*</span>{{/required}}</span>
+      {{#title_link}}
+        <a href="{{{href}}}"
+           class="form-group__title-link{{#additionalCssClass}} {{.}}{{/additionalCssClass}}"{{#targetBlank}}
+           target="_blank" rel="nofollow"{{/targetBlank}}>{{text}}</a>
+      {{/title_link}}
+  </span>
+{{/label}}

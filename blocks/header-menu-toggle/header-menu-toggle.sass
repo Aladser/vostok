@@ -1,0 +1,42 @@
+.header-menu-toggle
+  display: flex
+  flex-direction: column
+  justify-content: center
+  width: 44px
+  height: 44px
+  padding: 10px
+  position: relative
+  overflow: hidden
+
+  &:before
+    content: ''
+    position: absolute
+    left: -24px
+    top: -5px
+    height: 32px
+    border-left: 1px solid transparentize($main-color, .85)
+
+  &_open
+    .header-menu-toggle__line
+      &:nth-child(1)
+        transform: translate(3px, -2px) rotate(45deg) scaleX(1.2)
+      &:nth-child(2)
+        transform: translateX(-100px)
+      &:nth-child(3)
+        transform: translate(1px, 1px) rotate(-45deg) scaleX(1.2)
+
+.header-menu-toggle__line
+  display: inline-block
+  width: 22px
+  height: 3px
+  margin-bottom: 5px
+  background-color: #414759
+  border-radius: 100px
+  transition: $default-transition
+  transform-origin: left top
+
+  &:last-child
+    margin-bottom: 0
+
+  &:nth-child(2)
+    width: 16px

@@ -1,0 +1,14 @@
+<div class="cookie-alert">
+  <div class="cookie-alert-background"></div>
+  <div class="cookie-alert-block">
+    {{#text}}
+    <div class="cookie-alert__text">{{{.}}}</div>
+    {{/text}}
+    {{#link}}
+    <a href="{{href}}" class="cookie-alert__more">{{{text}}}</a>
+    {{/link}}
+    <div class="cookie-alert-button-container">
+      <button class="button button_filled_blue cookie-alert__button" type="button">Ок</button>
+    </div>
+  </div>
+</div>

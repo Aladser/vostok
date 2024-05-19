@@ -1,0 +1,23 @@
+{{#menu.isNotEmpty}}
+<div class="side-menu">
+    <ul class="side-menu-list">
+        {{#menu}}
+            <li class="side-menu-item{{#active}} side-menu-item_active{{/active}}">
+                <a href="{{href}}" class="side-menu-item__link">{{text}}</a>
+                {{#menu.isNotEmpty}}
+                    <button class="side-menu-item__trigger" type="button">
+                        <svg width="12" height="7" viewBox="0 0 12 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.325 0L5.6 4.327 9.884 0 11.2 1.332 5.6 7 0 1.332 1.325 0z" fill="#282D3C" fill-opacity=".4"/></svg>
+                    </button>
+                    <div class="side-submenu">
+                        <div class="side-submenu-list">
+                            {{#menu}}
+                                <a href="{{href}}" class="side-submenu-link{{#active}} side-submenu-link_active{{/active}}">{{text}}</a>
+                            {{/menu}}
+                        </div>
+                    </div>
+                {{/menu.isNotEmpty}}
+            </li>
+        {{/menu}}
+    </ul>
+</div>
+{{/menu.isNotEmpty}}

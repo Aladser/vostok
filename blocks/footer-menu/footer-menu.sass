@@ -1,0 +1,41 @@
+.footer-menu
+  padding: 30px 0 60px
+  font-size: 14px
+  line-height: 24px
+  font-weight: 600
+  color: transparentize($color-darkblue, .2)
+
+.footer-menu-list
+  columns: 2
+  gap: 20px
+  margin-bottom: -20px
+
+.footer-menu-item
+  margin-bottom: 20px
+
++mq(tablet)
+  .footer-menu
+    padding-bottom: 48px
+    font-size: 15px
+    line-height: 26px
+    font-weight: 500
+
+  .footer-menu-list
+    columns: 3
+    gap: 80px
+    max-width: 643px
+    margin-bottom: -18px
+
+  .footer-menu-item
+    margin-bottom: 18px
+
++mq(desktop)
+  .footer-menu
+    padding: 0
+    color: transparentize($color-darkblue, .3)
+
+  .footer-menu__container
+    +disable-container
+
+  .footer-menu-list
+    columns: 2

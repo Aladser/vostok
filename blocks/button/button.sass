@@ -1,0 +1,25 @@
+.button
+  display: inline-block
+  transition: $default-transition
+  border-radius: 20px
+  font-size: 14px
+  line-height: 20px
+  font-weight: 700
+  text-align: center
+
+.button_filled_blue
+  background-color: $color-blue
+  color: #fff
+
+.button_filled_gray
+  background-color: #9298A4
+  color: #fff
+
+.button_linear_gray
+  border: 2px solid transparentize(#1B1B1B, 0.8)
+  color: $main-color70
+
++mq(desktop)
+  .button_filled_blue
+    &:hover
+      background-color: #3A5B9D

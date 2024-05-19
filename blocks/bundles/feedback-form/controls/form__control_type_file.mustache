@@ -1,0 +1,42 @@
+<div class="form-group form-file-wrapper">
+    <div class="form-file">
+        <label class="form-label form-file-label">
+            <input name="{{code}}"
+                   type="file"
+                   {{#htmlRequired}}required{{/htmlRequired}}
+                {{#accept}} accept="{{.}}" {{/accept}}
+                {{#multiple}} multiple{{/multiple}}
+                {{#maxsize}} data-maxsize="{{.}}"{{/maxsize}}
+                {{#maxCount}} data-max-count="{{.}}"{{/maxCount}}
+                   class="form__control form__control_file form-file__control form-hidden{{#requiredCssClass}} {{.}}{{/requiredCssClass}}{{#maxsize}} form__control_valid-file-size{{/maxsize}}{{#maxCount}} form__control_valid-files-count{{/maxCount}}{{#additional_css_class}} {{.}}{{/additional_css_class}}">
+            <span class="form-file-content">
+                <span class="form-file-icon-container">
+                    <svg class="form-file-icon form-file-icon_default" width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 5.73658L11 16.6345C11 19.6006 8.94993 22 5.9243 22C2.95674 22 1 19.6587 1 16.6345L0.999999 4.3841C0.999999 2.50921 2.50991 1 4.38568 1C6.26146 0.999999 7.77137 2.50921 7.77137 4.3841L7.77137 16.8496C7.77137 17.7841 7.01346 18.5416 6.07853 18.5416C5.1436 18.5416 4.38569 17.7841 4.38569 16.8496L4.38568 5.73658" stroke="#1B1B1B" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                    <svg class="form-file-icon form-file-icon_complete" width="12" height="23" viewBox="0 0 12 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11 5.73658L11 16.6345C11 19.6006 8.94993 22 5.9243 22C2.95674 22 1 19.6587 1 16.6345L0.999999 4.3841C0.999999 2.50921 2.50991 1 4.38568 1C6.26146 0.999999 7.77137 2.50921 7.77137 4.3841L7.77137 16.8496C7.77137 17.7841 7.01346 18.5416 6.07853 18.5416C5.1436 18.5416 4.38569 17.7841 4.38569 16.8496L4.38568 5.73658" stroke="#1B1B1B" stroke-opacity="0.7" stroke-width="1.5" stroke-linecap="round"/>
+                    </svg>
+                </span>
+                {{#placeholder}}
+                    <span class="form-file__text">{{{.}}}{{#required}}<span class="form__astrix">*</span>{{/required}}</span>
+                {{/placeholder}}
+                <span class="form-file-filename-container">
+                    <span class="form-file__filename form-file__filename_default">Прикрепить файл</span>
+                    <span class="form-file__filename form-file__filename_complete"></span>
+                </span>
+            </span>
+            <span class="form-file__dropzone"></span>
+        </label>
+        <button type="button" class="form-file__close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M22.8332 1.1665L1.1665 22.8332M22.8332 22.8332L1.16651 1.1665" stroke="#1B1B1B" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+        </button>
+    </div>
+    {{#showErrorMessage}}
+        <span class="form-group__message"></span>
+    {{/showErrorMessage}}
+    {{#note}}<span class="form__note">{{{.}}}</span>{{/note}}
+</div>
+

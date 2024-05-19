@@ -1,0 +1,140 @@
+.mobile-menu
+  position: absolute
+  top: $hh1
+  left: 0
+  width: 100vw
+  height: calc(100vh - #{$hh1})
+  background-color: #fff
+  visibility: hidden
+  transform: translateX(100%)
+  transition: visibility $default-transition, transform $default-transition
+  z-index: -1
+
+  &_open
+    transform: translateX(0)
+    visibility: visible
+
+.mobile-menu__container
+  overflow: hidden auto
+  height: 100%
+  padding-bottom: 60px
+
+.mobile-menu-list
+  font-size: 20px
+  line-height: 30px
+  font-weight: 600
+
+.mobile-menu-item
+  display: flex
+  border-bottom: 1px solid $color-secondary100
+
+  &:last-child
+    border-bottom: none
+
+.mobile-menu-item__link
+  padding: 20px 0
+  min-width: 0
+  flex-grow: 1
+
+.mobile-menu-item__btn-submenu
+  display: flex
+  width: 100%
+  padding: 20px 0
+  align-items: center
+  justify-content: space-between
+
+.mobile-menu-item__btn-submenu-icon
+  flex-shrink: 0
+  margin-left: 10px
+
+.mobile-menu__bottom
+  border-top: 1px solid $color-secondary100
+  padding-top: 25px
+  display: grid
+  grid-gap: 25px 0
+
+.mobile-menu-button
+  padding: 13px 30px
+  border-radius: 100px
+  font-size: 14px
+  line-height: 20px
+
+.mobile-submenu
+  font-weight: 500
+  background-color: #fff
+  visibility: hidden
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  transform: translateX(100%)
+  transition: transform $default-transition, visibility $default-transition
+
+  &_open
+    visibility: visible
+    transform: translateX(0)
+
+.mobile-submenu__container
+  height: 100%
+  overflow: hidden auto
+
+.mobile-submenu__back
+  display: flex
+  align-items: center
+  justify-content: space-between
+  width: 100%
+  padding: 20px 0
+  font-weight: 600
+
+.mobile-submenu__back-btn
+  align-self: stretch
+  margin-left: 10px
+  flex-shrink: 0
+  width: 20px
+  display: flex
+  align-items: center
+  justify-content: flex-end
+
+.mobile-submenu__back-text
+  min-width: 0
+  flex-grow: 1
+
+.mobile-submenu-item
+  border-bottom: 1px solid $color-secondary100
+
+  &:last-child
+    border: none
+
+.mobile-submenu-item__link
+  width: 100%
+  padding: 20px 0
+  display: block
+
++mq(tablet)
+  .mobile-menu
+    top: 84px
+    height: calc(100vh - 84px)
+
+  .mobile-menu__bottom
+    padding-top: 40px
+    grid-template-columns: 1fr 1fr
+    grid-gap: 20px 16px
+
+  .mobile-menu-button
+    font-size: 16px
+    line-height: 24px
+
+  .mobile-menu-item__link,
+  .mobile-menu-item__btn-submenu,
+  .mobile-submenu__back,
+  .mobile-submenu-item__link
+    padding: 24px 0
+
+  .mobile-menu__container,
+  .mobile-submenu__container
+    padding-top: 19px
+
++mq(desktop)
+  .mobile-menu
+    display: none

@@ -1,0 +1,13 @@
+<div class="form-group form-group_textarea{{#has_error}} form-group_has-error{{/has_error}}">
+    <label class="form-label">
+      {{>form-control-title}}
+      <span class="form-group-inner">
+        <textarea name="{{code}}"
+                {{#htmlRequired}} required{{/htmlRequired}}
+               class="form__control form__textarea{{#requiredCssClass}} {{.}}{{/requiredCssClass}}{{#maskCssClass}} {{.}}{{/maskCssClass}}{{#additionalCssClass}} {{.}}{{/additionalCssClass}}">{{value}}</textarea>
+        {{>form-control-placeholder}}
+        {{>form-control-error-message}}
+      </span>
+    </label>
+  {{>form-control-note}}
+</div>

@@ -1,0 +1,50 @@
+<form method="post" action="{{action}}" class="form"{{#ajax_component_id}}
+      id="{{.}}"{{/ajax_component_id}}>
+    <div class="form-top">
+        {{#title}}
+            <div class="form__title">{{{.}}}</div>
+        {{/title}}
+        {{#sub_title}}
+            <div class="form__subtitle">{{{.}}}</div>
+        {{/sub_title}}
+    </div>
+    <div class="form-content">
+        <div class="form-content-fields">
+            {{#html_fields}}
+                {{{html}}}
+            {{/html_fields}}
+        </div>
+        <div class="form-bottom">
+            {{#user_consent}}
+                <div class="form-group form-uc-wrapper">
+                    <label class="form-label form-uc form-checkbox">
+                        <input type="checkbox"
+                               id="USER_CONSENT_{{ajax_component_id}}" name="USER_CONSENT" value="Y" checked
+                               class="form-checkbox__control form-hidden form-uc__control">
+                        <span class="form-checkbox__marker">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" fill="none" viewBox="0 0 11 8"><path
+                      fill="#DC5132" fill-opacity="0" d="M9.68 0 4.266 5.379 1.32 2.453 0 3.763 4.265 8 11 1.31 9.68 0Z"/></svg>
+                </span>
+                        <span class="form-checkbox__text">{{{.}}}</span>
+                    </label>
+                </div>
+            {{/user_consent}}
+            <div class="form-submit-container">
+                <button class="form__submit button button_submit" name="submit" type="submit">
+                    {{{submit_text}}}
+                </button>
+            </div>
+        </div>
+    </div>
+    <script>
+        if (!window.initFeedback) window.initFeedback = []
+
+        window.initFeedback.push(() => {
+            new window.FeedbackForm('#{{ajax_component_id}}', {
+                options: {
+                    showErrorMessages: true
+                }
+            })
+        })
+    </script>
+</form>

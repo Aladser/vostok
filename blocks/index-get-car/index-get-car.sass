@@ -1,0 +1,170 @@
+.index-get-car
+  overflow: hidden
+  position: relative
+  margin-top: 50px
+  z-index: 0
+
+.index-get-car-heading__logo
+  display: none
+
+.index-get-car-heading
+  margin-bottom: 28px
+
+.index-get-car-heading__title
+  color: $color-black
+  font-size: 28px
+  font-weight: 700
+  line-height: 34px
+  margin-bottom: 20px
+
+.index-get-car-heading__subtitle
+  color: $main-color70
+  font-size: 16px
+  font-weight: 400
+  line-height: 26px
+
+.index-get-car-main-background
+  height: 115px
+  margin-right: -$co1
+
+.index-get-car-main__image
+  position: absolute
+  width: auto
+  z-index: -1
+
+.index-get-car-main-button
+  position: relative
+  display: flex
+  align-items: center
+  gap: 60px
+  width: 315px
+  border-radius: 20px
+  border: 1px solid #ECF0F8
+  background: #FFF
+  box-shadow: 0 10px 50px 0 rgba(146, 152, 164, 0.30)
+  padding: 20px 25px
+  margin-top: -29px
+  margin-bottom: 50px
+  z-index: 1
+
+.index-get-car-main__text
+  text-align: left
+  font-size: 20px
+  font-weight: 700
+  line-height: 24px
+
+.index-get-car-main__icon
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 42px
+  height: 42px
+  background-color: $color-red
+  border-radius: 50%
+
+  svg
+    width: 8px
+    height: 13px
+
+    path
+      fill: #fff
+
++mq(tablet)
+  .index-get-car
+    margin-top: 40px
+
+  .index-get-car-heading-text
+    max-width: 643px
+
+  .index-get-car-heading
+    margin-bottom: 30px
+
+  .index-get-car-heading__title
+    font-size: 30px
+    margin-bottom: 15px
+
+  .index-get-car-heading__subtitle
+    font-size: 17px
+
+  .index-get-car-main
+    position: relative
+
+  .index-get-car-main-background
+    margin-right: 0
+
+  .index-get-car-main__image
+    width: 100%
+    height: auto
+
+  .index-get-car-main-button
+    gap: 20px
+    width: 414px
+    padding: 23px 24px
+    margin: -19px 0 47px
+
++mq(desktop)
+  .index-get-car-heading
+    display: flex
+    gap: 50px
+    margin-bottom: 18px
+    border-top: 1px solid #ECF0F8
+    padding-top: 53px
+
+  .index-get-car-heading__logo
+    display: block
+
+  .index-get-car-heading-text
+    max-width: 656px
+
+  .index-get-car-heading
+    margin-bottom: 0
+
+  .index-get-car-heading__title
+    font-size: 28px
+    line-height: 36px
+    margin: 17px 0 10px
+
+  .index-get-car-heading__subtitle
+    line-height: 24px
+
+  .index-get-car-main
+    height: 178px
+
+  .index-get-car-main-background
+    display: block
+    position: absolute
+    height: 190px
+    width: 909px
+    right: calc((100vw - 100%) / 2 * -1 - 24px)
+    top: -42px
+
+  .index-get-car-main-button
+    gap: 63px
+    width: 558px
+    padding: 31px 31px 31px 49px
+    margin: 40px 0 0
+
+    &:hover
+      .index-get-car-main__icon
+        background-color: $color-red
+
+      svg path
+        fill: #fff
+
+  .index-get-car-main__text
+    font-size: 24px
+    line-height: 28px
+
+  .index-get-car-main__icon
+    background-color: #F1F3F8
+    transition: $default-transition
+    width: 54px
+    height: 54px
+
+    svg
+      width: 10px
+      height: 16px
+
+      path
+        transition: $default-transition
+        fill: $main-color70

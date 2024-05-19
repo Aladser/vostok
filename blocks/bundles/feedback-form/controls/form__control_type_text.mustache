@@ -1,0 +1,15 @@
+<div class="form-group{{#has_error}} form-group_has-error{{/has_error}}">
+  <label class="form-label">
+    {{>form-control-title}}
+    <span class="form-group-inner">
+      <input name="{{code}}"
+             type="{{#typeInput}}{{.}}{{/typeInput}}{{^typeInput}}text{{/typeInput}}"
+             value="{{value}}"
+             {{#inputmode}} inputmode="{{.}}"{{/inputmode}}{{#html_required}} required{{/html_required}}
+             class="form__control{{#requiredCssClass}} {{.}}{{/requiredCssClass}}{{#maskCssClass}} {{.}}{{/maskCssClass}}{{#additionalCssClass}} {{.}}{{/additionalCssClass}}">
+      {{>form-control-placeholder}}
+      {{>form-control-error-message}}
+    </span>
+  </label>
+  {{>form-control-note}}
+</div>

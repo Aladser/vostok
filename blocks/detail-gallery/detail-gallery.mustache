@@ -1,0 +1,72 @@
+{{#gallery.isNotEmpty}}
+<div class="detail-gallery">
+<div class="detail-gallery-slider swiper">
+        <div class="swiper-wrapper">
+            {{#gallery}}
+                <div class="detail-gallery-slide{{#video}} detail-gallery-slide_has-video{{/video}} swiper-slide">
+                    {{#image}}
+                        <picture class="detail-gallery-slide__img">
+                            {{#mdSrc}}
+                                <source media="(max-width: 767px)" srcset="{{.}}, {{.}} 2x">
+                            {{/mdSrc}}
+                            {{#lgSrc}}
+                                <source media="(max-width: 1279px)" srcset="{{.}}, {{.}} 2x">
+                            {{/lgSrc}}
+                            <source srcset="{{src}}, {{src}} 2x">
+                            <img src="{{src}}"
+                                 alt="{{alt}}"
+                                {{#width}} width="{{.}}"{{/width}}
+                                {{#height}} height="{{.}}" {{/height}}
+                                 loading="lazy">
+                        </picture>
+                        {{#realSrc}}
+                            <a href="{{.}}" class="link-as-card" data-fancybox="gallery"></a>
+                        {{/realSrc}}
+                        {{#video}}
+                            <div class="detail-gallery-slide__video">
+                                <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.3 5.325L2.1.18a1.435 1.435 0 0 0-1.4 0C.487.302.31.472.188.678.065.883 0 1.117 0 1.355v10.288a1.31 1.31 0 0 0 .186.678 1.422 1.422 0 0 0 1.914.495l9.2-5.144c.213-.119.39-.29.513-.496a1.322 1.322 0 0 0 0-1.355 1.379 1.379 0 0 0-.512-.496z" fill="#fff"/></svg>
+                            </div>
+                            <a href="{{href}}" class="detail-gallery-slide__video-link link-as-card" data-fancybox></a>
+                        {{/video}}
+                    {{/image}}
+                </div>
+            {{/gallery}}
+        </div>
+    </div>
+    {{#thumbs.isNotEmpty}}
+        <div class="detail-gallery-thumbs">
+            <button class="detail-gallery-thumbs-arrow detail-gallery-thumbs-arrow_prev" type="button">
+                <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.293 2.707a1 1 0 1 1 1.414-1.414l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707z" fill="#282D3C" /></svg>
+            </button>
+            <div class="detail-gallery-thumbs-slider swiper">
+                <div class="swiper-wrapper">
+                    {{#thumbs}}
+                    <div class="detail-gallery-thumb swiper-slide">
+                        <div class="detail-gallery-thumb__img-wrap">
+                            {{#image}}
+                                <img src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=="
+                                     sizes="(max-width: 767px) 72px, 143px"
+                                     srcset="{{#mdSrc}}{{.}} 72w,{{/mdSrc}} {{src}} 143w"
+                                     {{#width}} width="{{.}}"{{/width}}
+                                     {{#height}} height="{{.}}" {{/height}}
+                                     alt="{{alt}}"
+                                     loading="lazy"
+                                     class="detail-gallery-thumb__img">
+                            {{/image}}
+                            {{#isVideo}}
+                                <div class="detail-gallery-thumb__video">
+                                    <svg width="12" height="13" viewBox="0 0 12 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.3 5.325L2.1.18a1.435 1.435 0 0 0-1.4 0C.487.302.31.472.188.678.065.883 0 1.117 0 1.355v10.288a1.31 1.31 0 0 0 .186.678 1.422 1.422 0 0 0 1.914.495l9.2-5.144c.213-.119.39-.29.513-.496a1.322 1.322 0 0 0 0-1.355 1.379 1.379 0 0 0-.512-.496z" fill="#fff"/></svg>
+                                </div>
+                            {{/isVideo}}
+                        </div>
+                    </div>
+                    {{/thumbs}}
+                </div>
+            </div>
+            <button class="detail-gallery-thumbs-arrow detail-gallery-thumbs-arrow_next" type="button">
+                <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.293 2.707a1 1 0 1 1 1.414-1.414l6 6a1 1 0 0 1 0 1.414l-6 6a1 1 0 0 1-1.414-1.414L6.586 8 1.293 2.707z" fill="#282D3C" /></svg>
+            </button>
+        </div>
+    {{/thumbs.isNotEmpty}}
+</div>
+{{/gallery.isNotEmpty}}

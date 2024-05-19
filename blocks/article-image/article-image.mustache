@@ -1,0 +1,23 @@
+<div class="article-image">
+    <figure class="article-image__figure">
+        <div class="article-image__wrapper">
+            {{#image.src}}
+            <picture class="article-image-picture">
+                {{#image.mdSrc}}
+                <source media="(min-width: 767px)" srcset="{{.}}"/>
+                {{/image.mdSrc}}
+                {{#image.lgSrc}}
+                <source media="(min-width: 1279px)" srcset="{{.}}"/>
+                {{/image.lgSrc}}
+                <img src="{{.}}" alt="{{image.alt}}" width="{{image.width}}" height="{{image.height}}" class="article-image__img">
+            </picture>
+            {{#image.realSrc}}
+            <a href="{{.}}" class="link-as-card" data-fancybox></a>
+            {{/image.realSrc}}
+            {{/image.src}}
+        </div>
+        {{#description}}
+        <figcaption class="article-image__sign">{{.}}</figcaption>
+        {{/description}}
+    </figure>
+</div>

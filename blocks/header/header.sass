@@ -1,0 +1,133 @@
+@import '../header-logo/header-logo'
+@import '../header-contacts/header-contacts'
+@import '../header-menu-toggle/header-menu-toggle'
+@import '../header-menu/header-menu'
+@import '../header-person/header-person'
+@import '../header-currency/header-currency'
+@import '../header-location/header-location'
+@import '../mobile-menu/mobile-menu'
+
+.header
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: $hh1
+  background-color: #fff
+  z-index: 10
+
+.header-top
+  padding: 10px 0
+  border-radius: 0 0 20px 20px
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.03)
+  background-color: #fff
+
+.header__container
+  display: flex
+  align-items: center
+
+.header-logo
+  margin-right: auto
+
+.header-menu-toggle
+  margin-left: 48px
+
++mq(tablet, max)
+  .header-nav,
+  .header-contacts
+    display: none
+
++mq(tablet)
+  .header
+    height: $hh2
+
+  .header-top
+    padding: 12px 0
+
+  .header-nav
+    height: 72px
+    display: flex
+    align-items: center
+    overflow: auto hidden
+    scrollbar-width: none
+    position: relative
+    z-index: -2
+    transition: transform $default-transition
+
+    &::-webkit-scrollbar
+      display: none
+
+  .header-button
+    padding: 8px 20px
+    margin-right: 30px
+
+  .header-menu-toggle
+    margin-left: 77px
+
+  +mq(desktop, max)
+    .page_inner
+      .header
+        border-bottom: 1px solid #ECF0F8
+
+    .header_compact
+      height: $hhFixTablet
+
+      .header-nav
+        transform: translateY(-100%)
+
++mq(desktop, max)
+  .header-currency,
+  .header-person,
+  .header-location
+    display: none
+
++mq(desktop)
+  .header
+    height: $hh3
+    box-shadow: 0 10px 50px 0 rgba(146, 152, 164, 0.20)
+    border-radius: 0 0 30px 30px
+
+  .compensate-for-scrollbar
+    .header
+      padding-right: var(--scrollbar-width)
+
+  .header-top
+    padding: 5px 0
+    box-shadow: none
+    border-radius: 0
+
+  .header-nav
+    height: 66px
+    overflow: visible
+
+    .header__container
+      height: 100%
+      position: relative
+      display: flex
+      align-items: center
+
+      &:before
+        content: ''
+        position: absolute
+        top: 0
+        left: $co3
+        width: calc(100% - #{$co3} * 2)
+        border-top: 1px solid #ECF0F8
+
+  .header-logo
+    margin-right: 22px
+
+  .header-menu-toggle
+    display: none
+
+  .header-person
+    margin-left: auto
+
+  .header-currency
+    margin-left: 60px
+
+  .header-location
+    margin-right: auto
+
+  .header-contacts
+    margin-left: auto

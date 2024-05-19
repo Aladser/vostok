@@ -1,0 +1,97 @@
+{{#items}}
+<div class="products-card"{{#strMainId}} id="{{.}}"{{/strMainId}}>
+    {{#gallery.isNotEmpty}}
+        <div class="products-card-images swiper">
+            <div class="swiper-wrapper">
+                {{#gallery}}
+                    <div class="products-card-images-item swiper-slide">
+                        <img src="{{src}}"
+                             alt="{{alt}}"
+                             {{#width}} width="{{.}}" {{/width}}
+                             {{#height}} height="{{.}}" {{/height}}
+                             class="products-card-images-item__img"
+                             loading="lazy">
+                    </div>
+                {{/gallery}}
+            </div>
+            <div class="products-card-nav">
+                {{#gallery}}
+                    <div class="products-card-nav-item"></div>
+                {{/gallery}}
+            </div>
+            <div class="products-card-progress">
+                <div class="products-card-progress__value"></div>
+            </div>
+        </div>
+    {{/gallery.isNotEmpty}}
+    {{^gallery.isNotEmpty}}
+        {{#image}}
+            <div class="products-card-image-wrap">
+                <img src="{{src}}"
+                     alt="{{alt}}"
+                     {{#width}} width="{{.}}"{{/width}}
+                     {{#height}} height="{{.}}"{{/height}}
+                     class="products-card-image"
+                     loading="lazy">
+            </div>
+        {{/image}}
+        {{^image}}
+            <div class="products-card-image-wrap">
+                <img src="/local/assets/images/img-stubs/img-hor-stub-3.jpg"
+                     alt="{{title}}"
+                     width="267"
+                     height="200"
+                     class="products-card-image"
+                     loading="lazy">
+            </div>
+        {{/image}}
+    {{/gallery.isNotEmpty}}
+    <div class="products-card__info">
+        <a href="{{detailPageUrl}}" class="products-card__name">{{title}}</a>
+        {{#props.isNotEmpty}}
+            <div class="products-card-props">
+                {{#props}}
+                    <div class="products-card-prop">
+                        <div class="products-card-prop__label">{{label}}:</div>
+                        <div class="products-card-prop__value">{{value}}</div>
+                    </div>
+                {{/props}}
+            </div>
+        {{/props.isNotEmpty}}
+        <div class="products-card__price-wrap">
+            {{#price}}
+                <div class="products-card-price">
+                    <div class="products-card-price__label">Стоимость авто</div>
+                    {{#basePrice}}
+                        <div class="products-card-price__value products-card-price__value_main">
+                            <span class="products-card-price__number">{{show}}</span>
+                            <span class="products-card-price__currency">{{currency}}</span>
+                        </div>
+                    {{/basePrice}}
+                    {{#additionalPrice}}
+                        <div class="products-card-price__value">
+                            <span class="products-card-price__number">{{show}}</span>
+                            <span class="products-card-price__currency">{{currency}}</span>
+                        </div>
+                    {{/additionalPrice}}
+                </div>
+            {{/price}}
+            {{#notice}}
+                <div class="products-card-notice">
+                    <button class="products-card-notice__btn" data-src="#products-card-modal-notice" data-fancybox type="button"></button>
+                    <svg class="products-card-notice__icon" xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="none" viewBox="0 0 29 29"><g fill="#2C3346"><path d="M14.112 0C6.38 0 .09 6.29.09 14.023c0 7.732 6.29 14.022 14.022 14.022s14.023-6.29 14.023-14.022S21.845 0 14.112 0Zm0 25.495c-6.326 0-11.473-5.146-11.473-11.472C2.64 7.696 7.786 2.55 14.112 2.55c6.327 0 11.473 5.146 11.473 11.473 0 6.326-5.146 11.472-11.473 11.472Z"/><path d="M14.112 5.949c-.937 0-1.7.763-1.7 1.7 0 .937.763 1.7 1.7 1.7.937 0 1.7-.763 1.7-1.7 0-.937-.763-1.7-1.7-1.7Zm0 5.949c-.704 0-1.274.57-1.274 1.274v7.649a1.275 1.275 0 0 0 2.55 0v-7.649c0-.704-.572-1.274-1.276-1.274Z"/></g></svg>
+                    <div class="products-card-notice-tip">
+                        {{{.}}}
+                        <span class="products-card-notice-tip__arrow"></span>
+                    </div>
+                </div>
+            {{/notice}}
+        </div>
+        <div class="products-card__buttons">
+            <button class="products-card-button modal-form-link button button_filled_blue" data-src="#order-form" data-product-id="{{id}}" type="button">Оставить заявку</button>
+            <a href="{{detailPageUrl}}" class="products-card-link">Подробнее о автомобиле</a>
+        </div>
+    </div>
+</div>
+{{/items}}
+{{{navigation}}}

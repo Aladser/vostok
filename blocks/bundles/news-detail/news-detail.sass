@@ -1,0 +1,225 @@
+@import '../../variables/variables'
+@import '../../mixins/mixins'
+@import '../../slider/slider'
+@import '../../seo-text/seo-text'
+@import '../../products-slider/products-slider'
+@import '../../ya-share/ya-share'
+@import '../../sidebar-recommendation/sidebar-recommendation'
+
+.news-detail
+  position: relative
+  overflow: hidden
+
+  .products-slider__container
+    padding-inline: 0
+
+  .products-slider
+    margin: 40px -100px
+    padding: 0
+    padding-inline: 100px
+
+  .products-card-prop__label
+    font-size: 12px
+    line-height: 14px
+
+  .products-card-prop__value
+    font-size: 14px
+    line-height: 14px
+
+  .products-card-props
+    max-height: 68px
+
+  .products-slider__title
+    font-size: 26px
+    line-height: 28px
+
+  .products-card__price-wrap
+    padding-top: 0
+    border: 0
+    margin-top: 15px
+
+  .products-card-image-wrap
+    padding-bottom: 0
+    height: 168px
+
+  .products-card-images-item
+    padding-bottom: 0
+    height: 168px
+
+  .products-card-price__label
+    margin-bottom: 2px
+    font-size: 12px
+    line-height: 14px
+
+  .products-card__info
+    padding: 15px 11px 20px 12px
+
+  .products-card-price__value
+    font-size: 20px
+    font-weight: 700
+    line-height: 22px
+    color: $main-color
+
+  .products-card-price__value:last-child
+    display: none
+
+  .products-card-notice
+    display: none
+
+  .products-slider-arrow
+    display: none
+
+  .products-slider-scrollbar
+    display: block
+
+  .products-card
+    width: 208px
+
+  .products-slider .products-card-slide
+    opacity: 1
+
+  .products-card__name
+    font-size: 14px
+    line-height: 22px
+
+.article-view
+  display: flex
+  gap: 12px
+  margin-top: 5px
+  margin-bottom: 20px
+
+.article-view__text
+  font-weight: 700
+  font-size: 14px
+  line-height: 18px
+  color: transparentize($color-black, 0.5)
+
+.article-detail-picture-block
+  margin: 20px auto
+  width: 100%
+  display: flex
+  flex-direction: column
+  max-height: 530px
+
+.article-detail-picture__img
+  border-radius: 16px
+  width: auto
+  height: auto
+  max-width: 100%
+  max-height: 530px
+
+.article-detail-picture
+  line-height: 0
+  width: auto
+  align-self: center
+
+.article-detail-picture__caption
+  margin-top: 10px
+  font-size: 14px
+  line-height: 14px
+  font-weight: 500
+  color: #9298A4
+
+.news-detail-footer
+  border-top: 1px solid #2430480D
+  padding-top: 30px
+  margin-bottom: 50px
+
+.products-slider
+  + .products-slider
+    margin-top: 0
+
+.news__bottom
+  margin-top: 20px
+  padding-top: 50px
+
++mq(tablet)
+  .news
+    padding-bottom: 60px
+
+  .news__bottom
+    margin-top: 50px
+    border-top: 1px solid #ECF0F8
+
+  .news-detail
+    .products-slider
+      margin-bottom: 30px
+
+    .products-slider__title
+      font-size: 23px
+      margin-bottom: 20px
+
+  .news-detail-footer
+    margin-bottom: 40px
+
+  .article-view
+    margin-top: 10px
+
+  .article-detail-picture-block
+    margin-bottom: 54px
+
++mq(desktop)
+  .news
+    padding-bottom: 50px
+
+  .news__bottom
+    max-width: 1140px
+    margin: 50px auto 0
+
+  .container-news__bottom
+    padding: 0
+
+  .article-view
+    margin-top: 20px
+    margin-bottom: 30px
+
+    .article-detail-picture-block
+      margin: 30px auto 49px
+
+  .news-detail
+    .products-slider-arrow
+      display: block
+
+    .products-slider-slides
+      margin-bottom: -25px
+      padding-bottom: 25px
+      overflow: hidden
+
+    .products-slider-scrollbar
+      margin-top: 25px
+
+    .products-slider
+      margin-bottom: 55px
+
+    .products-card
+      width: 224px
+
+    .products-card-notice
+      display: block
+      top: 18px
+
+    .products-card__price-wrap
+      border-top: 1px solid #ECF0F8
+      margin-top: 18px
+      padding-top: 19px
+
+    .products-card-price__label
+      margin-bottom: 15px
+      grid-column: span 2
+
+    .products-card-price__value:last-child
+      display: block
+      font-size: 14px
+      color: transparentize($main-color, 0.5)
+
+    .products-card-price
+      display: grid
+      grid-template-columns: auto 1fr
+
+    .products-card-price__value
+      margin: 0 20px 0 0
+      font-size: 16px
+      color: transparentize($main-color, 0.3)
+
+  .news-detail-footer
+    margin-bottom: 100px

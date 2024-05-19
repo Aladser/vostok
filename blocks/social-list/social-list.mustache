@@ -1,0 +1,7 @@
+{{#items.isNotEmpty}}
+    <div class="social-list">
+        {{#items}}
+            <a href="{{href}}" class="social-list-item{{#isWide}} social-list-item_wide{{/isWide}}">{{{icon.inline}}}</a>
+        {{/items}}
+    </div>
+{{/items.isNotEmpty}}

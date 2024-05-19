@@ -1,0 +1,62 @@
+.about-top
+    padding-top: 81%
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(44, 51, 70, 0.90) 0%, rgba(44, 51, 70, 0.90) 100%), url('/local/assets/images/temp/about/detail-mobile.png') lightgray 50% / cover no-repeat
+    background-blend-mode: normal, hard-light, normal
+    overflow: hidden
+    margin-top: -70px
+    border-radius: 0 0 30px 30px
+    position: relative
+    z-index: -1
+    margin-bottom: 40px
+
+.about-top-container
+    position: absolute
+    right: 0
+    left: 0
+    top: 50%
+    transform: translate(0, -50%)
+
+.about-top__head
+    font-size: 24px
+    font-weight: 700
+    line-height: 28px
+    color: #fff
+
+.about-top__subtitle
+    margin-top: 15px
+    font-size: 14px
+    font-weight: 700
+    line-height: 20px
+    color: #fff
+
++mq(tablet)
+    .about-top
+        padding-top: 30%
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(44, 51, 70, 0.90) 0%, rgba(44, 51, 70, 0.90) 100%), url('/local/assets/images/temp/about/detail-tablet.png') lightgray 50% / cover no-repeat
+        margin-top: -66px
+        margin-bottom: 50px
+
+    .about-top__head
+        font-size: 30px
+        line-height: 36px
+
+    .about-top__subtitle
+        margin-top: 10px
+        font-size: 18px
+
++mq(desktop)
+    .about-top
+        padding-top: 30%
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.20) 0%, rgba(0, 0, 0, 0.20) 100%), linear-gradient(0deg, rgba(44, 51, 70, 0.90) 0%, rgba(44, 51, 70, 0.90) 100%), url('/local/assets/images/temp/about/detail-desktop.png') lightgray 50% / cover no-repeat
+        margin-top: -230px
+        margin-bottom: 70px
+
+    .about-top-container
+        bottom: 50%
+
+    .about-top__head
+        font-size: 52px
+
+    .about-top__subtitle
+        margin-top: 31px
+        font-size: 28px

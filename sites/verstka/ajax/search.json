@@ -1,0 +1,145 @@
+{
+  "success": true,
+  "data": {
+    "results": [
+      {
+        "href": "#",
+        "text": "не разрыхлитель",
+        "price": {
+          "value": 12,
+          "oldValue": 24,
+          "text": null,
+          "currency": "<span class=\"currency\">\u0421<\/span>",
+          "currencyWithoutIcon": "\u0440\u0443\u0431.",
+          "discount": {
+            "percents": 10
+          },
+          "show": "12",
+          "showWithoutIcon": "12 \u0440\u0443\u0431.",
+          "showOld": "12",
+          "showOldWithoutIcon": "12 \u0440\u0443\u0431."
+        },
+        "image": "/local/assets/images/temp/search/item-2.jpg"
+      },
+      {
+        "href": "#",
+        "text": "Разрыхлитель для теста Dr.Oetker, 10 г",
+        "price": {
+          "value": 12,
+          "oldValue": 12,
+          "text": null,
+          "currency": "<span class=\"currency\">\u0421<\/span>",
+          "currencyWithoutIcon": "\u0440\u0443\u0431.",
+          "discount": null,
+          "show": "12",
+          "showWithoutIcon": "12 \u0440\u0443\u0431.",
+          "showOld": "12",
+          "showOldWithoutIcon": "12 \u0440\u0443\u0431."
+        },
+        "image": "/local/assets/images/temp/search/item-2.jpg"
+      },
+      {
+        "href": "#",
+        "text": "Разрыхлитель для теста Dr.Oetker, 10 г",
+        "price": {
+          "value": 12,
+          "oldValue": 12,
+          "text": null,
+          "currency": "<span class=\"currency\">\u0421<\/span>",
+          "currencyWithoutIcon": "\u0440\u0443\u0431.",
+          "discount": null,
+          "show": "12",
+          "showWithoutIcon": "12 \u0440\u0443\u0431.",
+          "showOld": "12",
+          "showOldWithoutIcon": "12 \u0440\u0443\u0431."
+        },
+        "image": "/local/assets/images/temp/search/item-2.jpg"
+      },
+      {
+        "href": "#",
+        "text": "Разрыхлитель для теста Dr.Oetker, 10 г",
+        "price": {
+          "value": 12,
+          "oldValue": 12,
+          "text": null,
+          "currency": "<span class=\"currency\">\u0421<\/span>",
+          "currencyWithoutIcon": "\u0440\u0443\u0431.",
+          "discount": null,
+          "show": "12",
+          "showWithoutIcon": "12 \u0440\u0443\u0431.",
+          "showOld": "12",
+          "showOldWithoutIcon": "12 \u0440\u0443\u0431."
+        },
+        "image": "/local/assets/images/temp/search/item-1.jpg"
+      },
+      {
+        "href": "#",
+        "text": "Разрыхлитель для теста Dr.Oetker, 10 г",
+        "price": {
+          "value": 12,
+          "oldValue": 12,
+          "text": null,
+          "currency": "<span class=\"currency\">\u0421<\/span>",
+          "currencyWithoutIcon": "\u0440\u0443\u0431.",
+          "discount": null,
+          "show": "12",
+          "showWithoutIcon": "12 \u0440\u0443\u0431.",
+          "showOld": "12",
+          "showOldWithoutIcon": "12 \u0440\u0443\u0431."
+        },
+        "image": "/local/assets/images/temp/search/item-1.jpg"
+      },
+      {
+        "href": "#",
+        "text": "Разрыхлитель для теста Dr.Oetker, 10 г",
+        "price": {
+          "value": 12,
+          "oldValue": 12,
+          "text": null,
+          "currency": "<span class=\"currency\">\u0421<\/span>",
+          "currencyWithoutIcon": "\u0440\u0443\u0431.",
+          "discount": null,
+          "show": "12",
+          "showWithoutIcon": "12 \u0440\u0443\u0431.",
+          "showOld": "12",
+          "showOldWithoutIcon": "12 \u0440\u0443\u0431."
+        },
+        "image": "/local/assets/images/temp/search/item-1.jpg"
+      },
+      {
+        "href": "#",
+        "text": "Разрыхлитель для теста Dr.Oetker, 10 г",
+        "price": {
+          "value": 12,
+          "oldValue": 12,
+          "text": null,
+          "currency": "<span class=\"currency\">\u0421<\/span>",
+          "currencyWithoutIcon": "\u0440\u0443\u0431.",
+          "discount": null,
+          "show": "12",
+          "showWithoutIcon": "12 \u0440\u0443\u0431.",
+          "showOld": "12",
+          "showOldWithoutIcon": "12 \u0440\u0443\u0431."
+        },
+        "image": "/local/assets/images/temp/search/item-1.jpg"
+      },
+      {
+        "href": "#",
+        "text": "Разрыхлитель для теста Dr.Oetker, 10 г",
+        "price": {
+          "value": 12,
+          "oldValue": 12,
+          "text": null,
+          "currency": "<span class=\"currency\">\u0421<\/span>",
+          "currencyWithoutIcon": "\u0440\u0443\u0431.",
+          "discount": null,
+          "show": "12",
+          "showWithoutIcon": "12 \u0440\u0443\u0431.",
+          "showOld": "12",
+          "showOldWithoutIcon": "12 \u0440\u0443\u0431."
+        },
+        "image": "/local/assets/images/temp/search/item-1.jpg"
+      }
+    ]
+  }
+}

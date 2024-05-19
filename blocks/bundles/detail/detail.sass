@@ -1,0 +1,44 @@
+@import '../../variables/variables'
+@import '../../mixins/mixins'
+@import '../../slider/slider'
+@import '../../detail-top/detail-top'
+@import '../../detail-tabs/detail-tabs'
+@import '../../article/article-base'
+@import '../../detail-chars/detail-chars'
+@import '../../products-slider/products-slider'
+@import '../../seo-text/seo-text'
+@import '../../index-faq/index-faq'
+@import '../../docs-list/docs-list'
+
+.detail
+  padding-bottom: 70px
+
+  .index-faq-container
+    +disable-container
+    margin-top: -16px
+    margin-bottom: -16px
+
+.products-slider
+  + .products-slider
+    margin-top: 0
+
+.static__bottom
+  margin-top: 30px
+
++mq(tablet)
+  .products-slider
+    margin-top: 30px
+
+  .detail
+    padding-bottom: 60px
+
+  .static__bottom
+    margin-top: 10px
+
++mq(desktop)
+  .detail
+    padding-bottom: 50px
+
+  .static__bottom
+    padding-top: 50px
+    border-top: 1px solid transparentize(#9298A4, .7)

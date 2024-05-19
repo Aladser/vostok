@@ -1,0 +1,252 @@
+.news-list
+  margin-top: 25px
+
+.news-list-list
+  display: grid
+  grid-template-columns: repeat(1, 1fr)
+  gap: 40px 16px
+
+.news-list-card:nth-child(n+7)
+  display: none
+
+.news-list__title
+  color: $color-black
+  font-size: 28px
+  font-weight: 700
+  line-height: 34px
+
+.news-list-tabs
+  margin-bottom: 40px
+  margin-right: -$co1
+  margin-left: -$co1
+  padding-left: $co1
+
+.news-list-tab
+  overflow: hidden
+  position: relative
+  width: auto
+  color: #FFF
+  font-size: 14px
+  font-weight: 700
+  line-height: 15px
+  padding: 10px 16px
+  margin-right: 11px
+  z-index: 0
+  &:last-child
+    margin-right: 0
+  &:after
+    display: block
+    position: absolute
+    content: ''
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    border-radius: 30px
+    background: rgba(146, 152, 164, 0.50)
+    transition: $default-transition
+    z-index: -1
+
+.news-list-tab_active
+  background: #1C2D5080
+  overflow: hidden
+  border-radius: 30px
+  pointer-events: none
+
+.news-list-card
+  position: relative
+
+  &:last-child
+    margin-bottom: 0
+
+.news-list-card-img
+  position: relative
+  overflow: hidden
+  height: 0
+  padding-bottom: 71%
+  border-radius: 15px
+  margin-bottom: 19px
+  z-index: 0
+
+  &:after
+    position: absolute
+    display: block
+    content: ''
+    bottom: 0
+    left: 0
+    width: 100%
+    height: 40px
+    background: linear-gradient(0deg, #1C2D50 0%, rgba(28, 45, 80, 0.00) 100%)
+    z-index: 1
+
+.news-list-card__image
+  +absoluteFluid
+  object-fit: cover
+  object-position: center
+
+.news-list-card-aside
+  display: flex
+  color: $main-color70
+  font-size: 14px
+  font-weight: 500
+  line-height: 13px
+  margin-bottom: 15px
+
+.news-list-card__date
+  margin-right: 3px
+
+.news-list-card__title
+  color: $color-black
+  font-size: 18px
+  font-weight: 700
+  line-height: 22px
+  margin-bottom: 15px
+  transition: $default-transition
+
+.news-list-card__subtitle
+  color: $main-color70
+  font-size: 15px
+  font-weight: 400
+  line-height: 22px
+
+.news-list-card-button
+  display: none
+
++mq(tablet)
+  .news-list
+    margin-top: 30px
+
+  .news-list__title
+    font-size: 30px
+
+  .news-list-tabs
+    margin-bottom: 30px
+
+  .news-list-list
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+
+  .news-list-card
+    margin-bottom: 0
+
+  .news-list-card:nth-child(n+7)
+    display: block
+
+  .news-list-card:nth-child(n+9)
+    display: none
+
+  .news-list-card-img
+    height: 246px
+    border-radius: 16px
+
+  .news-list-card-aside
+    font-size: 15px
+    line-height: 14px
+    margin-bottom: 10px
+
+  .news-list-card__date
+    margin-right: 3px
+
+  .news-list-card__title
+    font-size: 20px
+    line-height: 30px
+    max-width: 260px
+    margin-bottom: 10px
+
+  .news-list-card__subtitle
+    line-height: 24px
+
++mq(desktop)
+  .news-list
+    margin-top: 50px
+
+  .news-list__title
+    font-size: 36px
+    line-height: 36px
+
+    &:hover
+      border-color: transparent
+
+  .news-list-tabs
+    margin-right: 0
+    margin-left: 0
+    padding-left: 0
+
+  .news-list-tab
+    &:hover
+      &:after
+        background: $color-darkblue
+
+  .news-list-list
+    grid-template-columns: repeat(6, 1fr)
+    gap: 40px 24px
+
+  .news-list-list
+    .news-list-card
+      &:nth-child(1), &:nth-child(2)
+        margin-bottom: -20px
+
+        .news-list-card-img
+          height: 398px
+          margin-bottom: 14px
+          &:after
+            height: 71px
+        .news-list-card-aside
+          margin-bottom: 14px
+        .news-list-card__title
+          font-size: 24px
+          max-width: none
+          margin-bottom: 14px
+        .news-list-card__subtitle
+          font-size: 16px
+        .news-list-card-button
+          display: inline-block
+          border-radius: 100px
+          color: $main-color
+          background: rgba(146, 152, 164, 0.30)
+          text-align: center
+          font-size: 13px
+          font-weight: 600
+          line-height: 20px
+          padding: 5px 15px
+          margin-top: 14px
+
+      &:nth-child(1)
+        grid-column: 1 / 4
+        grid-row: 1 / 2
+      &:nth-child(2)
+        grid-column: 4 / 7
+        grid-row: 1 / 2
+      &:nth-child(5)
+        display: block
+
+      &:nth-child(n+3)
+        grid-column: span 2
+        .news-list-card-img
+          height: 259px
+          margin-bottom: 10px
+          border-radius: 11px
+          &:after
+            height: 47px
+        .news-list-card-aside
+          font-size: 12px
+          line-height: 12px
+          margin-bottom: 10px
+        .news-list-card__title
+          font-size: 16px
+          line-height: 20px
+          max-width: none
+        .news-list-card__subtitle
+          font-size: 14px
+          line-height: 20px
+
+  .news-list-card__date
+    margin-right: 5px
+
+  .news-list-card
+    &:hover
+      .news-list-card__title
+        color: $color-red
+
+  .news-list-card:nth-child(n+9)
+    display: block

@@ -1,0 +1,139 @@
+@import '../footer-buttons/footer-buttons'
+@import '../footer-contacts/footer-contacts'
+@import '../footer-menu/footer-menu'
+@import '../social-list/social-list'
+
+.footer
+  background-color: #F1F3F8
+  margin-top: auto
+
+.footer-buttons-wrap,
+.footer-contacts
+  background-color: #F8F9FC
+
+.footer-buttons-wrap
+  padding: 40px 0
+
+.footer__social
+  padding: 20px 0
+  border-top: 1px solid transparentize(#243048, .9)
+
+.footer-copyright
+  padding: 25px 0 14px
+  border-top: 1px solid transparentize(#243048, .9)
+  font-size: 14px
+  line-height: 20px
+  text-align: center
+  color: $main-color70
+
+.footer-developer
+  display: inline-block
+  padding: 10px 16px
+  margin-top: 15px
+  font-size: 12px
+  line-height: 16px
+  font-weight: 700
+  background-color: transparentize($color-darkblue, .9)
+  border-radius: 30px
+
++mq(tablet)
+  .footer-buttons-wrap
+    padding: 30px 0
+
+  .footer__social
+    padding: 0 0 30px
+    border: none
+
+    .footer__container
+      position: relative
+      padding-top: 30px
+
+      &:before
+        position: absolute
+        content: ''
+        top: 0
+        left: $co2
+        width: calc(100% - #{$co2} * 2)
+        border-top: 1px solid transparentize(#243048, .95)
+
+  .footer-copyright
+    padding: 30px 0
+    font-size: 12px
+    line-height: 16px
+    font-weight: 600
+    border-color: transparentize(#243048, .95)
+
+    .footer__container
+      display: flex
+      align-items: center
+
+  .footer-developer
+    margin: 0 0 0 auto
+
+  .footer__company
+    margin-right: 20px
+
++mq(desktop, max)
+  .footer-buttons-wrap
+    .social-list
+      display: none
+
+  .footer-menu-wrap__container
+    +disable-container
+
++mq(desktop)
+  .footer
+    overflow: hidden
+    border-radius: 36px 36px 0 0
+
+  .footer-buttons-wrap,
+  .footer-contacts
+    background-color: #F1F3F8
+
+  .footer__social
+    display: none
+
+  .footer-menu-wrap__container
+    padding-top: 34px
+    display: flex
+    position: relative
+
+    &:before
+      position: absolute
+      content: ''
+      top: 0
+      left: $co2
+      width: calc(100% - #{$co2} * 2)
+      border-top: 1px solid transparentize(#243048, .95)
+
+  .footer-menu
+    order: -2
+    margin-right: 30px
+
+  .footer-buttons-wrap
+    padding: 22px 0 18px
+
+    .social-list
+      margin-left: auto
+      margin-right: -12px
+
+  .footer-contacts
+    margin-left: auto
+
+  .footer-copyright
+    margin-top: 50px
+    padding: 20px 0
+    font-size: 14px
+    line-height: 16px
+    font-weight: 400
+
+  .footer-developer
+    padding: 13px 40px
+    font-size: 14px
+    line-height: 16px
+    font-weight: 400
+    background-color: transparent
+    border: 1px solid transparentize($color-darkblue, .8)
+
+    b
+      font-weight: 600

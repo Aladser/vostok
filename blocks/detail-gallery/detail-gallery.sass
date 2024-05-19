@@ -1,0 +1,206 @@
+.detail-gallery-slider
+  overflow: hidden
+  border-radius: 6px
+  width: 100%
+
+.detail-gallery-slide
+  height: 0
+  padding-bottom: 67%
+  position: relative
+
+  &_has-video
+    &:after
+      content: ''
+      +absoluteFluid
+      background-color: rgba(0, 0, 0, .3)
+
+.detail-gallery-slide__img
+  +absoluteFluid
+  border-radius: 6px
+  overflow: hidden
+
+  img
+    +absoluteFluid
+    object-fit: cover
+    object-position: center
+
+.detail-gallery-thumbs
+  margin-top: 10px
+
+.detail-gallery-thumbs-slider
+  border-radius: 6px
+
+.detail-gallery-thumb
+  width: 73px
+  height: auto
+  margin-right: 7px
+  z-index: 0
+
+  &.swiper-slide-thumb-active
+    .detail-gallery-thumb__img-wrap:after
+      opacity: 1
+
+.detail-gallery-thumb__img-wrap
+  padding-bottom: 56%
+  position: relative
+  overflow: hidden
+  border-radius: 6px
+
+  &:after
+    +absoluteFluid
+    content: ''
+    background-color: rgba(0, 0, 0, .3)
+    transition: opacity $default-transition
+    opacity: 0
+
+.detail-gallery-thumb__img
+  +absoluteFluid
+  object-fit: cover
+  object-position: center
+
+.detail-gallery-thumb__video
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  width: 28px
+  height: 28px
+  display: flex
+  align-items: center
+  justify-content: center
+  background-color: $color-red
+  border-radius: 50%
+  z-index: 1
+
+  svg
+    width: 10px
+    height: auto
+    margin-top: 1px
+    margin-left: 2px
+
+.detail-gallery-thumb__link
+  z-index: 2
+
+.detail-gallery-slide__video-link
+  z-index: 1
+
+.detail-gallery-slide__video
+  position: absolute
+  left: 50%
+  top: 50%
+  transform: translate(-50%, -50%)
+  width: 54px
+  height: 54px
+  border-radius: 50%
+  background: $color-red
+  display: flex
+  align-items: center
+  justify-content: center
+  pointer-events: none
+  z-index: 2
+
+  svg
+    width: 20px
+    height: auto
+    margin: 1px 0 0 1px
+
++mq(tablet)
+  .detail-gallery
+    display: flex
+    flex-direction: column
+
+  .detail-gallery-slider,
+  .detail-gallery-slide__img
+    border-radius: 12px
+
+  .detail-gallery-thumbs
+    margin-top: 16px
+
+  .detail-gallery-thumbs-slider,
+  .detail-gallery-thumb__img-wrap
+    border-radius: 8px
+
+  .detail-gallery-thumb
+    width: 94px
+    margin-right: 12px
+
++mq(desktop, max)
+  .detail-gallery-thumbs-arrow
+    display: none
+
++mq(desktop)
+  .detail-gallery-slider,
+  .detail-gallery-slide__img
+    border-radius: 16px
+
+  .detail-gallery-slide
+    &:hover
+      .detail-gallery-slide__img
+        &:after
+          opacity: 1
+
+  .detail-gallery-slide__img
+    &:after
+      +absoluteFluid
+      content: ''
+      background-color: rgba(0, 0, 0, .1)
+      transition: opacity $default-transition
+      opacity: 0
+
+  .detail-gallery-thumbs
+    margin-top: 15px
+    display: flex
+    align-items: center
+    margin-left: -39px
+
+  .detail-gallery-thumbs-slider
+    min-width: 0
+    flex-grow: 1
+
+  .detail-gallery-thumb
+    width: 121px
+    cursor: pointer
+
+    &.swiper-slide-thumb-active
+      cursor: default
+
+    &:hover
+      .detail-gallery-thumb__img-wrap:after
+        opacity: 1
+
+  .detail-gallery-thumb__video
+    width: 34px
+    height: 34px
+
+    svg
+      width: 12px
+
+  .detail-gallery-thumbs-arrow
+    flex-shrink: 0
+    width: 24px
+    height: 24px
+    display: flex
+    align-items: center
+    justify-content: center
+    transition: opacity $default-transition
+    opacity: 0.3
+
+    &.swiper-button-disabled
+      opacity: 0
+      pointer-events: none
+
+    &_next
+      margin-left: 15px
+
+    &_prev
+      margin-right: 15px
+
+      svg
+        transform: scaleX(-1)
+
+    &:hover
+      opacity: 1
+
+    svg
+      width: 8px
+      height: auto

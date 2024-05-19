@@ -1,0 +1,186 @@
+.index-company
+  display: grid
+  gap: 25px
+  margin: 40px 0 70px
+
+.index-company-item
+  position: relative
+  border-radius: 16px
+  overflow: hidden
+  min-width: 312px
+  min-height: 128px
+  z-index: 0
+  &:after
+    display: block
+    position: absolute
+    content: ''
+    background-color: #ECF0F8F7
+    width: 100%
+    height: 100%
+    z-index: -1
+
+.index-company-item-content
+  position: absolute
+  bottom: 27px
+  left: 25px
+
+.index-company-item__label
+  display: inline
+  font-size: 28px
+  font-weight: 700
+  line-height: 45px
+  letter-spacing: 1px
+  color: transparentize($color-darkblue, .6)
+  margin-right: 7px
+
+.index-company-item__number
+  font-size: 52px
+  font-weight: 700
+  line-height: 36px
+  letter-spacing: 1px
+  color: transparentize($color-darkblue, .3)
+  margin-bottom: 13px
+
+.index-company-item
+  &:nth-child(2)
+    .index-company-item__number
+      display: inline
+      margin-bottom: 5px
+
+.index-company-item__text
+  font-size: 16px
+  font-weight: 600
+  line-height: 20px
+  color: transparentize($color-darkblue, .2)
+
+.index-company-block-picture
+  +absoluteFluid
+
+.index-company-block__image
+  display: block
+  position: absolute
+  z-index: -2
+  width: 100%
+  height: 100%
+  object-fit: cover
+  object-position: center
+
+.index-company-text
+  margin-top: 5px
+
+.index-company-text__desc h3
+  font-size: 24px
+  font-weight: 700
+  line-height: 34px
+  color: $color-black
+  margin: 0 0 10px
+
+.index-company-text__desc
+  font-size: 14px
+  line-height: 26px
+  font-weight: 400
+  color: transparentize($color-darkblue, .3)
+
+.index-company-text__desc em
+  font-style: normal
+  font-weight: 700
+
+.index-company-text__link
+  font-weight: 600
+  border-bottom: 1px solid transparentize($color-darkblue, .1)
+  color: transparentize($color-darkblue, .1)
+
++mq(tablet)
+  .index-company
+    display: grid
+    grid-auto-flow: column
+    grid-template-columns: repeat(3, 1fr)
+    grid-template-rows: repeat(2, auto)
+    gap: 16px
+    margin-bottom: 60px
+
+  .index-company-item
+    min-width: 224px
+    min-height: 200px
+
+  .index-company-item-content
+    bottom: 47px
+
+  .index-company-item
+    &:nth-child(2)
+      .index-company-item-content
+        bottom: 27px
+      .index-company-item__number
+        display: block
+        margin-bottom: 12px
+
+  .index-company-item
+    border-radius: 18px
+
+  .index-company-item__label
+    display: block
+    font-size: 32px
+    margin: 0 0 7px
+
+  .index-company-text
+    grid-column: 1 / 4
+    grid-row: 2 / 3
+
+  .index-company-text
+    margin-top: 24px
+
+  .index-company-text__desc h3
+    font-size: 30px
+
+  .index-company-text__link
+    font-weight: 500
+
++mq(desktop)
+  .index-company
+    display: grid
+    grid-auto-flow: row
+    grid-template-columns: repeat(4, 1fr)
+    grid-template-rows: repeat(2, 1fr)
+    gap: 22px 24px
+    margin: 70px 0
+
+  .index-company-item
+    &:nth-child(2)
+      grid-column: 2 / 5
+      grid-row: 1 / 2
+      .index-company-item__number
+        display: inline
+        margin-bottom: 5px
+
+  .index-company-item-content
+    bottom: 30px
+    left: 30px
+
+  .index-company-item__label
+    display: inline
+    margin-bottom: 0
+
+  .index-company-item__number
+    display: block
+    font-size: 62px
+
+  .index-company-item__text
+    font-size: 18px
+
+  .index-company-text
+    margin-top: 14px
+    grid-column: 1 / 4
+    grid-row: 2 / 3
+
+  .index-company-text__desc h3
+    font-size: 36px
+    line-height: 36px
+    margin: 0 0 20px
+
+  .index-company-text__desc
+    font-size: 17px
+
+  .index-company-text__link
+    transition: $default-transition
+    &:hover
+      border-bottom: 1px solid transparent

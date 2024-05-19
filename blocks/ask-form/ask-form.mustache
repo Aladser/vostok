@@ -1,0 +1,42 @@
+<form method="post" action="{{action}}" class="ask-form form"
+    {{#ajax_component_id}} id="{{.}}"{{/ajax_component_id}}>
+    <div class="ask-form__container container">
+        <div class="ask-form__content">
+            <div class="form-top">
+                {{#title}}
+                    <div class="form__title">{{{.}}}</div>
+                {{/title}}
+                {{#sub_title}}
+                    <div class="form__subtitle">{{{.}}}</div>
+                {{/sub_title}}
+            </div>
+            <div class="form-content-fields">
+                {{#html_fields}}
+                    {{{html}}}
+                {{/html_fields}}
+            </div>
+            <div class="form-bottom">
+                <button class="form__submit button button_filled_blue" name="submit" type="submit">
+                    {{{submit_text}}}
+                </button>
+                {{#user_consent}}
+                    <div class="form-uc">
+                        {{{.}}}
+                    </div>
+                {{/user_consent}}
+            </div>
+        </div>
+        <div class="ask-form__img-wrap">
+            <img src="/local/assets/images/contacts/form-bg.svg"
+                 alt="Форма задать вопрос"
+                 width="262"
+                 height="180"
+                 loading="lazy"
+                 class="ask-form__img">
+        </div>
+    </div>
+</form>
+<script>
+    if (!window.initFeedback) window.initFeedback = []
+    window.initFeedback.push(() => new window.FeedbackForm('#{{ajax_component_id}}'))
+</script>

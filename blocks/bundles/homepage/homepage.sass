@@ -1,0 +1,105 @@
+@import '../../variables/variables'
+@import '../../mixins/mixins'
+@import '../../slider/slider'
+@import '../../infinite-button/infinite-button'
+@import '../../index-top/index-top'
+@import '../../products-list/products-list'
+@import '../../index-reviews/index-reviews'
+@import '../../index-stages/index-stages.sass'
+@import '../../index-faq/index-faq.sass'
+@import '../../index-company/index-company.sass'
+@import '../../index-get-car/index-get-car.sass'
+@import '../../index-blog/index-blog'
+
+.index-catalog
+  margin-top: 40px
+
+.index-catalog__head
+  display: flex
+  align-items: flex-end
+  margin-bottom: 24px
+
+.index-catalog__title
+  font-size: 28px
+  line-height: 34px
+  font-weight: 700
+  margin-right: 25px
+
+.index-catalog__link
+  margin-left: auto
+  margin-bottom: 6px
+  font-size: 14px
+  line-height: 16px
+  font-weight: 600
+  color: $main-color70
+  border-bottom: 1px solid currentColor
+
+.index-faq
+  margin-top: 40px
+
+.index-reviews
+  margin-top: 40px
+
+.index-catalog
+  margin-top: 40px
+
+.index-blog
+  margin-top: 40px
+
+.filter
+  margin-bottom: 35px
+  position: relative
+  z-index: 10
+
++mq(tablet)
+  .index-catalog
+    margin-top: 50px
+
+  .index-catalog__head
+    margin-bottom: 30px
+
+  .index-catalog__title
+    font-size: 30px
+
+  .index-faq
+    margin-top: 50px
+
+  .index-reviews
+    margin-top: 50px
+
+  .index-blog
+    margin-top: 50px
+
+  .filter
+    z-index: 5
+
++mq(desktop)
+  .index-catalog
+    margin-top: 70px
+
+  .index-catalog__title
+    font-size: 36px
+    line-height: 100%
+
+  .index-catalog__link
+    margin-bottom: 5px
+    transition: $default-transition
+
+    &:hover
+      border-color: transparent
+
+  .index-faq
+    margin-top: 70px
+
+  .index-reviews
+    margin-top: 70px
+
+  .index-blog
+    margin-top: 70px
+
++mq(wide-screen)
+  .index-reviews
+    margin-bottom: -70px
+
+    &:last-child
+      margin-bottom: 0

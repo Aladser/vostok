@@ -1,0 +1,24 @@
+{{#items.isNotEmpty}}
+<div class="requisites">
+    {{#title}}
+        <div class="requisites__title">{{{.}}}</div>
+    {{/title}}
+    <div class="requisites-items">
+        {{#items}}
+            <div class="requisites-item">
+                <div class="requisites-item__label">{{label}}</div>
+                <div class="requisites-item__filler"></div>
+                <div class="requisites-item__value">{{{value}}}</div>
+            </div>
+        {{/items}}
+    </div>
+    {{#downloadUrl}}
+        <a href="{{.}}" class="requisites-download" download>
+            <span class="requisites-download__text">Скачать реквизиты</span>
+            <span class="requisites-download__icon">
+                <svg width="9" height="10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.835 6.927V.2H3.413v6.727L1.006 4.465 0 5.494l4.124 4.218 4.124-4.218-1.005-1.029-2.408 2.462z" fill="#fff"/></svg>
+            </span>
+        </a>
+    {{/downloadUrl}}
+</div>
+{{/items.isNotEmpty}}

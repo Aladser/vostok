@@ -1,0 +1,33 @@
+.breadcrumbs
+  font-size: 14px
+  line-height: 100%
+  font-weight: 500
+  color: #9298A4
+  display: flex
+  overflow: auto hidden
+  margin: 0 -#{$co1} 30px
+  padding-left: $co1
+  scrollbar-width: none
+
+  &::-webkit-scrollbar
+    display: none
+
+.breadcrumbs-item
+  flex-shrink: 0
+
+.breadcrumbs-item_last
+  color: transparentize(#9298A4, .3)
+
+.breadcrumbs-separator
+  flex-shrink: 0
+  margin: 0 15px
+
++mq(desktop)
+  .breadcrumbs
+    margin-bottom: 50px
+
+  .breadcrumbs-item
+    &:not(.breadcrumbs-item_last)
+      transition: $default-transition
+      &:hover
+        color: $color-black

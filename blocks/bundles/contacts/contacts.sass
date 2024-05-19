@@ -1,0 +1,110 @@
+@import '../../variables/variables'
+@import '../../mixins/mixins'
+@import '../../units/units'
+@import '../../ask-form/ask-form'
+@import '../../requisites/requisites'
+
+.page-title
+  margin-bottom: 10px
+
+.breadcrumbs
+  margin-bottom: 0
+
+.contacts-top
+  margin-top: 40px
+
+.contacts-top__subtitle
+  font-size: 16px
+  line-height: 100%
+  color: $main-color70
+
+.contacts-top__header
+  margin-bottom: 44px
+
+.contacts-main__phone
+  font-size: 28px
+  line-height: 100%
+  font-weight: 700
+  letter-spacing: 0.07em
+
+.contacts-main__address,
+.contacts-main__email
+  margin-top: 10px
+  font-size: 15px
+  line-height: 24px
+  font-weight: 500
+
+.contacts-main__email
+  display: inline-block
+  margin-top: 10px
+
+.units
+  margin-top: 40px
+
+.requisites
+  margin-top: 40px
+
+.ask-form
+  margin-top: 20px
+
++mq(tablet)
+  .contacts-top
+    margin-top: 72px
+    display: flex
+
+  .page-title
+    font-size: 42px
+    line-height: 36px
+    margin-bottom: 20px
+
+  .contacts-top__header
+    max-width: 200px
+    flex-shrink: 0
+    margin-right: 99px
+    margin-bottom: 0
+
+  .contacts-main
+    min-width: 0
+    flex-grow: 1
+    max-width: 327px
+
+  .contacts-main__phone
+    font-size: 38px
+    line-height: 52px
+
+  .contacts-main__address,
+  .contacts-main__email
+    font-size: 16px
+
+  .units
+    margin-top: 60px
+
+  .requisites
+    margin-top: 50px
+
++mq(desktop)
+  .contacts-top
+    margin-top: 50px
+    justify-content: space-between
+
+  .contacts-top__header
+    margin-top: -8px
+
+  .page-title
+    font-size: 52px
+    line-height: 100%
+    margin-bottom: 12px
+
+  .contacts-main
+    max-width: 532px
+    margin-right: 25px
+
+  .contacts-main__phone
+    font-size: 52px
+    letter-spacing: 0.04em
+
+  .contacts-main__email
+    margin-top: 5px
+
+  .units
+    margin-top: 40px

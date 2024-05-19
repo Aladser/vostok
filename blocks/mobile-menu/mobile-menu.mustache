@@ -1,0 +1,52 @@
+{{#menu.isNotEmpty}}
+<div class="mobile-menu">
+    <div class="mobile-menu__container container scrollbar">
+        <div class="mobile-menu-list">
+            <ul class="mobile-menu-items">
+                {{#menu}}
+                    <li class="mobile-menu-item{{#menu.isNotEmpty}} mobile-menu-item_parent{{/menu.isNotEmpty}}">
+                        {{^menu.isNotEmpty}}
+                            <a href="{{href}}" class="mobile-menu-item__link">{{text}}</a>
+                        {{/menu.isNotEmpty}}
+                        {{#menu.isNotEmpty}}
+                            <button class="mobile-menu-item__btn-submenu" type="button">
+                                <span class="mobile-menu-item__btn-submenu-text">{{text}}</span>
+                                <svg class="mobile-menu-item__btn-submenu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.71495 18.8181C8.32109 18.4262 8.32221 17.7883 8.71746 17.3978L13.4616 12.7106C13.8575 12.3194 13.8579 11.6802 13.4624 11.2886L8.71844 6.59137C8.32294 6.19976 8.32329 5.56059 8.71922 5.16941L9.20001 4.69439C9.58953 4.30954 10.2161 4.30954 10.6057 4.69439L17.28 11.2886C17.6762 11.6801 17.6762 12.3199 17.28 12.7114L10.6081 19.3032C10.2176 19.689 9.58912 19.6879 9.19999 19.3007L8.71495 18.8181Z" fill="#2C3346" fill-opacity="0.8"/>
+                                </svg>
+                            </button>
+                            <div class="mobile-submenu">
+                                <div class="mobile-submenu__container container scrollbar">
+                                    <div class="mobile-submenu__back">
+                                        <a href="{{href}}" class="mobile-submenu__back-text">{{text}}</a>
+                                        <button class="mobile-submenu__back-btn" type="button">
+                                            <svg class="submenu__back-icon" width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M9.28505 1.18195C9.67892 1.57385 9.67779 2.21168 9.28254 2.60219L4.53838 7.28941C4.14245 7.68059 4.1421 8.31976 4.53761 8.71137L9.28156 13.4086C9.67706 13.8002 9.67671 14.4394 9.28078 14.8306L8.79999 15.3056C8.41047 15.6905 7.78387 15.6905 7.39434 15.3056L0.720004 8.71136C0.323772 8.31988 0.323772 7.68011 0.720004 7.28864L7.39185 0.696849C7.78236 0.311031 8.41088 0.312142 8.80002 0.699338L9.28505 1.18195Z" fill="#2C3346" fill-opacity="0.8"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <ul class="mobile-submenu-items">
+                                        {{#menu}}
+                                            <li class="mobile-submenu-item">
+                                                <a href="{{href}}" class="mobile-submenu-item__link">{{text}}</a>
+                                            </li>
+                                        {{/menu}}
+                                    </ul>
+                                </div>
+                            </div>
+                        {{/menu.isNotEmpty}}
+                    </li>
+                {{/menu}}
+            </ul>
+        </div>
+        <div class="mobile-menu__bottom">
+            <button class="mobile-menu-button button button_filled_blue modal-form-link"
+                    type="button"
+                    data-src="#write-form">Связаться с менеджером</button>
+            <button class="mobile-menu-button button button_filled_gray modal-form-link"
+                    type="button"
+                    data-src="#order-form">Отправить заявку</button>
+        </div>
+    </div>
+</div>
+{{/menu.isNotEmpty}}

@@ -1,0 +1,33 @@
+<div class="article">
+    <div class="article-container">
+        <h1 class="article__title">{{{title}}}</h1>
+        {{#previewText}}
+            <div class="article-view">
+                <span class="article-view__text">{{date}}</span>
+                <span class="article-view__text">{{time}}</span>
+                <span class="article-view__text">{{hash}}</span>
+            </div>
+        {{/previewText}}
+        {{#detailPicture}}
+            <div class="article-detail-picture-block">
+                {{#image.src}}
+                <picture class="article-detail-picture">
+                    {{#image.mdSrc}}
+                    <source media="(max-width: 767px)" srcset="{{.}}"/>
+                    {{/image.mdSrc}}
+                    {{#image.lgSrc}}
+                    <source media="(max-width: 1279px)" srcset="{{.}}"/>
+                    {{/image.lgSrc}}
+                    <img src="{{.}}" alt="{{image.alt}}" width="{{image.width}}" height="{{image.height}}" class="article-detail-picture__img">
+                </picture>
+                {{/image.src}}
+                {{#description}}
+                    <div class="article-detail-picture__caption">{{{.}}}</div>
+                {{/description}}
+            </div>
+        {{/detailPicture}}
+        {{#text}}
+            <div class="article-text">{{{.}}}</div>
+        {{/text}}
+    </div>
+</div>

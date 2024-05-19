@@ -1,0 +1,26 @@
+<div class="form-group{{#has_error}} form-group_has-error{{/has_error}}">
+  {{#label}}
+    <div class="form-group__title">
+      {{{.}}}{{#required}} <span class="form__astrix">*</span>{{/required}}
+    </div>
+  {{/label}}
+  {{#possibleValues.isNotEmpty}}
+    <div class="form-checkbox-list">
+      {{#possibleValues}}
+        <label class="form-label form-checkbox form-radio form-checkbox-item">
+          <input name="{{code}}"
+                 type="radio"
+                 value="{{value}}"
+            {{#checked}} checked{{/checked}}
+                 class="form-checkbox__control form__control form__control_radio form-hidden{{#requiredCssClass}} {{.}}{{/requiredCssClass}}{{#maskCssClass}} {{.}}{{/maskCssClass}}{{#additionalCssClass}} {{.}}{{/additionalCssClass}}">
+          <span class="form-checkbox__marker form-radio__marker"></span>
+          <span class="form-checkbox__text">{{title}}</span>
+        </label>
+      {{/possibleValues}}
+    </div>
+  {{/possibleValues.isNotEmpty}}
+  {{#show_error_message}}
+    <span class="form-group__message">{{{error_message}}}</span>
+  {{/show_error_message}}
+  {{#note}}<span class="form__note">{{{.}}}</span>{{/note}}
+</div>

@@ -1,0 +1,28 @@
+{{#cards.isNotEmpty}}
+<div class="index-blog">
+    <div class="index-blog-container container">
+        <div class="index-blog-header">
+            {{#title}}
+                <div class="index-blog-header__title">
+                    {{.}}
+                </div>
+            {{/title}}
+            {{#linkAll}}
+                <a href="{{href}}" class="index-blog-header__link">{{{text}}}</a>
+            {{/linkAll}}
+        </div>
+        <div class="index-blog-tabs swiper">
+            <div class="index-blog-tabs-wrapper swiper-wrapper">
+                {{#tabs}}
+                    <a href="{{href}}" class="index-blog-tab swiper-slide">
+                        {{text}}
+                    </a>
+                {{/tabs}}
+            </div>
+        </div>
+        <div class="index-blog-list">
+            {{> index-blog-card }}
+        </div>
+    </div>
+</div>
+{{/cards.isNotEmpty}}

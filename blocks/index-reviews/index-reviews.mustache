@@ -1,0 +1,72 @@
+{{#items.isNotEmpty}}
+<div class="index-reviews">
+    <div class="index-reviews__container container">
+	    <div class="index-reviews__head">
+	        {{#title}}
+	            <div class="index-reviews__title">{{{.}}}</div>
+	        {{/title}}
+		    {{#linkAll}}
+	            <a href="{{href}}" class="index-reviews__link-all">{{text}}</a>
+		    {{/linkAll}}
+	    </div>
+        <div class="index-reviews-slider-wrap">
+            <button class="index-reviews-slider__arrow index-reviews-slider__arrow_prev" type="button">
+                <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.75 12.343L6.158 7 .75 1.645 2.415 0 9.5 7l-7.085 7L.75 12.343z" fill="#282D3C" /></svg>
+            </button>
+            <div class="index-reviews-slider swiper">
+                <div class="swiper-wrapper">
+                    {{#items}}
+                        <div class="index-reviews-slide swiper-slide"{{#strMainId}} id="{{.}}"{{/strMainId}}>
+					        <div class="index-reviews-slide__top{{^video_duration}}{{^image}} index-reviews-slide__top_disable-shadow{{/image}}{{/video_duration}}">
+					            {{#image}}
+					                <img src="{{src}}"
+					                     alt="{{alt}}"
+					                     {{#width}} width="{{.}}" {{/width}}
+					                     {{#height}} height="{{.}}" {{/height}}
+					                     class="index-reviews-slide__img"
+					                     loading="lazy">
+				                {{/image}}
+						        {{^image}}
+                                    <img src="/local/assets/images/img-stubs/stub-vertical-1.jpg"
+                                         alt="{{title}}"
+	                                     width="364"
+	                                     height="398"
+                                         class="index-reviews-slide__img"
+                                         loading="lazy">
+						        {{/image}}
+					            {{#video_duration}}
+						            <div class="index-reviews-slide-video">
+                                        <div class="index-reviews-slide-video__icon">
+                                            <svg width="8" height="11" viewBox="0 0 8 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M.384.063a.774.774 0 0 0-.351.45C.01.604 0 2.23 0 5.527c0 5.346-.011 5.01.179 5.24.165.2.483.29.7.197.126-.055 6.778-4.794 6.901-4.917a.793.793 0 0 0 0-1.095C7.657 4.827 1.005.088.878.033a.678.678 0 0 0-.494.03z" fill="#1C2D50"/></svg>
+                                        </div>
+                                        <div class="index-reviews-slide-video__time">{{.}}</div>
+                                    </div>
+					            {{/video_duration}}
+					        </div>
+                            <div class="index-reviews-slide__content">
+	                            {{#date}}
+                                    <div class="index-reviews-slide__date">{{.}}</div>
+	                            {{/date}}
+	                            {{#title}}
+                                    <div class="index-reviews-slide__title">{{.}}</div>
+	                            {{/title}}
+	                            {{#text}}
+                                    <div class="index-reviews-slide__text">{{{.}}}</div>
+	                            {{/text}}
+                                <div class="index-reviews-slide__button">Подробнее</div>
+                            </div>
+	                        {{#detailPageUrl}}
+                                <a href="#" class="index-reviews-slide__link link-as-card"></a>
+	                        {{/detailPageUrl}}
+                        </div>
+                    {{/items}}
+                </div>
+            </div>
+            <button class="index-reviews-slider__arrow index-reviews-slider__arrow_next" type="button">
+                <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.75 12.343L6.158 7 .75 1.645 2.415 0 9.5 7l-7.085 7L.75 12.343z" fill="#282D3C" /></svg>
+            </button>
+            <div class="index-reviews-slider-scrollbar slider-scrollbar"></div>
+        </div>
+    </div>
+</div>
+{{/items.isNotEmpty}}

@@ -1,0 +1,44 @@
+{{#items.isNotEmpty}}
+    <div class="index-stages">
+        <div class="index-stages__container container">
+            <div class="index-stages-heading">
+                {{#title}}
+                    <div class="index-stages-heading__title">
+                        {{{.}}}
+                    </div>
+                {{/title}}
+                {{#subtitle}}
+                    <div class="index-stages-heading__subtitle">
+                        {{.}}
+                    </div>
+                {{/subtitle}}
+            </div>
+            <div class="index-stages-items">
+                {{#items}}
+                    <div class="index-stages-item"{{#strMainId}} id="{{.}}"{{/strMainId}}>
+                        {{#number}}
+                            <div class="index-stages-item__number">
+                                {{.}}
+                            </div>
+                        {{/number}}
+                        <div class="index-stages-item-text">
+                            {{#title}}
+                                <div class="index-stages-item__title">
+                                    {{.}}
+                                </div>
+                            {{/title}}
+                            {{#text}}
+                                <div class="index-stages-item__subtitle">
+                                    {{.}}
+                                </div>
+                            {{/text}}
+                        </div>
+                    </div>
+                {{/items}}
+            </div>
+            {{#image}}
+                <img src="{{src}}" alt="{{alt}}" width="{{width}}" height="{{height}}" class="index-stages-img" loading="lazy">
+            {{/image}}
+        </div>
+    </div>
+{{/items.isNotEmpty}}

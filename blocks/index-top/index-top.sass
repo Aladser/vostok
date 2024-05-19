@@ -1,0 +1,132 @@
+.index-top
+  position: relative
+
+.index-top-slider
+  border-radius: 30px
+
+.index-top-slider-arrow
+  padding: 10px
+  position: absolute
+  top: 50%
+  transform: translateY(-50%)
+  display: flex
+  z-index: 1
+  opacity: .3
+  transition: $default-transition
+
+  &_prev
+    left: -48px
+
+    svg
+      transform: scaleX(-1)
+
+  &_next
+    right: -48px
+
+  &:hover
+    opacity: .7
+
+.index-top-slide
+  position: relative
+  padding-bottom: 134%
+  overflow: hidden
+  border-radius: 30px
+
+.index-top-slide__img,
+.index-top-slide__img img
+  +absoluteFluid
+  object-fit: cover
+  object-position: center
+
+.index-top-slide__content
+  +absoluteFluid
+  padding: 30px 18px 23px 20px
+
+.index-top-slide__title
+  font-size: 24px
+  line-height: 32px
+  font-weight: 700
+
+.index-top-slide__subtitle
+  margin-top: 20px
+  font-size: 17px
+  line-height: 24px
+  letter-spacing: 0.02em
+
+  b
+    font-weight: 600
+
+.index-top-slide__button
+  margin-top: 20px
+  display: inline-block
+  padding: 12px 42px
+  background: linear-gradient(92.37deg, #13306D 4.49%, #3357A2 99.68%)
+  color: #fff
+  border-radius: 100px
+  font-size: 14px
+  line-height: 20px
+  font-weight: 700
+  text-align: center
+
+.index-top-slider-pagination
+  margin-top: 22px
+
++mq(tablet)
+  .index-top-slide
+    padding-bottom: 60%
+
+  .index-top-slide__content
+    padding: 60px 37px
+    max-width: 556px
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: flex-start
+
+  .index-top-slide__title
+    font-size: 32px
+    line-height: 36px
+    font-weight: 700
+
+  .index-top-slide__subtitle
+    margin-top: 10px
+    line-height: 26px
+
+  .index-top-slide__button
+    margin-top: 60px
+
+  .index-top-slider-pagination
+    margin-top: 20px
+
++mq(desktop, max)
+  .index-top-slider-arrow
+    display: none
+
++mq(desktop)
+  .index-top
+    .index-top-slider-pagination
+      bottom: 25px
+
+  .index-top-slide
+    padding-bottom: 41%
+
+  .index-top-slide__content
+    padding: 70px
+    max-width: 770px
+
+  .index-top-slide__title
+    font-size: 42px
+    line-height: 48px
+
+  .index-top-slide__subtitle
+    margin-top: 15px
+    max-width: 568px
+    font-size: 19px
+
+  .index-top-slide__button
+    margin-top: 30px
+
+  .index-top-slider-pagination
+    margin: 0
+    position: absolute
+    z-index: 2

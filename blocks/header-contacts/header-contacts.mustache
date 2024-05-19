@@ -1,0 +1,16 @@
+<div class="header-contacts">
+    <div class="header-contacts__label">WhatsApp</div>
+    <svg class="header-contacts__icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.19 19.491a9.71 9.71 0 0 1-4.752-1.221L0 20l1.779-5.216A9.744 9.744 0 0 1 .381 9.745C.381 4.351 4.778 0 10.191 0 15.602 0 20 4.351 20 9.745c0 5.395-4.396 9.746-9.81 9.746zm4.93-7.455c-.05-.102-.228-.153-.457-.28-.254-.127-1.423-.713-1.652-.79-.203-.075-.38-.1-.533.128-.153.255-.61.789-.763.942-.127.152-.28.178-.508.05-.229-.127-1.017-.381-1.931-1.195-.712-.636-1.195-1.425-1.347-1.654-.153-.23-.026-.357.102-.484.101-.102.228-.28.355-.407.102-.153.153-.254.229-.407.076-.153.025-.28-.025-.407-.051-.127-.534-1.298-.737-1.781-.204-.484-.382-.407-.534-.407-.127 0-.305-.026-.457-.026-.153 0-.407.076-.636.305-.229.23-.838.815-.838 1.985 0 1.17.864 2.316.99 2.468.128.178 1.678 2.647 4.118 3.614 2.465.941 2.465.636 2.897.585.432-.051 1.423-.585 1.626-1.145.178-.56.178-1.044.102-1.094z" fill="#90C87D"/></svg>
+    {{#phone}}
+        <div class="header-phone">
+            <a href="{{href}}" class="header-phone__value{{#popupContacts}} mobile-hide desktop-show{{/popupContacts}}">{{text}}</a>
+            {{#popupContacts}}
+                <button class="header-phone__value desktop-hide" data-src="#contacts-popup" data-fancybox type="button">{{text}}</button>
+            {{/popupContacts}}
+            <svg class="header-phone__icon" width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.866 7.5a1 1 0 0 1-1.732 0L.67 1.5A1 1 0 0 1 1.536 0h6.928a1 1 0 0 1 .866 1.5l-3.464 6z" fill="#2C3346"/></svg>
+            {{#popupContacts}}
+                {{> contacts-popup }}
+            {{/popupContacts}}
+        </div>
+    {{/phone}}
+</div>

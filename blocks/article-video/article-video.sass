@@ -1,0 +1,59 @@
+.article-video
+  position: relative
+  margin: 0 auto
+  margin-top: 10px
+  margin-bottom: 20px
+  max-width: 704px
+
+  a
+    border: none
+
+    a:hover
+      border: none
+
+.article-video-preview
+  position: relative
+  background-color: transparentize($color-blue, 0.7)
+  border-radius: 12px
+  padding-bottom: 49%
+  overflow: hidden
+
+.article-video__img
+  position: absolute
+  width: auto
+  height: 100%
+  left: 50%
+  transform: translateX(-50%)
+
+.article-video__plague
+  position: absolute
+  top: 0
+  bottom: 0
+  left: 0
+  right: 0
+
+.article-video__svg
+  position: absolute
+  background-color: $color-red
+  border-radius: 100px
+  box-shadow: 0 4px 10px 0 #EA433D80
+  padding: 15px 15px 15px 33px
+  width: 80px
+  height: 54px
+  pointer-events: none
+  top: calc( 50% - 54px / 2 )
+  left: calc( 50% - 80px / 2 )
+  transition: $default-transition
+
++mq(tablet)
+  .article-video
+    margin-top: 5px
+
++mq(desktop)
+  .article-video
+    margin-bottom: 30px
+    max-width: 849px
+
+  .article-video:hover
+    .article-video__svg
+      background-color: #D61D2F

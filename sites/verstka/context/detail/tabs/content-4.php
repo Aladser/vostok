@@ -1,0 +1,1 @@
+<?= $mustache->render('index-faq', include $_SERVER['DOCUMENT_ROOT'] . '/context/detail/faq.php') ?>

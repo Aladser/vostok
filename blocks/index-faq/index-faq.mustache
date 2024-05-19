@@ -1,0 +1,31 @@
+{{#items.isNotEmpty}}
+    <div class="index-faq">
+        <div class="index-faq-container container">
+            {{#title}}
+                <div class="index-faq__title">{{{.}}}</div>
+            {{/title}}
+            <div class="index-faq-list">
+                {{#items}}
+                    <div class="index-faq-item"{{#strMainId}} id="{{.}}"{{/strMainId}}>
+                        <div class="index-faq-item-top">
+                            <button class="index-faq-item__title" type="button">
+                                {{{title}}}
+                            </button>
+                            <div class="index-faq-item__icon">
+                                <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <rect x="9" y="0.570312" width="2" height="21.4286" fill="#BE1E2D"/>
+                                    <rect x="20" y="10.2129" width="2.14286" height="20" transform="rotate(90 20 10.2129)" fill="#BE1E2D"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="index-faq-item-hidden">
+                            <div class="index-faq-item__text">
+                                {{{text}}}
+                            </div>
+                        </div>
+                    </div>
+                {{/items}}
+            </div>
+        </div>
+    </div>
+{{/items.isNotEmpty}}

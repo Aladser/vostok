@@ -1,0 +1,42 @@
+.form__control_select
+  appearance: none
+  cursor: pointer
+
+.form-select-dd_expand
+  z-index: 1
+  transition: z-index 0s
+  .dropdown-list
+    z-index: 100
+    visibility: visible
+    transition: transform $default-transition, visibility $default-transition, z-index $default-transition
+    transform: translateY(0)
+
+.form-select__option
+  border: none
+
+.form-select-current
+  display: block
+  position: relative
+  z-index: 0
+
+.form-select__value_selected,
+.form-select__option:checked
+  display: none
+
++mq(tablet, max)
+  .form-select-current__text,
+  .form-select-hidden
+    display: none
+
++mq(tablet)
+  .form-select__control
+    opacity: 0
+    visibility: hidden
+    width: 0
+    height: 0
+    position: absolute
+    top: 0
+    left: 0
+
+  .form-select-current
+    -webkit-appearance: none

@@ -1,0 +1,42 @@
+{{#cards}}
+    <div class="index-blog-card"{{#strMainId}} id="{{.}}"{{/strMainId}}>
+        {{#image}}
+            <div class="index-blog-card-img">
+                <img src="{{src}}" alt="{{alt}}" width="{{width}}" height="{{height}}" class="index-blog-card__image" loading="lazy">
+            </div>
+        {{/image}}
+        {{#aside}}
+            <div class="index-blog-card-aside">
+                {{#date}}
+                    <div class="index-blog-card__date">
+                        {{.}}
+                    </div>
+                {{/date}}
+                {{#sections}}
+                    <div class="index-blog-card__sections">
+                        | {{.}}
+                    </div>
+                {{/sections}}
+            </div>
+        {{/aside}}
+        {{#title}}
+            <div class="index-blog-card__title">
+                {{.}}
+            </div>
+        {{/title}}
+        {{#subtitle}}
+            <div class="index-blog-card__subtitle">
+                {{.}}
+            </div>
+        {{/subtitle}}
+        {{#detailPageUrl}}
+            <a href="{{.}}" class="link-as-card"></a>
+        {{/detailPageUrl}}
+        {{#link}}
+            <div class="index-blog-card-button">
+                <a href="{{href}}" class="index-blog-card__link">{{text}}</a>
+            </div>
+        {{/link}}
+    </div>
+{{/cards}}
+{{{navigation}}}

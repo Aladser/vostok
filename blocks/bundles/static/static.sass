@@ -1,0 +1,56 @@
+@import '../../variables/variables'
+@import '../../mixins/mixins'
+@import '../../side-menu/side-menu'
+@import '../../article/article-base'
+@import '../../seo-text/seo-text'
+
+.static
+  padding-bottom: 50px
+
+.page-content
+  padding-top: 25px
+
+.static__bottom
+  margin-top: 50px
+  padding-top: 50px
+  border-top: 1px solid transparentize(#9298A4, .7)
+
++mq(tablet)
+  .static
+    padding-bottom: 60px
+
+  .static__bottom
+    margin-top: 60px
+    padding-top: 50px
+
+  .page-columns
+    display: flex
+
+  .side-menu-wrap
+    width: 202px
+    flex-shrink: 0
+    margin-right: 38px
+
+  .page-content
+    padding: 0
+    min-width: 0
+    flex-grow: 1
+
++mq(desktop)
+  .static
+    padding-bottom: 50px
+
+  .static__bottom
+    margin-top: 80px
+
+  .side-menu-wrap
+    width: 307px
+    padding-right: 30px
+    margin-right: 40px
+
+    border-right: 1px solid transparentize(#9298A4, .7)
+
++mq(wide-screen)
+  .side-menu-wrap
+    padding-right: 40px
+    margin-right: 80px

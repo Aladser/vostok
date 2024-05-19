@@ -1,0 +1,165 @@
+@import '../../variables/variables'
+@import '../../mixins/mixins'
+@import '../../custom-fancybox/custom-fancybox'
+
+*,
+*:before,
+*:after
+  box-sizing: border-box
+
+a
+  +link-preset
+
+ul
+  +list-preset
+
+button
+  +button-preset
+
+input,
+textarea
+  +input-preset
+
+.link-as-card
+  +absoluteFluid
+
+.page-sidebar
+  display: none
+
+.page
+  margin: 0
+  padding: 0
+  color: $main-color
+  background-color: #fff
+  font-size: 16px
+  font-family: $default-font
+  font-weight: normal
+  font-style: normal
+  line-height: 1.25
+  --scrollbar-width: 17px
+
+  &_no-scroll
+    overflow: hidden
+    height: 100vh
+
+  .page-inner
+    overflow: hidden
+
+.page-inner
+  min-height: 100vh
+  position: relative
+  display: flex
+  flex-direction: column
+
+.page_modal-opened
+  overflow: hidden
+  padding-right: var(--scrollbar-width)
+
+.main
+  padding-top: $hh1 + 24px
+  min-height: 70vh
+
+.page-title
+  margin: 0 0 18px
+  font-size: 28px
+  line-height: 34px
+  font-weight: 700
+  color: $color-black
+
+.clearfix
+  +clearfix()
+
+.mobile
+  &-hide
+    display: none
+  &-show
+    display: inline
+
++mq(tablet, max)
+  .tablet-only
+    display: none
+
++mq(tablet)
+  .tablet
+    &-hide
+      display: none
+    &-show
+      display: inline
+    &-only
+      display: block
+    &-block
+      display: block
+
+  .main
+    padding-top: $hh2 + 22px
+
+  .page-title
+    font-size: 30px
+    margin-bottom: 30px
+
++mq(desktop, max)
+  .desktop-only
+    display: none
+
++mq(desktop)
+  .tablet-only
+    display: none
+
+  .desktop
+    &-hide
+      display: none
+    &-show
+      display: inline
+
+  .main
+    padding-top: $hh3 + 30px
+
+  .page-title
+    font-size: 36px
+    line-height: 39px
+    margin-bottom: 46px
+
+  .page-sidebar
+    width: calc(234px + (100vw - 100%) / 2)
+    min-width: 234px
+    padding-top: 104px
+    padding-left: 27px
+    margin-right: calc((100vw - #{$wp3}) / 2 * -1 - #{$co3} + var(--scrollbar-width) / 2)
+    padding-right: calc((100vw - #{$wp3}) / 2 + #{$co3} - var(--scrollbar-width) / 2)
+    background-color: #F1F7FE
+
+  .page-columns
+    display: flex
+    position: relative
+    min-height: 0
+    flex-grow: 1
+    margin-top: 137px
+
+  .page-sidebar
+    display: block
+    margin-left: 50px
+    flex-shrink: 0
+
+  .page-content
+    min-width: 0
+    flex-grow: 1
+    padding-top: 25px
+
+  .main-width-sidebar
+    padding-top: 0
+    display: flex
+    flex-direction: column
+
+.animate
+  transition: 0.3s
+  &:not(.loaded)
+    opacity: 0
+
+
+@import '../../button/button'
+@import '../../container/container'
+@import '../../header/header'
+@import '../../breadcrumbs/breadcrumbs'
+@import '../../scrollbar/scrollbar'
+@import '../../footer/footer'
+@import '../../cookie-alert/cookie-alert'

@@ -1,0 +1,75 @@
+<div class="detail-top">
+    <div class="detail-top__image">
+        {{#gallery.isNotEmpty}}
+            {{> detail-gallery }}
+        {{/gallery.isNotEmpty}}
+        {{^gallery.isNotEmpty}}
+            {{! todo: заменить путь к заглушке после ответа дизайнера }}
+            <div class="detail-top__image-stub-wrap">
+                <picture class="detail-top__image-stub">
+                    <source media="(max-width: 767px)" srcset="/local/assets/images/img-stubs/img-hor-stub-mobile.jpg, local/assets/images/img-stubs/img-hor-stub-mobile.jpg 2x">
+                    <source srcset="/local/assets/images/img-stubs/img-hor-stub.jpg">
+                    <img src="/local/assets/images/img-stubs/img-hor-stub-mobile.jpg"
+                         width="362"
+                         height="242"
+                         alt="{{title}}">
+                </picture>
+            </div>
+        {{/gallery.isNotEmpty}}
+    </div>
+    <div class="detail-top-main">
+        {{> detail-share }}
+        <h1 class="detail-top__title">{{{title}}}</h1>
+        {{#vendorCode}}
+            <div class="detail-top__id">ID: {{.}}</div>
+        {{/vendorCode}}
+        {{#price}}
+            <div class="detail-price">
+                {{#basePrice}}
+                    <div class="detail-price__base">{{show}} {{currency}}</div>
+                {{/basePrice}}
+                {{#additionalPrice}}
+                    <div class="detail-price__additional">{{show}} {{currency}}</div>
+                {{/additionalPrice}}
+                {{#notice}}
+                    <div class="detail-price-notice">
+                        <button class="detail-price-notice__btn" data-src="#detail-price-notice-tip" data-fancybox type="button">
+                            <svg class="detail-price-notice__icon" xmlns="http://www.w3.org/2000/svg" width="29" height="29" fill="none" viewBox="0 0 29 29"><g fill="#2C3346"><path d="M14.112 0C6.38 0 .09 6.29.09 14.023c0 7.732 6.29 14.022 14.022 14.022s14.023-6.29 14.023-14.022S21.845 0 14.112 0Zm0 25.495c-6.326 0-11.473-5.146-11.473-11.472C2.64 7.696 7.786 2.55 14.112 2.55c6.327 0 11.473 5.146 11.473 11.473 0 6.326-5.146 11.472-11.473 11.472Z"/><path d="M14.112 5.949c-.937 0-1.7.763-1.7 1.7 0 .937.763 1.7 1.7 1.7.937 0 1.7-.763 1.7-1.7 0-.937-.763-1.7-1.7-1.7Zm0 5.949c-.704 0-1.274.57-1.274 1.274v7.649a1.275 1.275 0 0 0 2.55 0v-7.649c0-.704-.572-1.274-1.276-1.274Z"/></g></svg>
+                        </button>
+                        <div class="detail-price-notice-tip" id="detail-price-notice-tip">
+                            {{{.}}}
+                            <span class="detail-price-notice-tip__arrow"></span>
+                        </div>
+                    </div>
+                {{/notice}}
+            </div>
+        {{/price}}
+        {{#propsShort.isNotEmpty}}
+            <div class="detail-props">
+                <div class="detail-props__header">Характеристики:</div>
+                <div class="detail-props-list">
+                    {{#propsShort}}
+                        <div class="detail-prop">
+                            <div class="detail-prop__label">{{label}}</div>
+                            <div class="detail-prop__filler"></div>
+                            <div class="detail-prop__value">{{value}}</div>
+                        </div>
+                    {{/propsShort}}
+                </div>
+                <button class="detail-props__button" type="button">Все характеристики</button>
+            </div>
+        {{/propsShort.isNotEmpty}}
+    </div>
+    <div class="detail-buttons{{#auctionSheet}} detail-buttons_tablet-center{{/auctionSheet}}">
+        <button class="detail-button button button_filled_blue modal-form-link" data-src="#order-form" data-product-id="{{id}}" type="button">Оставить заявку</button>
+        {{#auctionSheet}}
+            <button class="detail-button button button_filled_gray" data-src="{{first}}" type="button" data-fancybox="auction-sheet">
+                <svg class="detail-button__icon" width="22" height="21" viewBox="0 0 22 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.407 9.019a7.487 7.487 0 0 0 7.487 7.487h4.492L20.437 20V9.019A7.487 7.487 0 0 0 12.95 1.53H8.894A7.487 7.487 0 0 0 1.407 9.02z" stroke="#fff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/><path d="M10.89 10.017c-4.145 0-3.99-.006-3.993 0a6.72 6.72 0 0 0 0-4.992c4.146 0 3.991.007 3.993 0a6.72 6.72 0 0 0 0 4.992zM6.897 13.012h3.994" stroke="#fff" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                Аукционный лист
+              {{#items}}
+                <span data-fancybox="auction-sheet" data-src="{{{.}}}"></span>
+              {{/items}}
+            </button>
+        {{/auctionSheet}}
+    </div>
+</div>

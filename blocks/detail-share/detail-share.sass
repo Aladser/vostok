@@ -1,0 +1,64 @@
+.detail-share
+  display: flex
+  align-items: center
+  font-size: 13px
+  line-height: 20px
+  font-weight: 500
+  position: relative
+  z-index: 1
+
+  &_show-tip
+    .detail-share__tip
+      visibility: visible
+      opacity: 1
+      transform: translateY(0)
+
+    .detail-share__text,
+    .detail-share__icon
+      opacity: 1
+
+.detail-share__text,
+.detail-share__icon
+  opacity: 0.7
+  transition: opacity $default-transition
+
+.detail-share__icon
+  width: 15px
+  height: auto
+  flex-shrink: 0
+  margin-right: 5px
+
+.detail-share__tip
+  position: absolute
+  left: -5px
+  bottom: calc(100% + 10px)
+  min-width: 168px
+  padding: 10px 15px
+  background-color: $main-color
+  color: #fff
+  border-radius: 4px
+  font-size: 12px
+  line-height: 14px
+  font-weight: 500
+  pointer-events: none
+  transform: translateY(10px)
+  visibility: hidden
+  opacity: 0
+  transition: $default-transition
+
+  &:before
+    content: ''
+    position: absolute
+    left: 24px
+    bottom: -13px
+    width: 22px
+    height: 22px
+    background-color: $main-color
+    transform: translate(-50%, -50%) rotate(319deg) skew(349deg, -18deg)
+    border-bottom-left-radius: 5px
+    border-top-right-radius: 15px
+
+  &:after
+    content: 'Ссылка скопирована'
+    position: relative
+    z-index: 1

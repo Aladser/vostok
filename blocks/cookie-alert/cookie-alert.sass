@@ -1,0 +1,87 @@
+.cookie-alert
+  position: fixed
+  bottom: 0
+  right: 0
+  left: 0
+  z-index: 2
+
+.cookie-alert-background
+  position: absolute
+  bottom: 0
+  right: 0
+  width: 640px
+  height: 640px
+  background: radial-gradient(68.87% 68.87% at -0.12% 2.34%, rgba(44, 51, 70, 0.4) 0%, rgba(217, 217, 217, 0) 100%)
+  transform: rotate(180deg)
+  pointer-events: none
+
+.cookie-alert-block
+  position: absolute
+  bottom: 35px
+  left: 50%
+  transform: translate(-50%)
+  background-color: #fff
+  width: 312px
+  max-width: 100%
+  padding: 25px
+  border-radius: 12px
+  border: 1px solid #E2E2E2
+  box-shadow: 0 8px 24px 0 #8187BD1A
+
+.cookie-alert__text
+  font-size: 13px
+  line-height: 20px
+  margin-bottom: 20px
+  color: transparentize($main-color, 0.1)
+
+.cookie-alert__more
+  border-bottom: 1px solid transparentize($main-color, 0.1)
+  font-size: 12px
+  line-height: 22px
+  margin-bottom: 20px
+  color: transparentize($main-color, 0.1)
+
+.cookie-alert__button
+  border-radius: 100px
+  padding: 11px
+  font-size: 14px
+  line-height: 14px
+  letter-spacing: 0.03em
+  font-weight: 600
+  text-align: center
+  color: #fff
+  width: 100%
+  margin-top: 20px
+
++mq(tablet)
+  .cookie-alert-background
+    width: 768px
+    height: 768px
+
+  .cookie-alert__text
+    font-size: 14px
+
+  .cookie-alert-block
+    bottom: 36px
+    left: auto
+    transform: translate(0)
+    right: 32px
+    width: 426px
+
+  .cookie-alert__button
+    width: auto
+    min-width: 143px
+
++mq(desktop)
+  .cookie-alert-block
+    bottom: 35px
+    right: 35px
+
+  .cookie-alert-background
+    width: 661px
+    height: 661px
+
+  .cookie-alert__more
+    transition: border-color $default-transition
+    &:hover
+      border-color: transparent

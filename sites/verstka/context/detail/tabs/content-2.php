@@ -1,0 +1,1 @@
+<?= $mustache->render('docs-list', include $_SERVER['DOCUMENT_ROOT'] . '/context/detail/docs.php') ?>

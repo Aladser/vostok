@@ -1,0 +1,138 @@
+.form-file-wrapper
+  position: relative
+
+.form-file
+  font-size: 14px
+  line-height: 18px
+  position: relative
+  z-index: 0
+  text-align: center
+  color: #000
+
+.form-group_has-error
+  .form-file-label
+    border-color: #f00
+    background-color: rgba(255, 0, 0, .1)
+
+  .form-file__close
+    path
+      stroke: #f00
+
+.form-file_dragged-enter .form-file-label
+  background-color: rgba(255, 0, 0, .1)
+  border-color: #f00
+
+.form-file__filename_default
+  display: none
+
+.form-file_filled
+  .form-file-label
+    background-color: #000
+
+  .form-file__filename_complete
+    display: block
+
+  .form-file__text
+    margin-bottom: 15px
+
+  .form-file-icon_default
+    display: none
+
+  .form-file-icon_complete
+    display: block
+
+  .form-file__close
+    opacity: 1
+    visibility: visible
+
+.form-file-label
+  display: flex
+  border: 2px dashed #DFDFDF
+  border-radius: 10px
+  padding: 20px 16px
+  transition: $default-transition
+
+.form-file-content
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-direction: column
+  width: 100%
+  min-height: 100%
+
+.form-file-icon-container
+  margin-bottom: 9px
+  height: 24px
+  max-width: 100%
+  +svg
+
+.form-file-icon_complete
+  display: none
+
+.form-file__text
+  em
+    font-style: normal
+    color: #f00
+
+  b
+    font-weight: 500
+
+.form-file-filename-container
+  margin-top: auto
+
+.form-file__filename
+  font-size: 12px
+  font-weight: 500
+  transition: border $default-transition
+
+.form-file__filename_complete
+  display: none
+
+.form-file__close
+  position: absolute
+  top: 0
+  right: 0
+  width: 48px
+  height: 48px
+  padding: 16px
+  opacity: 0
+  visibility: hidden
+  transition: $default-transition
+  +svg
+
+  svg path
+    stroke: rgba(255, 255, 255, .5)
+
+.form-file__dropzone
+  position: absolute
+  top: -2px
+  bottom: -2px
+  left: -2px
+  right: -2px
+
++mq(tablet, max)
+  .form-group__message
+    text-align: center
+
++mq(tablet)
+  .form-file
+    font-size: 12px
+    line-height: 14px
+
+  .form-file-icon-container
+    height: 21px
+    margin-bottom: 6px
+
+  .form-file-filename-container
+    display: none
+
+  .form-file-label
+    padding: 14px 20px 13px
+
+  .form-file_filled
+    .form-file__text
+      margin-bottom: 0
+
++mq(desktop)
+  .form-file
+    color: #828282

@@ -1,0 +1,16 @@
+.tab-panels
+  transition: $default-transition
+
+.tab-panel
+  display: none
+  opacity: 0
+  visibility: hidden
+  transition: $default-transition
+
+  &_active
+    display: block
+
+  &_in
+    opacity: 1
+    visibility: visible
+    transition: visibility $default-transition, opacity $default-transition $default-transition

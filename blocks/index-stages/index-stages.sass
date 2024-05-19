@@ -1,0 +1,187 @@
+.index-stages
+  border-radius: 36px
+  background: $color-gray
+  padding: 40px 0
+  margin-bottom: 40px
+
+.index-stages-heading__title
+  font-size: 21px
+  font-weight: 700
+  line-height: 32px
+  color: $color-black
+  margin-bottom: 15px
+
+.index-stages-heading__title em
+  display: inline-block
+  position: relative
+  font-style: normal
+  color: #FFF
+  text-align: center
+  z-index: 0
+  padding: 0 10px 0 11px
+  margin: 0 4px
+  &:after
+    display: block
+    position: absolute
+    content: ''
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    z-index: -1
+    background-color: $color-red
+    border-radius: 50%
+
+.index-stages-heading__subtitle
+  font-size: 17px
+  font-weight: 400
+  line-height: 26px
+  color: $main-color80
+
+.index-stages-items
+  margin-top: 35px
+
+.index-stages-item
+  margin-bottom: 35px
+  &:last-child
+    margin-bottom: 0
+
+.index-stages-item__number
+  position: relative
+  display: inline-block
+  color: transparentize(#2B4375, .4)
+  font-size: 42px
+  font-weight: 700
+  line-height: 42px
+  margin: 0 0 9px 20px
+
+.index-stages-item__number
+  &:before
+    position: absolute
+    display: inline-block
+    content: ''
+    background-color: $color-red
+    width: 10px
+    height: 10px
+    border-radius: 50%
+    top: 16px
+    left: -20px
+
+.index-stages-item__title
+  font-size: 18px
+  font-weight: 700
+  line-height: 22px
+  margin-bottom: 10px
+
+.index-stages-item__subtitle
+  color: $main-color70
+  font-size: 15px
+  font-weight: 400
+  line-height: 24px
+
+.index-stages-img
+  display: none
+
+@media screen and (max-width: 480px)
+  .index-stages-heading
+    max-width: 275px
+
++mq(tablet)
+  .index-stages
+    position: relative
+    padding: 54px 0 62px
+    margin-bottom: 50px
+
+  .index-stages-heading__title
+    font-size: 26px
+    line-height: 35px
+    margin-bottom: 20px
+
+  .index-stages-heading__title em
+    padding: 5px 16px
+
+  .index-stages-items
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    margin-top: 40px
+    gap: 40px
+
+  .index-stages-item
+    margin-bottom: 0
+
+  .index-stages-item__title
+    margin-bottom: 7px
+    max-width: 284px
+
+  .index-stages-img
+    display: block
+    position: absolute
+    bottom: 35px
+    right: 84px
+
+@media screen and (max-width: 920px)
+  .index-stages-heading__title
+    max-width: 630px
+
+  .index-stages-heading__subtitle
+    max-width: 592px
+
++mq(desktop)
+  .index-stages
+    padding: 50px 0
+    margin-bottom: 70px
+
+  .index-stages-heading
+    max-width: 870px
+
+  .index-stages-heading__title
+    font-size: 32px
+    line-height: 38px
+    margin-bottom: 10px
+
+  .index-stages-heading__title em
+    padding: 8px 17px
+
+  .index-stages-heading__subtitle
+    font-size: 18px
+    line-height: 24px
+
+  .index-stages-items
+    grid-template-columns: repeat(3, 1fr)
+    margin-top: 50px
+    gap: 44px 48px
+
+  .index-stages-item__number
+    margin-bottom: 4px
+    &:before
+      top: 52px
+
+  .index-stages-item-text
+    margin-left: 20px
+
+  .index-stages-item__title
+    font-size: 18px
+    margin-bottom: 6px
+    max-width: 320px
+
+  .index-stages-item__subtitle
+    font-size: 16px
+    line-height: 26px
+
+  .index-stages-img
+    display: none
+
++mq(wide-screen)
+  .index-stages-heading__title
+    font-size: 36px
+    line-height: 38px
+
+  .index-stages-heading__title em
+    margin: 0
+
+  .index-stages-item__title
+    font-size: 20px
+    margin-bottom: 8px
+
+  .index-stages-item__subtitle
+    font-size: 17px

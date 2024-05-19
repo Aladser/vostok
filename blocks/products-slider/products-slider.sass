@@ -1,0 +1,111 @@
+@import '../products-card/products-card'
+
+.products-slider
+  overflow: hidden
+  padding-bottom: 40px
+
+  .products-card-slide
+    width: 208px
+    margin-right: 22px
+
+  .products-card-notice
+    width: 16px
+    height: 16px
+
+.products-slider__title
+  font-size: 28px
+  line-height: 34px
+  font-weight: 700
+  color: $color-black
+  margin-bottom: 20px
+
+.products-slider-slides
+  overflow: visible
+  width: 100%
+
+.products-slider-scrollbar
+  margin-top: 20px
+  cursor: pointer
+
+.products-slider-arrow
+  display: none
+
++mq(tablet)
+  .products-slider
+    padding-bottom: 60px
+
+    .products-card-slide
+      width: auto
+      margin-right: 0
+      opacity: 0
+      transition: opacity $default-transition
+
+      &.swiper-slide-active
+        opacity: 1
+
+        + .products-card-slide
+          opacity: 1
+
+          + .products-card-slide
+            opacity: 1
+
+  .products-slider__title
+    font-size: 30px
+    margin-bottom: 30px
+
+  .products-slider-slides-wrap
+    position: relative
+
+  .products-slider-arrow
+    padding: 8px
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    display: flex
+    align-items: center
+    justify-content: center
+    opacity: .7
+    z-index: 2
+    transition: opacity $default-transition
+
+    &.swiper-button-disabled
+      opacity: .3
+
+    &_prev
+      left: -24px
+
+      svg
+        transform: scaleX(-1)
+
+    &_next
+      right: -24px
+
+  .products-slider-scrollbar
+    display: none
+
++mq(desktop)
+  .products-slider
+    user-select: none
+
+    .products-card-slide
+      &.swiper-slide-active
+        opacity: 1
+
+        + .products-card-slide
+          opacity: 1
+
+          + .products-card-slide
+            opacity: 1
+
+            + .products-card-slide
+              opacity: 1
+
+  .products-slider-arrow
+    &_prev
+      left: -38px
+    &_next
+      right: -38px
+
+  .products-card-slide
+    .products-card-notice-tip_pull-left
+      right: -29px

@@ -1,0 +1,8 @@
+{{#items.isNotEmpty}}
+<div class="products-list">
+    {{> products-card }}
+</div>
+{{/items.isNotEmpty}}
+{{#notice}}
+    <div class="products-card-modal-notice" id="products-card-modal-notice">{{{.}}}</div>
+{{/notice}}

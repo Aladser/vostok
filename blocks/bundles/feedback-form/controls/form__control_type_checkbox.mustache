@@ -1,0 +1,16 @@
+<div class="form-group{{#has_error}} form-group_has-error{{/has_error}}">
+  {{>form-control-title}}
+  <label class="form-label form-checkbox">
+    <input name="{{code}}"
+           type="checkbox"
+           value="Y" {{#checked}} checked{{/checked}}
+           class="form-checkbox__control form__control form__control_checkbox form-hidden{{#requiredCssClass}} {{.}}{{/requiredCssClass}}{{#maskCssClass}} {{.}}{{/maskCssClass}}{{#additionalCssClass}} {{.}}{{/additionalCssClass}}">
+    <span class="form-checkbox__marker">
+        <svg xmlns="http://www.w3.org/2000/svg" width="11" height="8" fill="none" viewBox="0 0 11 8"><path
+          fill="#DC5132" fill-opacity="0" d="M9.68 0 4.266 5.379 1.32 2.453 0 3.763 4.265 8 11 1.31 9.68 0Z"/></svg>
+    </span>
+    <span class="form-checkbox__text">{{.}}</span>
+  </label>
+  {{>form-control-error-message}}
+  {{>form-control-note}}
+</div>

@@ -1,0 +1,45 @@
+{{#items.isNotEmpty}}
+    <div class="index-company">
+        {{#items}}
+            <div class="index-company-item"{{#strMainId}} id="{{.}}"{{/strMainId}}>
+                <div class="index-company-item-content">
+                    {{#label}}
+                        <div class="index-company-item__label">
+                            {{.}}
+                        </div>
+                    {{/label}}
+                    {{#number}}
+                        <div class="index-company-item__number">
+                            <span class="index-company-item__number-item">{{.}}</span>
+                        </div>
+                    {{/number}}
+                    {{#text}}
+                        <div class="index-company-item__text">
+                            {{{.}}}
+                        </div>
+                    {{/text}}
+                </div>
+                {{#image}}
+                    <picture class="index-company-block-picture">
+                        {{#mdSrc}}
+                            <source media="(max-width: 767px)" srcset="{{.}}">
+                        {{/mdSrc}}
+                        <img src="{{src}}" alt="{{alt}}" width="{{width}}" class="index-company-block__image"
+                             height="{{height}}" loading="lazy">
+                    </picture>
+                {{/image}}
+            </div>
+        {{/items}}
+        <div class="index-company-text"{{#mainStrMainId}} id="{{.}}"{{/mainStrMainId}}>
+            {{#text}}
+                <div class="index-company-text__desc">
+                    {{{.}}}
+                    {{#link}}
+                        <a href="{{href}}" class="index-company-text__link"
+                            {{#targetBlank}} target="_blank" {{/targetBlank}}>{{{text}}}</a>
+                    {{/link}}
+                </div>
+            {{/text}}
+        </div>
+    </div>
+{{/items.isNotEmpty}}

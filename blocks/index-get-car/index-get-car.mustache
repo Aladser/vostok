@@ -1,0 +1,41 @@
+{{#items.isNotEmpty}}
+    {{#items}}
+        <div class="index-get-car">
+            <div class="index-get-car-container container">
+                <div class="index-get-car-heading">
+                    <img src="local/assets/images/temp/index/get-car/logo.svg" alt="Восток Транзит" width="178" height="122" class="index-get-car-heading__logo" loading="lazy">
+                    <div class="index-get-car-heading-text">
+                        {{#title}}
+                            <div class="index-get-car-heading__title">
+                                {{.}}
+                            </div>
+                        {{/title}}
+                        {{#subtitle}}
+                            <div class="index-get-car-heading__subtitle">
+                                {{.}}
+                            </div>
+                        {{/subtitle}}
+                    </div>
+                </div>
+                <div class="index-get-car-main">
+                    <div class="index-get-car-main-background">
+                        <picture class="index-get-car-picture">
+                            <source media="(max-width: 767px)" srcset="local/assets/images/temp/index/get-car/car_mobile.png">
+                            <img src="local/assets/images/temp/index/get-car/car_tablet.png" alt="Подбор авто" width="506" height="115" class="index-get-car-main__image" loading="lazy">
+                        </picture>
+                    </div>
+                    {{#button}}
+                        <button class="index-get-car-main-button modal-form-link" data-src="{{href}}" data-fancybox>
+                            <span class="index-get-car-main__text">
+                                {{{text}}}
+                            </span>
+                            <span class="index-get-car-main__icon">
+                               <svg xmlns="http://www.w3.org/2000/svg" width="10" height="17" viewBox="0 0 10 17" fill="none"><path d="M0 14.6067L6.18084 8.5L0 2.38L1.90283 0.5L10 8.5L1.90283 16.5L0 14.6067Z" fill="#282D3C" /></svg>
+                            </span>
+                        </button>
+                    {{/button}}
+                </div>
+            </div>
+        </div>
+    {{/items}}
+{{/items.isNotEmpty}}

@@ -1,0 +1,66 @@
+<div class="news-list">
+        {{#title}}
+            <div class="news-list__title">
+                {{.}}
+            </div>
+        {{/title}}
+    <div class="news-list-tabs swiper">
+        <div class="news-list-tabs-wrapper swiper-wrapper">
+            {{#tabs}}
+                {{^active}}
+                    <a href="{{href}}" class="news-list-tab swiper-slide">
+                        {{text}}
+                    </a>
+                {{/active}}
+                {{#active}}
+                    <span class="news-list-tab news-list-tab_active swiper-slide">
+                        {{text}}
+                    </span>
+                {{/active}}
+            {{/tabs}}
+        </div>
+    </div>
+    <div class="news-list-list">
+        {{#cards}}
+            <div class="news-list-card"{{#strMainId}} id="{{.}}"{{/strMainId}}>
+                {{#image}}
+                    <div class="news-list-card-img">
+                        <img src="{{src}}" alt="{{alt}}" width="{{width}}" height="{{height}}" class="news-list-card__image" loading="lazy">
+                    </div>
+                {{/image}}
+                {{#aside}}
+                    <div class="news-list-card-aside">
+                        {{#date}}
+                            <div class="news-list-card__date">
+                                {{.}}
+                            </div>
+                        {{/date}}
+                        {{#sections}}
+                            <div class="news-list-card__sections">
+                                | {{.}}
+                            </div>
+                        {{/sections}}
+                    </div>
+                {{/aside}}
+                {{#title}}
+                    <div class="news-list-card__title">
+                        {{.}}
+                    </div>
+                {{/title}}
+                {{#subtitle}}
+                    <div class="news-list-card__subtitle">
+                        {{.}}
+                    </div>
+                {{/subtitle}}
+                {{#detailPageUrl}}
+                    <a href="{{.}}" class="link-as-card"></a>
+                {{/detailPageUrl}}
+                {{#link}}
+                    <div class="news-list-card-button">
+                        <a href="{{href}}" class="news-list-card__link">{{text}}</a>
+                    </div>
+                {{/link}}
+            </div>
+        {{/cards}}
+    </div>
+</div>

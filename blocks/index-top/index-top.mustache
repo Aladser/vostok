@@ -1,0 +1,55 @@
+{{#items.isNotEmpty}}
+  <div class="index-top">
+    <button class="index-top-slider-arrow index-top-slider-arrow_prev" type="button">
+      <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M.75 12.343L6.158 7 .75 1.645 2.415 0 9.5 7l-7.085 7L.75 12.343z" fill="#282D3C"/>
+      </svg>
+    </button>
+    <div class="index-top-slider swiper">
+      <div class="swiper-wrapper index-top-slider__wrapper">
+        {{#items}}
+          <div class="index-top-slide swiper-slide">
+            {{#image}}
+              <picture class="index-top-slide__img">
+                {{#mdSrc}}
+                  <source media="(max-width: 767px)" srcset="{{.}}, {{.}} 2x">
+                {{/mdSrc}}
+                {{#lgSrc}}
+                  <source media="(max-width: 1279px)" srcset="{{.}}, {{.}} 2x">
+                {{/lgSrc}}
+                <source srcset="{{src}}, {{src}} 2x">
+                <img src="{{src}}"
+                     alt="{{alt}}"
+                  {{#width}} width="{{.}}"{{/width}}
+                  {{#height}} height="{{.}}"{{/height}}
+                  {{^isFirst}} loading="lazy"{{/isFirst}}>
+              </picture>
+            {{/image}}
+            <div class="index-top-slide__content">
+              {{#title}}
+                <div class="index-top-slide__title">{{{.}}}</div>
+              {{/title}}
+              {{#subtitle}}
+                <div class="index-top-slide__subtitle">{{{.}}}</div>
+              {{/subtitle}}
+              {{#button}}
+                <a href="{{href}}" class="index-top-slide__button{{#isModal}} modal-form-link{{/isModal}}"{{#isModal}}
+                   data-fancybox{{/isModal}}{{#targetBlank}} target="_blank" rel="nofollow"{{/targetBlank}}>{{text}}</a>
+              {{/button}}
+            </div>
+            {{#detailPageUrl}}
+              <a href="{{href}}" class="link-as-card{{#isModal}} modal-form-link{{/isModal}}"{{#isModal}}
+                 data-fancybox{{/isModal}}{{#targetBlank}} target="_blank" rel="nofollow"{{/targetBlank}}></a>
+            {{/detailPageUrl}}
+          </div>
+        {{/items}}
+      </div>
+    </div>
+    <button class="index-top-slider-arrow index-top-slider-arrow_next" type="button">
+      <svg width="10" height="14" viewBox="0 0 10 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M.75 12.343L6.158 7 .75 1.645 2.415 0 9.5 7l-7.085 7L.75 12.343z" fill="#282D3C"/>
+      </svg>
+    </button>
+    <div class="index-top-slider-pagination slider-dots"></div>
+  </div>
+{{/items.isNotEmpty}}

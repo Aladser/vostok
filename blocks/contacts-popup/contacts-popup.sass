@@ -1,0 +1,57 @@
+.contacts-popup
+  position: absolute
+  background-color: #fff
+  border-radius: 12px
+  padding: 20px 23px 24px
+  border: 1px solid #E2E2E2
+  width: 268px
+  font-size: 12px
+  line-height: 18px
+  font-weight: 500
+  color: $main-color70
+  box-shadow: 0 8px 24px 0 rgba(129, 135, 189, 0.10)
+
+.custom-fancybox
+  .contacts-popup.fancybox__content
+    padding: 20px 23px 24px
+
+.contacts-popup-button-wrap
+  margin-top: 20px
+  padding-top: 20px
+  border-top: 1px solid #ECF0F8
+
+.contacts-popup-button
+  padding: 12px 30px
+  font-size: 14px
+  line-height: 20px
+  font-weight: 700
+  min-width: 200px
+  background-color: $color-blue
+  color: #fff
+  border-radius: 100px
+
+.contacts-popup-item
+  margin-bottom: 17px
+
+  &:last-child
+    margin-bottom: 0
+
+.contacts-popup-item__label
+  font-size: 13px
+  line-height: 20px
+  margin-bottom: 1px
+
+.contacts-popup-item__phone
+  font-size: 16px
+  line-height: 24px
+  font-weight: 700
+  letter-spacing: 0.04em
+  color: $color-darkblue
+
+.contacts-popup-item__text
+  a
+    color: $color-green
+
++mq(desktop, max)
+  .contacts-popup
+    display: none

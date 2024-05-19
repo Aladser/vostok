@@ -1,0 +1,60 @@
+{
+  "name": "z-labs/vostok-transit-gk.ru",
+  "type": "project",
+  "require": {
+    "php": ">=8.1",
+    "mustache/mustache": "^2.12",
+    "z-labs/bx-app": "^1.2",
+    "vlucas/phpdotenv": "^5.1",
+    "notamedia/console-jedi": "^1.2",
+    "arrilot/bitrix-models": "^0.8.0",
+    "z-labs/feedback-form": "^1.1",
+    "z-labs/image-resizer": "^1.1",
+    "bitrix-expert/monolog-adapter": "^1.0.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "ZLabs\\": "src"
+    }
+  },
+  "extra": {
+    "bitrix-dir": "bitrix",
+    "installer-paths": {
+      "local/modules/{$name}/": [
+        "type:bitrix-module"
+      ]
+    }
+  },
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "ssh://gitea/z-labs/bx-app.git"
+    },
+    {
+      "type": "vcs",
+      "url": "ssh://gitea/z-labs/deferred-functions.git"
+    },
+    {
+      "type": "vcs",
+      "url": "ssh://gitea/z-labs/image-resizer.git"
+    },
+    {
+      "type": "vcs",
+      "url": "ssh://gitea/z-labs/tools-modules.git"
+    },
+    {
+      "type": "vcs",
+      "url": "ssh://gitea/z-labs/feedback-form.git"
+    },
+    {
+      "type": "vcs",
+      "url": "ssh://gitea/z-labs/vue-filter.git"
+    }
+  ],
+  "config": {
+    "allow-plugins": {
+      "composer/installers": true,
+      "kylekatarnls/update-helper": true
+    }
+  }
+}

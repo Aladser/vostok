@@ -1,0 +1,11 @@
+{{#nextLink.index}}
+  <span class="infinite-button-wrap">
+    <button class="button{{#additionalCssClass}} {{.}}{{/additionalCssClass}}{{^additionalCssClass}} button_filled_blue{{/additionalCssClass}} infinite-button"
+            data-comp-id="{{compId}}"
+            data-pager-id="{{id}}"
+            data-page-number="{{nextLink.index}}"
+            type="button">
+      <span class="infinite-button__text">{{{infinite_btn_text}}}</span>
+    </button>
+  </span>
+{{/nextLink.index}}

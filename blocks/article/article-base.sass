@@ -1,0 +1,84 @@
+.article
+  font-size: 16px
+  line-height: 30px
+  font-weight: 400
+
+  h2, h3, h4, h5
+    margin: 30px 0 20px
+    font-weight: 800
+
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
+
+  h3
+    font-size: 18px
+    line-height: 28px
+
+  p
+    margin: 20px 0
+
+    &:first-child
+      margin-top: 0
+    &:last-child
+      margin-bottom: 0
+
+  mark
+    display: block
+    background: none
+    color: inherit
+    font-size: 17px
+    line-height: 22px
+    font-weight: 600
+    margin: 20px 0 10px
+    padding-left: 24px
+    position: relative
+
+    + p
+      margin-top: 0
+
+    &:before
+      content: ''
+      position: absolute
+      left: 0
+      top: 4px
+      width: 12px
+      height: 12px
+      border-radius: 50%
+      background-color: transparentize($color-blue, .3)
+  a
+    color: $color-darkblue
+    border-bottom: 1px solid
+    transition: $default-transition
+    font-weight: 600
+
+    &:hover
+      border-bottom-color: transparent
+
+  a
+    color: $color-darkblue
+    border-bottom: 1px solid
+    transition: $default-transition
+    font-weight: 600
+
+    &:hover
+      border-bottom-color: transparent
+
++mq(tablet)
+  .article
+    line-height: 28px
+
+    h3
+      font-size: 26px
+      line-height: 28px
+
+    mark
+      margin-top: 22px
+
++mq(desktop)
+  .article
+    font-size: 17px
+
+    mark
+      margin-top: 25px

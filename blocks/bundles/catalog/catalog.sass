@@ -1,0 +1,51 @@
+@import '../../variables/variables'
+@import '../../mixins/mixins'
+@import '../../slider/slider'
+@import '../../infinite-button/infinite-button'
+@import '../../products-list/products-list'
+@import '../../seo-text/seo-text'
+
+.catalog
+  padding-bottom: 70px
+
+.seo-text
+  margin-top: 70px
+
+.products-list
+  margin-top: 35px
+
+.filter
+  position: relative
+  z-index: 10
+
++mq(tablet, max)
+  .page-title
+    max-width: 110px
+    white-space: nowrap
+    overflow: hidden
+
+  .products-list
+    margin-top: 40px
+
++mq(tablet)
+  .catalog
+    padding-bottom: 60px
+
+  .seo-text
+    margin-top: 50px
+
+  .filter
+    z-index: 5
+
++mq(desktop)
+  .filter
+    padding-bottom: 40px
+    position: relative
+
+    &:before
+      content: ''
+      position: absolute
+      left: calc((100vw - 100%) / 2 * -1)
+      width: 100vw
+      bottom: 0
+      border-bottom: 1px solid transparentize(#9298A4, .9)

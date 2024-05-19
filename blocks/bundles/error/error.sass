@@ -1,0 +1,107 @@
+@import '../../variables/variables'
+@import '../../mixins/mixins'
+@import '../../seo-text/seo-text'
+
+.error
+    padding-bottom: 50px
+    overflow: hidden
+
+.static__bottom
+    margin-top: 110px
+    padding-top: 50px
+    border-top: 1px solid #9298A44D
+
+.error-block
+    margin-top: 30px
+
+.error-img-block
+    margin-left: -10px
+    margin-bottom: 14px
+
+.error__img
+    width: auto
+    height: 115px
+
+    img
+        width: auto
+        height: auto
+        max-height: 100%
+
+.error__head
+    font-size: 22px
+    font-weight: 700
+    line-height: 28px
+    margin-bottom: 10px
+    color: $color-black
+
+.error__text
+    font-size: 15px
+    line-height: 30px
+    color: $main-color
+
+    a
+        color: $color-red2
+        border-bottom: 1px solid $color-red2
+
++mq(tablet)
+    .error
+        padding-bottom: 60px
+
+    .error-block
+        margin-top: 64px
+
+    .error-img-block
+        margin-left: -1px
+        margin-bottom: 20px
+
+    .error-text-block
+        max-width: 531px
+
+    .error__head
+        font-size: 30px
+        line-height: 42px
+        margin-bottom: 20px
+        max-width: 464px
+
+    .error__text
+        font-size: 17px
+        line-height: 28px
+
+    .error__img
+        height: 147px
+
++mq(desktop)
+    .error
+        padding-bottom: 50px
+
+        .seo-text
+            p
+                font-size: 17px
+                line-height: 26px
+
+    .container-news__bottom
+        padding: 0
+
+    .error-block
+        margin-top: 85px
+
+    .error-img-block
+        margin-left: -13px
+        margin-bottom: 27px
+
+    .error-text-block
+        max-width: 752px
+
+    .error__head
+        font-size: 36px
+        margin-bottom: 22px
+        max-width: 558px
+
+    .error__text
+        a
+            transition: $default-transition
+            &:hover
+                border-color: transparent
+
+    .static__bottom
+        margin-top: 160px

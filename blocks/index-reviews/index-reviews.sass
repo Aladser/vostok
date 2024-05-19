@@ -1,0 +1,225 @@
+.index-reviews__head
+  margin-bottom: 25px
+
+.index-reviews__title
+  font-size: 28px
+  line-height: 34px
+  font-weight: 700
+
+.index-reviews__link-all
+  display: inline-block
+  margin-top: 10px
+  font-size: 14px
+  line-height: 20px
+  font-weight: 600
+  border-bottom: 1px solid currentColor
+  opacity: 0.7
+
+.index-reviews-slider
+  margin-left: -$co1
+  margin-right: -$co1
+  padding-left: $co1
+  padding-right: $co1
+
+.index-reviews-slide__top
+  overflow: hidden
+  border-radius: 15px
+  position: relative
+  padding-bottom: 109%
+
+  &:not(.index-reviews-slide__top_disable-shadow)
+    &:after
+      content: ''
+      position: absolute
+      bottom: 0
+      left: 0
+      width: 100%
+      height: 60px
+      background: linear-gradient(0deg, #1C2D50 0%, rgba(28, 45, 80, 0) 100%)
+
+.index-reviews-slide__img
+  +absoluteFluid
+  object-fit: cover
+  object-position: center
+
+.index-reviews-slide__content
+  padding-top: 14px
+  font-size: 15px
+  line-height: 22px
+  color: $main-color70
+
+.index-reviews-slide__date
+  font-size: 14px
+  line-height: 100%
+  font-weight: 500
+  margin-bottom: 14px
+
+.index-reviews-slide__title
+  font-size: 18px
+  line-height: 22px
+  font-weight: 700
+  color: $main-color
+
+.index-reviews-slide__text
+  margin-top: 15px
+
+.index-reviews-slide__button
+  display: none
+
+.index-reviews-slide-video
+  position: absolute
+  z-index: 1
+  color: #fff
+  display: flex
+  align-items: center
+  font-size: 13px
+  line-height: 100%
+  font-weight: 500
+  left: 20px
+  bottom: 20px
+
+.index-reviews-slide-video__icon
+  flex-shrink: 0
+  width: 32px
+  height: 32px
+  display: flex
+  align-items: center
+  justify-content: center
+  background-color: #fff
+  border-radius: 50%
+  margin-right: 10px
+
+  svg
+    width: 8px
+    height: auto
+
+.index-reviews-slide__link
+  z-index: 1
+
+.index-reviews-slider-scrollbar
+  margin-top: 25px
+
++mq(tablet)
+  .index-reviews__head
+    display: flex
+    align-items: flex-end
+    margin-bottom: 30px
+
+  .index-reviews__title
+    font-size: 30px
+    margin-right: 30px
+
+  .index-reviews__link-all
+    line-height: 16px
+    margin: 0 0 5px auto
+
+  .index-reviews-slider
+    margin: 0
+    padding: 0
+
+  .index-reviews-slide__content
+    line-height: 24px
+
+  .index-reviews-slide__date
+    font-size: 15px
+
+  .index-reviews-slide__title
+    font-size: 20px
+    line-height: 24px
+
+  .index-reviews-slide__text
+    margin-top: 14px
+
+  .index-reviews-slider-scrollbar
+    margin-top: 40px
+
++mq(desktop, max)
+  .index-reviews-slider__arrow
+    display: none
+
++mq(desktop)
+  .index-reviews__title
+    font-size: 36px
+    line-height: 100%
+
+  .index-reviews__link-all
+    transition: $default-transition
+
+    &:hover
+      border-color: transparent
+
+  .index-reviews-slider-wrap
+    position: relative
+
+  .index-reviews-slider-scrollbar
+    display: none
+
+  .index-reviews-slider__arrow
+    position: absolute
+    top: 182px
+    padding: 10px
+    opacity: .3
+    transition: $default-transition
+
+    &_prev
+      left: -50px
+
+      svg
+        transform: scaleX(-1)
+
+    &_next
+      right: -50px
+
+    &:hover
+      opacity: 0.7
+
+    &.swiper-button-disabled
+      pointer-events: none
+
+  .index-reviews-slide
+    &:hover
+      .index-reviews-slide__title
+        color: $color-red90
+
+      .index-reviews-slide__button
+        visibility: visible
+        opacity: 1
+
+  .index-reviews-slide__content
+    font-size: 16px
+    line-height: 24px
+
+  .index-reviews-slide__title
+    transition: $default-transition
+    font-size: 26px
+    line-height: 36px
+
+  .index-reviews-slide__button
+    display: inline-block
+    margin-top: 14px
+    padding: 5px 15px
+    border-radius: 100px
+    background-color: #F1F3F8
+    color: $main-color70
+    font-size: 13px
+    line-height: 20px
+    font-weight: 600
+    visibility: hidden
+    opacity: 0
+    transition: $default-transition
+
++mq(wide-screen)
+  .index-reviews
+    padding-bottom: 70px
+    position: relative
+    overflow: hidden
+
+    &:after
+      position: absolute
+      right: -175px
+      bottom: -236px
+      content: ''
+      display: block
+      width: 610px
+      height: 610px
+      background: radial-gradient(50% 50% at 50% 50%, rgba(220, 223, 230, 0.7) 23.44%, rgba(244, 246, 251, 0) 100%)

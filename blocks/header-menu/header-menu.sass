@@ -1,0 +1,118 @@
+.header-menu
+  height: 100%
+
+.header-menu-list
+  height: 100%
+  display: flex
+  font-size: 16px
+  line-height: 20px
+  font-weight: 500
+
+  &:after
+    content: ''
+    display: block
+    width: 1px
+    flex-shrink: 0
+
+.header-menu-item
+  height: 100%
+  position: relative
+  cursor: pointer
+  flex-shrink: 0
+  margin-right: 24px
+  display: flex
+  align-items: center
+
+.header-submenu
+  position: absolute
+  visibility: hidden
+  opacity: 0
+  background-color: #fff
+  border-radius: 6px
+  min-width: 260px
+  max-width: 350px
+  left: 0
+  top: calc(100% - 19px)
+  transform: translateY(16px)
+  transition: .3s
+  box-shadow: 0 8px 24px 0 rgba(129, 135, 189, 0.10)
+  border: 1px solid #E2E2E2
+  overflow: hidden
+  z-index: 2
+
+.header-submenu-item
+  &:first-child
+    .header-submenu-item__link
+      padding-top: 24px
+
+  &:last-child
+    .header-submenu-item__link
+      padding-bottom: 24px
+      &:after
+        display: none
+
+.header-submenu-item__link
+  display: block
+  width: 100%
+  padding: 14px 15px
+  position: relative
+  transition: background-color $default-transition
+
+  &:after
+    position: absolute
+    content: ''
+    bottom: 0
+    left: 15px
+    width: calc(100% - 30px)
+    border-bottom: 1px solid $color-secondary100
+
+  &:hover
+    background-color: #F1F3F8
+
+.header-menu-item__arrow
+  flex-shrink: 0
+  margin-left: 8px
+
++mq(desktop)
+  .header-menu-list
+    font-size: 15px
+
+  .header-menu-item
+    margin-right: 20px
+
+    &:hover
+      .header-menu-item__text
+        color: $color-red2
+
+      .header-submenu
+        visibility: visible
+        opacity: 1
+        transform: translateY(0)
+        transition: $default-transition 0s
+
+    &:not(.header-menu-item_parent):hover
+      .header-menu-item__text:after
+        opacity: 1
+        transform: translateY(0)
+
+  .header-menu-item__link
+    display: flex
+    align-items: center
+    height: 100%
+
+  .header-menu-item__text
+    transition: color $default-transition
+    position: relative
+
+    &:after
+      content: ''
+      display: block
+      width: 100%
+      border-bottom: 2px solid $color-red2
+      transform: translateY(2px)
+      transition: $default-transition
+      opacity: 0
+
+  .header-menu-item__arrow
+    width: 8px
+    height: auto

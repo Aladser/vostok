@@ -1,0 +1,52 @@
+.pager
+    display: flex
+    gap: 25px
+    justify-content: center
+    margin-top: 60px
+
+.pager-item
+    border-radius: 50%
+
+.pager__link
+    border-radius: 50%
+    background-color: transparentize($color-darkblue, 0.9)
+    font-size: 14px
+    line-height: 22px
+    width: 42px
+    height: 42px
+    display: flex
+    justify-content: center
+    align-items: center
+    font-weight: 700
+    color: transparentize($color-darkblue, 0.3)
+    transition: $default-transition
+
+.pager__link:hover
+    background-color: $color-darkblue
+    color: #fff
+
+.pager__filler
+    border-radius: 50%
+    background-color: transparentize($color-darkblue, 0.9)
+    font-size: 14px
+    line-height: 22px
+    width: 44px
+    height: 44px
+    display: flex
+    justify-content: center
+    align-items: center
+    font-weight: 700
+    color: #243048
+
+.pager__link_active
+    background-color: $color-darkblue
+    color: #fff
+
++mq(tablet)
+    .pager
+        gap: 37px
+        margin-top: 50px
+
+    .pager__link
+        width: 44px
+        height: 44px

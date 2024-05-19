@@ -1,0 +1,122 @@
+.side-menu
+  font-size: 17px
+  line-height: 18px
+  font-weight: 500
+  padding-bottom: 30px
+  position: relative
+
+  &:after
+    content: ''
+    position: absolute
+    left: calc((100vw - 100%) / 2 * -1)
+    right: calc((100vw - 100%) / 2 * -1)
+    bottom: 0
+    width: 100vw
+    border-bottom: 1px solid transparentize(#9298A4, .7)
+
+.side-menu-list
+  color: $color-blue
+
+.side-menu-item
+  margin-bottom: 22px
+  position: relative
+
+  &:last-child
+    margin-bottom: 0
+
+  &_opened
+    .side-menu-item__trigger
+      svg
+        transform: rotate(180deg)
+
+  &_active
+    .side-menu-item__link
+      color: $color-red80
+
+.side-menu-item__link
+  width: 100%
+  display: block
+  padding-right: 30px
+
+.side-menu-item__trigger
+  position: absolute
+  right: 0
+  top: 0
+  display: flex
+  align-items: center
+  justify-content: center
+  height: 16px
+  width: 30px
+  margin-right: -12px
+
+  svg
+    transition: $default-transition
+
+.side-submenu
+  display: none
+
+.side-submenu-list
+  margin-top: 22px
+  padding-left: 15px
+  border-left: 1px solid transparentize(#9298A4, .7)
+  font-size: 16px
+  line-height: 18px
+  font-weight: 500
+  display: flex
+  flex-direction: column
+  align-items: flex-start
+  color: $color-black80
+
+.side-submenu-link
+  margin-bottom: 15px
+
+  &:last-child
+    margin-bottom: 0
+
+  &_active
+    color: $color-red80
+
++mq(tablet)
+  .side-menu
+    font-size: 15px
+
+    &:after
+      content: none
+      display: none
+
+  .side-menu-item
+    margin-bottom: 18px
+
+  .side-menu-item__link
+    padding-right: 35px
+
+  .side-submenu-list
+    margin-top: 20px
+    font-size: 14px
+    line-height: 17px
+
+  .side-submenu-link
+    margin-bottom: 18px
+
++mq(desktop)
+  .side-menu
+    font-size: 17px
+    line-height: 19px
+
+  .side-menu-item
+    margin-bottom: 21px
+
+  .side-menu-item__link,
+  .side-submenu-link
+    transition: $default-transition
+    &:hover
+      color: $color-red80
+
+  .side-submenu-list
+    margin-left: 15px
+    margin-top: 17px
+    font-size: 16px
+    line-height: 18px
+
+  .side-submenu-link
+    margin-bottom: 25px

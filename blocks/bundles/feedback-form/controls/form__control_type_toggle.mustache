@@ -1,0 +1,25 @@
+<div class="form-group{{#has_error}} form-group_has-error{{/has_error}}">
+    <label class="form-label form-toggle-wrapper">
+      <span class="form-group-top">
+        {{#label}}
+            <div class="form-group__title form-toggle__title">
+              {{{.}}}{{#required}} <span class="form__astrix">*</span>{{/required}}
+            </div>
+        {{/label}}
+      </span>
+      <span class="form-group-inner">
+        <span class="form-toggle">
+            <input name="{{code}}"
+                   type="checkbox"
+                   value="Y"
+                {{#checked}} checked{{/checked}}
+                   class="form-toggle__control form__control form__control_checkbox form-hidden{{#requiredCssClass}} {{.}}{{/requiredCssClass}}{{#maskCssClass}} {{.}}{{/maskCssClass}}{{#additionalCssClass}} {{.}}{{/additionalCssClass}}">
+            <span class="form-toggle__marker"></span>
+      </span>
+        {{#show_error_message}}
+          <span class="form-group__message">{{{error_message}}}</span>
+        {{/show_error_message}}
+      </span>
+    </label>
+    {{#note}}<span class="form__note">{{{.}}}</span>{{/note}}
+</div>

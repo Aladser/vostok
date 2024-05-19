@@ -1,0 +1,20 @@
+<div class="pager">
+    {{#pages}}
+    <div class="pager-item{{#active}} pager-item_active{{/active}}">
+        {{#has_filler_before}}
+        <div class="pager__filler pager__filler_before">...</div>
+        {{/has_filler_before}}
+        {{^active}}
+        {{^has_filler_after}}
+        <a href="{{{href}}}" class="pager__link" data-pager-button>{{text}}</a>
+        {{/has_filler_after}}
+        {{/active}}
+        {{#active}}
+        <span class="pager__link pager__link_active" data-pager-button>{{text}}</span>
+        {{/active}}
+        {{#has_filler_after}}
+        <div class="pager__filler pager__filler_after">...</div>
+        {{/has_filler_after}}
+    </div>
+    {{/pages}}
+</div>

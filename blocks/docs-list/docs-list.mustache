@@ -1,0 +1,21 @@
+{{#items.isNotEmpty}}
+<div class="docs-list">
+    {{#items}}
+        <div class="docs-item">
+            <div class="docs-item__icon">
+                <svg class="docs-item__icon-arrow" width="11" height="12" viewBox="0 0 11 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6.04418 8.40909V0H4.2664V8.40909L1.25716 5.33137L0 6.617L5.15529 11.8895L10.3106 6.617L9.05342 5.33137L6.04418 8.40909Z" fill="#2C3346" fill-opacity="0.8"/>
+                </svg>
+                {{#format}}
+                    <div class="docs-item__icon-type">{{.}}</div>
+                {{/format}}
+            </div>
+            <div class="docs-item__title">{{text}}</div>
+            {{#meta}}
+                <div class="docs-item__meta">{{{.}}}</div>
+            {{/meta}}
+            <a href="{{href}}" class="link-as-card" download></a>
+        </div>
+    {{/items}}
+</div>
+{{/items.isNotEmpty}}

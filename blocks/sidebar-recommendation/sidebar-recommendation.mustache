@@ -1,0 +1,41 @@
+{{#cards.isNotEmpty}}
+<div class="sidebar-recommendation">
+    {{#title}}
+        <div class="sidebar-recommendation-header__title">{{.}}</div>
+    {{/title}}
+    <div class="sidebar-recommendation-list">
+        {{#cards}}
+            <div class="sidebar-recommendation-card"{{#strMainId}} id="{{.}}"{{/strMainId}}>
+                {{#image}}
+                    <div class="sidebar-recommendation-card-img">
+                        <img src="{{src}}" alt="{{alt}}" width="{{width}}" height="{{height}}" class="sidebar-recommendation-card__image" loading="lazy">
+                        <div class="sidebar-recommendation-card-img__plague"></div>
+                    </div>
+                {{/image}}
+                {{#aside}}
+                    <div class="sidebar-recommendation-card-aside">
+                        {{#date}}
+                            <div class="sidebar-recommendation-card__date">
+                                {{.}}
+                            </div>
+                        {{/date}}
+                        {{#sections}}
+                            <div class="sidebar-recommendation-card__sections">
+                                | {{.}}
+                            </div>
+                        {{/sections}}
+                    </div>
+                {{/aside}}
+                {{#title}}
+                    <div class="sidebar-recommendation-card__title">
+                        {{.}}
+                    </div>
+                {{/title}}
+                {{#detailPageUrl}}
+                    <a href="{{.}}" class="link-as-card"></a>
+                {{/detailPageUrl}}
+            </div>
+        {{/cards}}
+    </div>
+</div>
+{{/cards.isNotEmpty}}

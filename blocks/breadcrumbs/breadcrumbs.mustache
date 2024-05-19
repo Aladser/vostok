@@ -1,0 +1,18 @@
+{{#breadcrumbs}}
+  <nav class="breadcrumbs">
+    {{#breadcrumbs.items}}
+      {{^isLast}}
+        <a href="{{{href}}}" class="breadcrumbs-item">
+          <span class="breadcrumbs-item__text">{{{text}}}</span>
+        </a>
+        <span class="breadcrumbs-separator">-</span>
+      {{/isLast}}
+      {{#isLast}}
+        <span class="breadcrumbs-item breadcrumbs-item_last">
+            <span class="breadcrumbs-item__text">{{{text}}}</span>
+        </span>
+      {{/isLast}}
+    {{/breadcrumbs.items}}
+  </nav>
+{{/breadcrumbs}}
+{{#schema}}{{{.}}}{{/schema}}

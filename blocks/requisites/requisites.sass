@@ -1,0 +1,82 @@
+.requisites
+  padding-top: 50px
+  padding-bottom: 30px
+  border-top: 1px solid #ECF0F8
+
+.requisites__title
+  font-size: 26px
+  line-height: 100%
+  font-weight: 700
+  margin-bottom: 22px
+
+.requisites-items
+  font-size: 14px
+  line-height: 24px
+  font-weight: 500
+
+.requisites-item__label
+  color: $main-color50
+
+.requisites-download
+  margin-top: 31px
+  display: inline-flex
+  align-items: center
+  font-size: 16px
+  line-height: 18px
+  font-weight: 500
+  color: $color-darkblue
+
+.requisites-download__icon
+  width: 24px
+  height: 24px
+  display: flex
+  align-items: center
+  justify-content: center
+  flex-shrink: 0
+  margin-left: 16px
+  background-color: $color-blue
+  border-radius: 4px
+
++mq(tablet)
+  .requisites__title
+    margin-bottom: 20px
+
+  .requisites-items
+    font-size: 17px
+    line-height: 32px
+
+  .requisites-item
+    display: flex
+
+  .requisites-item__label
+    flex-shrink: 0
+
+  .requisites-item__filler
+    min-width: 0
+    flex-grow: 1
+    margin: 0 14px
+    overflow: hidden
+    position: relative
+    align-self: stretch
+
+    &:after
+      content: '. . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . '
+      position: absolute
+      font-size: 12px
+      line-height: 100%
+      bottom: 9px
+      left: 0
+      width: 100%
+      white-space: nowrap
+      color: $main-color40
+
+  .requisites-item__value
+    width: 329px
+    flex-shrink: 0
+
+  .requisites-download
+    margin-top: 20px
+
++mq(desktop)
+  .requisites-items
+    max-width: 717px

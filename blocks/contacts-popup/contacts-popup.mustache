@@ -1,0 +1,27 @@
+{{#items.isNotEmpty}}
+<div class="contacts-popup" id="contacts-popup">
+    <div class="contacts-popup-list">
+        {{#items}}
+            <div class="contacts-popup-item">
+                {{#title}}
+                    <div class="contacts-popup-item__label">{{.}}</div>
+                {{/title}}
+                {{#phone}}
+                    <a href="{{href}}" class="contacts-popup-item__phone">{{text}}</a>
+                {{/phone}}
+                {{#text}}
+                    <div class="contacts-popup-item__text">{{{.}}}</div>
+                {{/text}}
+            </div>
+        {{/items}}
+    </div>
+    {{#button}}
+        <div class="contacts-popup-button-wrap">
+            <button class="contacts-popup-button button"
+                    type="button"
+                    data-fancybox
+                    data-src="{{href}}">{{text}}</button>
+        </div>
+    {{/button}}
+</div>
+{{/items.isNotEmpty}}

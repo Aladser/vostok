@@ -1,0 +1,72 @@
+.article-table
+    padding-bottom: 23px
+    margin-top: 20px
+    margin-bottom: 40px
+
+    .os-padding
+        margin-inline: -100px
+
+    .os-scrollbar
+        background-color: #F1F7FE
+        border-radius: 2px
+        padding: 0
+        cursor: pointer
+
+.article
+    .os-host-resize-disabled.os-host-scrollbar-vertical-hidden>.os-scrollbar-horizontal, .os-host-rtl.os-host-resize-disabled.os-host-scrollbar-vertical-hidden>.os-scrollbar-horizontal
+        padding: 0   
+        height: 3px   
+        background-color: #D9D9D9   
+
+    .os-theme-dark.os-host-transition>.os-scrollbar>.os-scrollbar-track>.os-scrollbar-handle, .os-theme-light.os-host-transition>.os-scrollbar>.os-scrollbar-track>.os-scrollbar-handle
+        height: 3px   
+        background-color: $color-blue                                        
+
+    .os-host
+        overflow: visible !important
+
+.table-wrapper
+    width: fit-content
+    padding-inline: 100px
+
+    table
+        width: 847px
+        border-spacing: 0
+        border-radius: 14px
+        border: 1px solid #E2E2E2
+        overflow: hidden
+
+        th
+            width: fit-content
+            text-align: start
+            font-size: 16px
+            font-weight: 500
+            line-height: 20px
+            color: transparentize($main-color, 0.2)
+            background-color: transparentize($color-blue, 0.9)
+            padding: 27px 30px 28px
+            height: 20px
+
+        td
+            vertical-align: middle
+            padding: 0 39px 0 30px
+            font-weight: 500
+            font-size: 16px
+            line-height: 20px
+            color: $main-color
+            width: 182px
+            height: 90px
+
+        th, td
+            border-bottom: 1px solid #E2E2E2
+            border-right: 1px solid #E2E2E2
+
+            em
+                font-style: normal
+                color: transparentize($main-color, 0.2)
+
+        th:last-child, td:last-child
+            border-right: none
+
+        tr:last-child td
+            border-bottom: none

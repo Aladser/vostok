@@ -1,0 +1,23 @@
+{{#menu.isNotEmpty}}
+<div class="header-menu">
+    <ul class="header-menu-list">
+	    {{#menu}}
+            <li class="header-menu-item{{#active}} header-menu-item_active{{/active}}{{#menu.isNotEmpty}} header-menu-item_parent{{/menu.isNotEmpty}}">
+                <a href="{{href}}" class="header-menu-item__link">
+                    <span class="header-menu-item__text">{{text}}</span>
+                </a>
+                {{#menu.isNotEmpty}}
+                    <svg class="header-menu-item__arrow" width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.866 7.5a1 1 0 0 1-1.732 0L.67 1.5A1 1 0 0 1 1.536 0h6.928a1 1 0 0 1 .866 1.5l-3.464 6z" fill="#2C3346"/></svg>
+                    <ul class="header-submenu">
+                        {{#menu}}
+	                        <li class="header-submenu-item{{#active}} header-submenu-item_active{{/active}}">
+								<a href="{{href}}" class="header-submenu-item__link">{{text}}</a>
+	                        </li>
+                        {{/menu}}
+                    </ul>
+                {{/menu.isNotEmpty}}
+            </li>
+	    {{/menu}}
+    </ul>
+</div>
+{{/menu.isNotEmpty}}

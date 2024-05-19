@@ -1,0 +1,16 @@
+{{#chars.isNotEmpty}}
+<div class="detail-chars">
+    {{#title}}
+        <div class="detail-chars__title">{{{.}}}</div>
+    {{/title}}
+    <div class="detail-chars__list">
+        {{#chars}}
+            <div class="detail-char">
+                <div class="detail-char__label">{{label}}</div>
+                <div class="detail-char__filler"></div>
+                <div class="detail-char__value">{{value}}</div>
+            </div>
+        {{/chars}}
+    </div>
+</div>
+{{/chars.isNotEmpty}}

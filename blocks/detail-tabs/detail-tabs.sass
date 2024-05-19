@@ -1,0 +1,101 @@
+.detail-tabs-links
+  background-color: transparentize(#F3F3F3, .7)
+  overflow: hidden
+  position: relative
+  font-size: 15px
+  line-height: 20px
+  font-weight: 600
+  text-transform: uppercase
+
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    border-bottom: 1px solid #E2E2E2
+
+  .detail-tabs-link
+    width: auto
+
+.detail-tabs-links-list
+  overflow: visible
+  width: 100%
+
+.detail-tabs-links__container
+  overflow: auto hidden
+  display: flex
+  scrollbar: none
+
+  &::-webkit-scrollbar
+    display: none
+
+.detail-tabs-link
+  flex-shrink: 0
+  padding: 20px 0
+  position: relative
+  color: $main-color80
+  transition: color $default-transition
+
+  &:after
+    content: ''
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    border-bottom: 2px solid transparent
+    transition: $default-transition
+
+  &_active
+    color: $main-color
+
+    &:after
+      border-color: #BE1E2D
+
+.detail-tabs-panels
+  transition: $default-transition
+
+.detail-tabs-panel
+  padding: 30px 0
+  display: none
+  opacity: 0
+  visibility: hidden
+  transition: $default-transition
+
+  &_active
+    display: block
+
+  &_in
+    opacity: 1
+    visibility: visible
+    transition: visibility $default-transition, opacity $default-transition $default-transition
+
+  .article
+    line-height: 32px
+
++mq(tablet)
+  .detail-tabs-panel
+    padding-top: 25px
+
+    .article
+      line-height: 34px
+      letter-spacing: 0.02em
+
+  .detail-tabs-link
+    padding: 22px 0
+
++mq(desktop)
+  .detail-tabs-panel
+    padding: 40px 0
+
+    .article
+      line-height: 30px
+
+  .detail-tabs-link
+    padding: 23px 0
+
+    &:hover
+      color: $main-color
+
+    &_active
+      cursor: default

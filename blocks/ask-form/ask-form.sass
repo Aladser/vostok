@@ -1,0 +1,123 @@
+.ask-form
+  background-color: #F1F3F8
+  border-radius: 14px 14px 0 0
+  padding: 40px 0
+
+  .form__title
+    font-size: 26px
+    line-height: 29px
+    font-weight: 700
+
+  .form__subtitle
+    margin-top: 14px
+    font-size: 15px
+    line-height: 26px
+    color: $main-color70
+
+  .form-content-fields
+    margin-top: 21px
+
+  .form-group
+    margin-bottom: 19px
+
+    &:last-child
+      margin-bottom: 0
+
+  .form-bottom
+    margin-top: 30px
+
+  .form__submit
+    width: 100%
+    padding: 14px 30px
+    border-radius: 100px
+    font-size: 16px
+    line-height: 20px
+    font-weight: 700
+
+.form-uc
+  margin-top: 20px
+
++mq(tablet, max)
+  .ask-form
+    .form__control.form__textarea
+      height: 190px
+
++mq(tablet)
+  .ask-form
+    padding: 50px 0
+
+    .form__subtitle
+      margin-top: 15px
+      line-height: 28px
+
+    .form-group
+      margin-bottom: 0
+
+    .form-content-fields
+      margin-top: 30px
+      display: grid
+      grid-template-columns: 1fr 1fr
+      grid-gap: 20px 32px
+
+    .form-group_textarea
+      grid-column: span 2
+
+    .form-bottom
+      display: flex
+      align-items: flex-start
+
+    .form__submit
+      width: auto
+      margin-left: 68px
+      order: 2
+      flex-shrink: 0
+
+    .form-uc
+      margin-top: 2px
+
++mq(desktop, max)
+  .ask-form__img-wrap
+    display: none
+
++mq(desktop)
+  .ask-form
+    background-color: transparentize(#F1F3F8, .5)
+    padding: 40px 0 100px
+
+    .form__title
+      font-size: 34px
+      line-height: 36px
+
+    .form__subtitle
+      margin-top: 5px
+      font-size: 17px
+
+    .form-uc
+      margin-top: 5px
+      font-size: 16px
+
+    .form__submit
+      padding: 17px 30px
+      margin-left: 89px
+
+  .ask-form__container
+    display: flex
+
+  .ask-form__content
+    min-width: 0
+    flex-grow: 1
+    max-width: 752px
+
+  .ask-form__img-wrap
+    align-self: center
+    margin-left: 45px
+    flex-shrink: 0
+    width: 262px
+
+    .ask-form__img
+      width: 100%
+      height: auto
+
++mq(wide-screen)
+  .ask-form__img-wrap
+    margin-left: 86px

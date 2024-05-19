@@ -1,0 +1,23 @@
+{{#items.isNotEmpty}}
+<div class="products-slider">
+    <div class="products-slider__container container">
+	    {{#title}}
+	        <div class="products-slider__title">{{.}}</div>
+	    {{/title}}
+        <div class="products-slider-slides-wrap">
+            <button class="products-slider-arrow products-slider-arrow_prev" type="button">
+                <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 12.343L5.408 7 0 1.645 1.665 0 8.75 7l-7.085 7L0 12.343z" fill="#282D3C" /></svg>
+            </button>
+	        <div class="products-slider-slides swiper">
+	            <div class="swiper-wrapper">
+	                {{> products-card-slide }}
+	            </div>
+	        </div>
+            <button class="products-slider-arrow products-slider-arrow_next" type="button">
+                <svg width="9" height="14" viewBox="0 0 9 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 12.343L5.408 7 0 1.645 1.665 0 8.75 7l-7.085 7L0 12.343z" fill="#282D3C" /></svg>
+            </button>
+        </div>
+        <div class="products-slider-scrollbar slider-scrollbar"></div>
+    </div>
+</div>
+{{/items.isNotEmpty}}

@@ -1,0 +1,54 @@
+@import '../contacts-popup/contacts-popup'
+
+.header-contacts
+  display: flex
+  align-items: center
+  position: relative
+
+  .contacts-popup
+    left: 0
+    top: calc(100% + 10px)
+    z-index: 2
+    visibility: hidden
+    opacity: 0
+    transform: translateY(16px)
+    transition: .15s .1s
+
+.header-contacts__label
+  flex-shrink: 0
+  font-size: 15px
+  line-height: 20px
+  font-weight: 500
+  color: #9298A4
+
+.header-contacts__icon
+  flex-shrink: 0
+  margin-left: 8px
+  width: 20px
+  height: auto
+
+.header-phone
+  margin-left: 8px
+  display: flex
+  align-items: center
+  font-size: 16px
+  line-height: 20px
+  font-weight: 600
+
+.header-phone__icon
+  flex-shrink: 0
+  margin-left: 8px
+  width: 10px
+  height: auto
+
++mq(desktop)
+  .header-phone__icon
+    width: 8px
+
+  .header-contacts
+    &:hover
+      .contacts-popup
+        visibility: visible
+        opacity: 1
+        transform: translateY(0)
+        transition: $default-transition 0s
