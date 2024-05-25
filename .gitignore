@@ -49,3 +49,5 @@ error_log
 !/public_html/browserconfig.xml
 !/local/assets/vendor/icommon/demo.html
 /composer.phar
+
+!a-test/index.html
