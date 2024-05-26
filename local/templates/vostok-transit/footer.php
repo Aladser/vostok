@@ -38,6 +38,7 @@ $APPLICATION->IncludeComponent(
     ),
     false
 );
+// Напишите нам и Заказать звонок
 $APPLICATION->IncludeComponent(
     "bitrix:main.include",
     "",

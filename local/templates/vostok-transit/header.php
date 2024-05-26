@@ -30,7 +30,7 @@ global $USER, $APPLICATION;
     // <script data-skip-moving="true"></script>
     echo DeferredFunctions\Asset\InlineJs::show();
     // список <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/apple-touch-icon-57x57.png">
-    ZLabs\App::Include('header/favicon');
+    //ZLabs\App::Include('header/favicon');
 
     $APPLICATION->ShowMeta('robots', false);
     $APPLICATION->ShowMeta('keywords', false);
@@ -72,10 +72,10 @@ global $USER, $APPLICATION;
     </style>
 </head>
 <body class="page">
+  <!-- АДМ.ПАНЕЛЬ -->
   <div class="fixed-panel"><? ZLabs\App::CMain()->ShowPanel(); ?></div>
-
   <div class="page-inner">
-      <!-- /local/include/.. -->
+      <!-- /local/include/header/template.php -->
       <? ZLabs\App::Include('header/template'); ?>
       <main class="main<? DeferredFunctions\MainClass::show() ?>">
           <?
