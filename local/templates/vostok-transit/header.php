@@ -30,7 +30,7 @@ global $USER, $APPLICATION;
     // <script data-skip-moving="true"></script>
     echo DeferredFunctions\Asset\InlineJs::show();
     // список <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/apple-touch-icon-57x57.png">
-    //ZLabs\App::Include('header/favicon');
+    ZLabs\App::Include('header/favicon');
 
     $APPLICATION->ShowMeta('robots', false);
     $APPLICATION->ShowMeta('keywords', false);
