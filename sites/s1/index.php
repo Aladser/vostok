@@ -7,31 +7,7 @@
 	$APPLICATION->SetPageProperty("not_show_container", 'Y');
 	$APPLICATION->SetPageProperty("not_show_nav_chain_custom", 'Y');
 	$APPLICATION->SetPageProperty("not_show_text_formatting", 'Y');
-?>
-
-
-<div class='container'>
-	<div><?$APPLICATION->IncludeComponent(
-	"bitrix:menu", 
-	"main-menu", 
-	array(
-		"ALLOW_MULTI_SELECT" => "N",
-		"CHILD_MENU_TYPE" => "left",
-		"COMPONENT_TEMPLATE" => "main-menu",
-		"DELAY" => "N",
-		"MAX_LEVEL" => "2",
-		"MENU_CACHE_GET_VARS" => array(
-		),
-		"MENU_CACHE_TIME" => "3600",
-		"MENU_CACHE_TYPE" => "N",
-		"ROOT_MENU_TYPE" => "top",
-		"USE_EXT" => "N",
-		"MENU_CACHE_USE_GROUPS" => "N"
-	),
-	false
-);?></div>
-	
-</div>
+?><div class='container'>Контент</div>
 
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
