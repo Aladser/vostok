@@ -42,7 +42,7 @@
 	<?=str_repeat("</ul></li>", ($previousLevel-1) );?>
 <?endif?>
 
-<!-- /CUSTOM header-menu -->
 </ul></div>
+<!-- /CUSTOM header-menu -->
 
 <div class="menu-clear-left"></div>	
