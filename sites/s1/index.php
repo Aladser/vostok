@@ -7,7 +7,12 @@
 	$APPLICATION->SetPageProperty("not_show_container", 'Y');
 	$APPLICATION->SetPageProperty("not_show_nav_chain_custom", 'Y');
 	$APPLICATION->SetPageProperty("not_show_text_formatting", 'Y');
-?><div class='container'>Контент</div>
+?>
+
+
+<div class='container'>
+	
+</div>
 
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
