@@ -2,28 +2,28 @@
 $aMenuLinks = Array(
 	Array(
 		"Каталог автомобилей", 
-		SITE_DIR."/catalog-auto/", 
+		SITE_DIR."/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Как заказать", 
-		SITE_DIR."/how-to-buy/", 
+		SITE_DIR."/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Доставка и оплата", 
-		SITE_DIR."/delivery-and-payment/", 
+		SITE_DIR."/", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
 		"Контакты", 
-		SITE_DIR."/contacts/", 
+		SITE_DIR."/", 
 		Array(), 
 		Array(), 
 		"" 
