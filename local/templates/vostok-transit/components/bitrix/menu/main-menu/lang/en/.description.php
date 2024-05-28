@@ -1,4 +1,4 @@
 <?
-$MESS ['MENU_DOT_DEFAULT_NAME'] = "Default vertical menu";
-$MESS ['MENU_DOT_DEFAULT_DESC'] = "Default vertical menu";
+$MESS ['MENU_HORIZONT_MULTI_NAME'] = "Horizontal multi level dropdown menu";
+$MESS ['MENU_HORIZONT_MULTI_DESC'] = "Horizontal multi level dropdown menu";
 ?>
