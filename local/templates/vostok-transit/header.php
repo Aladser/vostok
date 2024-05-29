@@ -23,14 +23,16 @@ global $USER, $APPLICATION;
           content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <?
+      // список <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/apple-touch-icon-57x57.png">
+      ZLabs\App::Include('header/favicon');
+    ?>
     <title><? $APPLICATION->ShowTitle();?></title>
     <?php
     // внутренние стили
     echo DeferredFunctions\Asset\InlineStyles::show();
     // <script data-skip-moving="true"></script>
     echo DeferredFunctions\Asset\InlineJs::show();
-    // список <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/apple-touch-icon-57x57.png">
-    ZLabs\App::Include('header/favicon');
 
     $APPLICATION->ShowMeta('robots', false);
     $APPLICATION->ShowMeta('keywords', false);
@@ -70,6 +72,18 @@ global $USER, $APPLICATION;
         top: 0;
       }
     </style>
+
+    <!-- CSS бандлы -->
+    <link rel="stylesheet" href="/local/assets/local/bundle-common/bundle-common.css">
+    <link rel="stylesheet" href="/local/assets/local/bundle-feedback-form/bundle-feedback-form.css">
+    <link rel="stylesheet" href="/local/assets/local/bundle-homepage/bundle-homepage.css">
+    <link rel="stylesheet" href="/local/assets/local/bundle-vue-catalog/bundle-vue-catalog.css">
+    <!-- JS бандлы -->
+    <script type='text/javascript' src="/local/assets/local/bundle-common/bundle-common.js" defer></script>
+    <script type='text/javascript' src="/local/assets/local/bundle-homepage/bundle-homepage.js" defer></script>
+    <script type='text/javascript' src="/local/assets/local/bundle-feedback-form/bundle-feedback-form.js" defer></script>
+    <script type='text/javascript' src="/local/assets/local/bundle-vue-catalog/bundle-vue-catalog.js" defer></script>
+
 </head>
 <body class="page">
   <!-- АДМ.ПАНЕЛЬ -->
