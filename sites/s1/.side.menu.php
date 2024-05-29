@@ -1,7 +1,14 @@
 <?
 $aMenuLinks = Array(
 	Array(
-		"Как заказать", 
+		"Каталог", 
+		SITE_DIR."#", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Как купить", 
 		SITE_DIR."#", 
 		Array(), 
 		Array(), 
@@ -9,14 +16,56 @@ $aMenuLinks = Array(
 	),
 	Array(
 		"Доставка и оплата", 
-		SITE_DIR."/delivery-and-payment/", 
+		SITE_DIR."#", 
 		Array(), 
 		Array(), 
 		"" 
 	),
 	Array(
-		"О Компании", 
-		SITE_DIR."/about/", 
+		"Журнал", 
+		SITE_DIR."#", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Отзывы", 
+		SITE_DIR."#", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"О компании", 
+		SITE_DIR."#", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Документы", 
+		SITE_DIR."#", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Контакты", 
+		SITE_DIR."#", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Пользовательское соглашение", 
+		SITE_DIR."#", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Политика конфиденциальности", 
+		SITE_DIR."#", 
 		Array(), 
 		Array(), 
 		"" 
