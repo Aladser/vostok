@@ -9,8 +9,5 @@
 	$APPLICATION->SetPageProperty("not_show_text_formatting", 'Y');
 ?>
 
-<div class="container">
-
-</div>
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
