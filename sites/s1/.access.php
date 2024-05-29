@@ -1,4 +1,4 @@
 <?
-$PERM["test.php"]["*"]="D";
+$PERM["test.php"]["*"]="X";
 $PERM["/"]["*"]="R";
 ?>
