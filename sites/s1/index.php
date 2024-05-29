@@ -9,9 +9,8 @@
 	$APPLICATION->SetPageProperty("not_show_text_formatting", 'Y');
 ?>
 
-
-<div class='container'>
-	
+<div class="container">
+Контент
 </div>
 
 
