@@ -73,7 +73,15 @@
 	),
 	false
 );?>
-		
+<br>
+<div class="index-catalog__head">
+	<div class="index-catalog__title">Каталог</div>
+	<a href="#" class="index-catalog__link">
+		<span class="tablet-hide">Полный каталог</span>
+		<span class="mobile-hide tablet-show">Смотреть полный каталог</span>
+	</a>
+</div>
+
 </div>
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
