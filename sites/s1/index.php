@@ -10,8 +10,7 @@
 ?>
 
 <div class="container">
-Контент
-</div>
 
+</div>
 
 <? require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/footer.php"); ?>
