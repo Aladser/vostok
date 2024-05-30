@@ -8,10 +8,9 @@
 	$APPLICATION->SetPageProperty("not_show_nav_chain_custom", 'Y');
 	$APPLICATION->SetPageProperty("not_show_text_formatting", 'Y');
 ?>
+<div class="container">
 
-<div class='container'>
 
-	
 
 </div>
 
