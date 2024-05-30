@@ -42,7 +42,6 @@ node_modules
 !/sites/verstka/robots.txt
 
 .env
-*.gz
 access_log
 error_log
 *.htaccess
@@ -50,4 +49,4 @@ error_log
 !/local/assets/vendor/icommon/demo.html
 /composer.phar
 
-!a-test/index.html
+!db_backup.tar.gz
