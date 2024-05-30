@@ -74,15 +74,19 @@ global $USER, $APPLICATION;
     </style>
 
     <!-- CSS бандлы -->
-    <link rel="stylesheet" href="/local/assets/local/bundle-common/bundle-common.css">
-    <link rel="stylesheet" href="/local/assets/local/bundle-feedback-form/bundle-feedback-form.css">
-    <link rel="stylesheet" href="/local/assets/local/bundle-homepage/bundle-homepage.css">
-    <link rel="stylesheet" href="/local/assets/local/bundle-vue-catalog/bundle-vue-catalog.css">
+    <?
+      ZLabs\App::inlineCss([
+        'bundle-common',
+        'bundle-homepage'
+      ]);
+    ?>
     <!-- JS бандлы -->
-    <script type='text/javascript' src="/local/assets/local/bundle-common/bundle-common.js" defer></script>
-    <script type='text/javascript' src="/local/assets/local/bundle-homepage/bundle-homepage.js" defer></script>
-    <script type='text/javascript' src="/local/assets/local/bundle-feedback-form/bundle-feedback-form.js" defer></script>
-    <script type='text/javascript' src="/local/assets/local/bundle-vue-catalog/bundle-vue-catalog.js" defer></script>
+    <?
+      ZLabs\App::inlineJs([
+        'bundle-common',
+        'bundle-homepage',
+      ]);
+    ?>
 
 </head>
 <body class="page">
