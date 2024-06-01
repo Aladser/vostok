@@ -36,6 +36,7 @@ node_modules
 !/bitrix/.settings_extra.php
 /upload
 !/upload/.keepme
+!/upload/iblock
 /local/modules/
 /local/assets/local/
 /local/assets/mustache/
