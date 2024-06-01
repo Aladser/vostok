@@ -24,9 +24,9 @@ $this->setFrameMode(true);
 			<? $img_folder_path = '/local/assets/images/temp/index/top/'; ?>
 	  		<? for($i=0; $i<count($arResult["ITEMS"]); $i++): ?>
 				<? 
-					$mobile_photo_car = $img_folder_path.$arResult["ITEMS"][$i]['PROPERTIES']['MOBILE_PHOTO']['VALUE'];
-					$tablet_photo_car = $img_folder_path.$arResult["ITEMS"][$i]['PROPERTIES']['TABLET_PHOTO']['VALUE'];
-					$photo_car = $img_folder_path.$arResult["ITEMS"][$i]['PROPERTIES']['PHOTO']['VALUE'];
+					$mobile_car_photo = $img_folder_path.$arResult["ITEMS"][$i]['PROPERTIES']['MOBILE_PHOTO']['VALUE'];
+					$tablet_car_photo = $img_folder_path.$arResult["ITEMS"][$i]['PROPERTIES']['TABLET_PHOTO']['VALUE'];
+					$car_photo = $img_folder_path.$arResult["ITEMS"][$i]['PROPERTIES']['PHOTO']['VALUE'];
 				?>
 
 				<? if( ($i+1)%2 !== 0 && ($i+3)%3!=0 ): ?>
@@ -38,10 +38,10 @@ $this->setFrameMode(true);
 				<? endif ?>
 
 						<picture class="index-top-slide__img">
-							<source media="(max-width: 767px)" srcset="<?=$mobile_photo_car?>, <?=$mobile_photo_car?> 2x">
-							<source media="(max-width: 1279px)" srcset="<?=$tablet_photo_car?>, <?=$tablet_photo_car?> 2x">
-							<source srcset="<?=$photo_car?>, <?=$photo_car?> 2x">
-							<img src="<?=$photo_car?>" alt="Подбор и доставка автомобилей из Азии под ключ" width="1140" height="470" loading="lazy">
+							<source media="(max-width: 767px)" srcset="<?=$mobile_car_photo?>, <?=$mobile_car_photo?> 2x">
+							<source media="(max-width: 1279px)" srcset="<?=$tablet_car_photo?>, <?=$tablet_car_photo?> 2x">
+							<source srcset="<?=$car_photo?>, <?=$car_photo?> 2x">
+							<img src="<?=$car_photo?>" alt="<?=$arResult["ITEMS"][$i]['NAME']?>" width="1140" height="470" loading="lazy">
 						</picture>
 						<div class="index-top-slide__content">
 							<div class="index-top-slide__title"><?=$arResult["ITEMS"][$i]['NAME']?></div>
