@@ -34,9 +34,6 @@ node_modules
 /bitrix/*
 !/bitrix/.keepme
 !/bitrix/.settings_extra.php
-/upload
-!/upload/.keepme
-!/upload/iblock
 /local/modules/
 /local/assets/local/
 /local/assets/mustache/
@@ -51,3 +48,5 @@ error_log
 /composer.phar
 
 !db_backup.tar.gz
+/upload/resize_cache
+/upload/tmp
