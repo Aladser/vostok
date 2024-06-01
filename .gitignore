@@ -51,3 +51,4 @@ error_log
 /upload/resize_cache
 /upload/tmp
 /upload/cars
+test.php
