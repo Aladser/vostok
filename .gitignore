@@ -50,4 +50,4 @@ error_log
 !db_backup.tar.gz
 /upload/resize_cache
 /upload/tmp
-/upload/iblock
+/upload/cars
