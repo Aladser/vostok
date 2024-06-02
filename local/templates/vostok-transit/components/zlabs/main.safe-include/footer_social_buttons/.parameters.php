@@ -8,35 +8,35 @@ $arTemplateParameters = array(
         "TYPE" => "STRING",
     ),
     "BUTTON1_HREF" => array(
-        "NAME" => "Ссылка 1",
+        "NAME" => "Rutube - ссылка",
         "TYPE" => "STRING",
     ),
     "BUTTON1_TEXT" => array(
-        "NAME" => "Текст ссылки 1",
+        "NAME" => "Rutube - заголовок ссылки",
         "TYPE" => "STRING",
     ),
     "BUTTON2_HREF" => array(
-        "NAME" => "Ссылка 2",
+        "NAME" => "Youtube - ссылка",
         "TYPE" => "STRING",
     ),
     "BUTTON2_TEXT" => array(
-        "NAME" => "Текст ссылки 2",
+        "NAME" => "Youtube - заголовок ссылки",
         "TYPE" => "STRING",
     ),
     "BUTTON3_HREF" => array(
-        "NAME" => "Ссылка 3",
+        "NAME" => "VK - ссылка",
         "TYPE" => "STRING",
     ),
     "BUTTON3_TEXT" => array(
-        "NAME" => "Текст ссылки 3",
+        "NAME" => "VK - заголовок ссылки",
         "TYPE" => "STRING",
     ),
     "BUTTON4_HREF" => array(
-        "NAME" => "Ссылка 4",
+        "NAME" => "Телеграм - ссылка",
         "TYPE" => "STRING",
     ),
     "BUTTON4_TEXT" => array(
-        "NAME" => "Текст ссылки 4",
+        "NAME" => "Телеграм - заголовок ссылки",
         "TYPE" => "STRING",
     ),
 );
