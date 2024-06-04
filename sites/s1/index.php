@@ -1,7 +1,7 @@
 <?
 	require($_SERVER["DOCUMENT_ROOT"] . "/bitrix/header.php");
 	/** @var CMain $APPLICATION */
-	$APPLICATION->SetTitle("Главная");
+	$APPLICATION->SetTitle("Восток Транзит");
 	$APPLICATION->SetPageProperty("main_class", 'index');
 	$APPLICATION->SetPageProperty("not_show_h1", 'Y');
 	$APPLICATION->SetPageProperty("not_show_container", 'Y');
