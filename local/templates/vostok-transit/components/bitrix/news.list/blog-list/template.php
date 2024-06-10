@@ -1,15 +1,5 @@
-<?if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
-/** @var array $arParams */
-/** @var array $arResult */
-/** @global CMain $APPLICATION */
-/** @global CUser $USER */
-/** @global CDatabase $DB */
-/** @var CBitrixComponentTemplate $this */
-/** @var string $templateName */
-/** @var string $templateFile */
-/** @var string $templateFolder */
-/** @var string $componentPath */
-/** @var CBitrixComponent $component */
+<?
+if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED!==true)die();
 $this->setFrameMode(true);
 ?>
 
@@ -18,9 +8,7 @@ $this->setFrameMode(true);
 <div class="index-blog">
     <div class="index-blog-container container">
         <div class="index-blog-header">
-                <div class="index-blog-header__title">
-                    Журнал
-                </div>
+                <div class="index-blog-header__title">Журнал</div>
                 <a href="#" class="index-blog-header__link"><span class="mobile-show tablet-hide">Все новости</span><span class="mobile-hide tablet-show">Смотреть все новости</span></a>
         </div>
         <div class="index-blog-tabs swiper swiper-initialized swiper-horizontal swiper-free-mode swiper-backface-hidden">
