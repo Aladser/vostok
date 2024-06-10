@@ -21,11 +21,12 @@ $this->setFrameMode(true);
     </button>
     <div class="index-top-slider swiper swiper-initialized swiper-horizontal swiper-backface-hidden">
       	<div class="swiper-wrapper index-top-slider__wrapper" style="transition-duration: 700ms; transform: translate3d(-2312px, 0px, 0px);">
+			<? $img_folder_path = '/local/assets/images/temp/index/top/'; ?>
 	  		<? for($i=0; $i<count($arResult["ITEMS"]); $i++): ?>
 				<? 
-					$car_photo = $arResult["ITEMS"][$i]["DISPLAY_PROPERTIES"]["PHOTO"]["FILE_VALUE"]['SRC'];
-					$tablet_car_photo = $arResult["ITEMS"][$i]["DISPLAY_PROPERTIES"]["TABLET_PHOTO"]["FILE_VALUE"]['SRC'];
-					$mobile_car_photo = $arResult["ITEMS"][$i]["DISPLAY_PROPERTIES"]["MOBILE_PHOTO"]["FILE_VALUE"]['SRC'];
+					$mobile_car_photo = $img_folder_path.$arResult["ITEMS"][$i]['PROPERTIES']['MOBILE_PHOTO']['VALUE'];
+					$tablet_car_photo = $img_folder_path.$arResult["ITEMS"][$i]['PROPERTIES']['TABLET_PHOTO']['VALUE'];
+					$car_photo = $img_folder_path.$arResult["ITEMS"][$i]['PROPERTIES']['PHOTO']['VALUE'];
 				?>
 
 				<? if( ($i+1)%2 !== 0 && ($i+3)%3!=0 ): ?>
